@@ -1,8 +1,8 @@
-### 🚀 Java Projects Repository
+<!---# 🚀 Java Projects Repository  --->
 
 ## 📌 About This Repository
 
-This repository contains Java-related tasks, projects, and practice exercises. It serves as a collection of Java programming concepts, covering fundamental and advanced topics, including real-world applications.
+This repository contains **Java-related tasks, projects, and practice exercises**. It serves as a collection of Java programming concepts, covering fundamental and advanced topics, including real-world applications.
 
 ## 📂 Contents
 
