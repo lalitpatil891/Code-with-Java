@@ -1,5 +1,3 @@
-In your Java repository's README file, you should include the following sections:  
-
 ### 📌 **About This Repository**  
 This repository contains all my Java-related tasks, projects, and practice exercises. It serves as a collection of my Java programming journey, covering fundamental concepts, advanced topics, and real-world applications.  
 
@@ -7,9 +5,8 @@ This repository contains all my Java-related tasks, projects, and practice exerc
 <!-- 🔹 **Basic Java Programs** – Covers variables, loops, conditionals, arrays, etc.  
 - 🔹 **Object-Oriented Programming (OOP)** – Covers classes, objects, inheritance, polymorphism, encapsulation, and abstraction.  
 - 🔹 **Data Structures & Algorithms (DSA)** – Covers linked lists, stacks, queues, trees, sorting, searching, etc.-->
-- 
-- [Multithreading & Concurrency](#OLA-Cab-Booking-Process-Multithreading-in-Java) – Covers thread creation, synchronization, executors, etc.  
-<-- 🔹 **File Handling** – Reading/writing files, serialization, etc.  
+- [Multithreading & Concurrency](#ola-cab-booking-process---multithreading-in-java) – Covers thread creation, synchronization, executors, etc.  
+<!-- 🔹 **File Handling** – Reading/writing files, serialization, etc.  
 - 🔹 **Database Connectivity (JDBC)** – Connecting Java applications with databases.  
 - 🔹 **Mini & Major Projects** – Java applications solving real-world problems.--->  
 
