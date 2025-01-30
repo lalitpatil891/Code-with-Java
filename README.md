@@ -98,7 +98,7 @@ User rated the ride: 5 star
 
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/your-username/your-repository.git](https://github.com/lalitpatil891/CodeWithJava.git)
+   git clone https://github.com/lalitpatil891/CodeWithJava.git
    ```
 2. Open the project in any Java IDE (Eclipse, IntelliJ, or VS Code).
 3. Run individual programs as needed.
