@@ -14,7 +14,6 @@ This repository contains all my Java-related tasks, projects, and practice exerc
 ---------------------------------------------------------------------------
 # OLA Cab Booking Process - Multithreading in Java
 
-## Overview
 This project simulates an **OLA Cab Booking Process** using **Multithreading in Java**. It consists of six different classes that extend the `Thread` class (or use anonymous inner classes). Each thread represents a different stage in the cab booking process.
 
 ## Classes and Their Functionalities
