@@ -27,7 +27,7 @@ class DriverAssignment extends Thread {
 			e.printStackTrace();
 		}
 
-		
+
 	}
 }
 
@@ -74,8 +74,9 @@ class PaymentProcessing extends Thread {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+
 		System.out.println("Payment successful!");
+		System.out.println("Enter your name:");
 	}
 }
 
@@ -83,17 +84,17 @@ class RatingSystem extends Thread {
 
 	@Override
 	public void run() {
-		
+
 		System.out.println("Requesting user rating...");
-		
+
 		try {
 			Thread.sleep(1000);
 		}
 		catch(InterruptedException e) {
-			
+
 			e.printStackTrace();
 		}
-		
+
 		System.out.println("User rated the ride: 5 Star");
 	}
 }
@@ -101,20 +102,20 @@ class RatingSystem extends Thread {
 /**---------------Main Class---------------*/
 
 public class OlaRidingApp {
-	
+
 	public static void main(String [] args) throws InterruptedException {
-		
+
 		RideRequest rideRequest = new RideRequest();
 		DriverAssignment driverAssignment = new DriverAssignment();
 		FareCalculation fareCalculation = new FareCalculation();
 		LiveTracking liveTracking = new LiveTracking();
-		PaymentProcessing paymentProcessing = new PaymentProcessing();  
+		PaymentProcessing paymentProcessing = new PaymentProcessing();
 		RatingSystem ratingSystem = new RatingSystem();
-		
+
 		rideRequest.start();
 		fareCalculation.start();
 		rideRequest.join();
-		driverAssignment.start(); 
+		driverAssignment.start();
 		driverAssignment.join();
 		liveTracking.start();
 		liveTracking.join();
@@ -122,8 +123,7 @@ public class OlaRidingApp {
 		paymentProcessing.join();
 		ratingSystem.start();
 		ratingSystem.join();
-		
-		
+
+
 	}
 }
-
