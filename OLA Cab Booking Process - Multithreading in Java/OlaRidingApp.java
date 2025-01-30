@@ -76,7 +76,7 @@ class PaymentProcessing extends Thread {
 		}
 
 		System.out.println("Payment successful!");
-		System.out.println("Enter your name:");
+		
 	}
 }
 
