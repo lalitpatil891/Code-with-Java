@@ -6,10 +6,14 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
 ## 📂 Contents
 
-- **🧵 Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
+- **OOP Concepts** – Inheritance, method overriding, polymorphism
+***Random Object Generation*** – Using `Math.random()`
+1)  [Shape Hierarchy – Geometric shape classification](#question-1-shape-hierarchy)
+2)  [Hospital Management System – Real-world application of OOP](#question-2-hospital-management-system)
 
-   1) [Shape and Hospital Management System](#shape-and-hospital-management-system)          
-   2) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
+- **Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
+
+   1) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
 
 
 ---------------------------------------------------------------------------------------------------------------------
