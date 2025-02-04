@@ -6,17 +6,97 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
 ## 📂 Contents
 
-- **OOP Concepts** – Inheritance, method overriding, polymorphism
-***Random Object Generation*** – Using `Math.random()`
+- **Object-Oriented Programming (OOP)** – ***Inheritance, Encapsulation, method overriding, polymorphism
+***Random Object Generation*** – Using `Math.random()` , ***Factory Method***,***User Input Handling – Using `Scanner` to take input dynamically*** ,***Conditional Logic***  
 1)  [Shape Hierarchy – Geometric shape classification](#question-1-shape-hierarchy)
 2)  [Hospital Management System – Real-world application of OOP](#question-2-hospital-management-system)
+3)  [Student Grade Calculator](#student-grade-calculator)
 
 - **Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
 
    1) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
 
 
+------------------------------------------------------------------------------------------------------
+## Student Grade Calculator
+
+✅ Object-Oriented Programming (OOP) – , Inheritance, and Method Overriding  
+✅ Factory Method – Implementing a factory method for grade calculation  
+✅ User Input Handling – Using `Scanner` to take input dynamically  
+✅ Conditional Logic – Applying grading criteria using `if-else` conditions  
+
+## Problem Statement
+Create a Java program to determine a student's grade based on their marks. The program should include the following:
+- `Student` class with `name` and `marks` attributes.
+- `StudentGrade` class to store student information and grade.
+- `CalculateStudentGrade` class with a factory method to determine the grade.
+- `StudentGradeCalculator` class with the `main` method to take input and display the result.
+
+## Implementation Details
+- `Student` class contains private fields, a parameterized constructor, getter/setter methods, and an overridden `toString()`.
+- `StudentGrade` class associates a student with a grade and has an overridden `toString()`.
+- `CalculateStudentGrade` has a `calculateGrade(Student student)` method to determine grades based on marks.
+- `StudentGradeCalculator` (ELC class) contains the `main` method for user interaction and program execution.
+
+## How to Run
+1. Compile all Java files:
+   ```sh
+   javac Student.java StudentGrade.java CalculateStudentGrade.java StudentGradeCalculator.java
+   ```
+2. Run the program:
+   ```sh
+   java StudentGradeCalculator
+   ```
+3. Enter student details when prompted and view the calculated grade.
+
+## Example Output
+```
+Enter Student Name: John
+Enter Student Marks: 85
+The Student John has 'B' Grade
+```
 ---------------------------------------------------------------------------------------------------------------------
+## Shape and Hospital Management System
+"DateOfAssingment: 27-DEC-2024".
+
+## Question 1: Shape Hierarchy
+
+### Problem Statement
+
+Implement a class `Shape` with three subclasses: `Circle`, `Triangle`, and `Square`. Each class should have `draw()` and `erase()` methods that override the base class methods. The `Shape` class should also have a `randshape()` method that randomly generates an instance of one of the subclasses.
+
+### Implementation Details
+
+- `Shape` is the base class with default `draw()` and `erase()` methods.
+- `Circle`, `Triangle`, and `Square` override these methods with specific behavior.
+- `randshape()` generates a random shape instance.
+- The `ShapeDemo` class contains the `main` method to test the implementation.
+
+### How to Run
+
+1. Compile and run `ShapeDemo.java`.
+2. Observe the random shape generation and method overriding in action.
+
+---
+
+## Question 2: Hospital Management System
+
+### Problem Statement
+
+Design a Hospital Management System using inheritance. Create a base class `HospitalStaff` with `name`, `age`, and `role` attributes, and a `work()` method. Extend this class into `Doctor` and `Nurse` with specific attributes and method overrides.
+
+### Implementation Details
+
+- `HospitalStaff` is the base class with a `work()` method.
+- `Doctor` extends `HospitalStaff` and includes a `specialization` attribute.
+- `Nurse` extends `HospitalStaff` and includes `yearsOfExperience`.
+- The `HospitalManagementSystem` class contains the `main` method to test the implementation.
+
+### How to Run
+
+1. Compile and run `HospitalManagementSystem.java`.
+2. Observe role-based behavior using method overriding.
+------------------------------------------------------------------------------------------------------
 ### 🚖 OLA Cab Booking Process - Multithreading in Java    
 "DateOfAssingment: 30-JAN-2025".
 
@@ -85,46 +165,6 @@ User rated the ride: 5 star
 - `join()` and `start()` methods for execution sequence
 
 ---------------------------------------------------------------
-## Shape and Hospital Management System
-"DateOfAssingment: 27-DEC-2024".
-
-## Question 1: Shape Hierarchy
-
-### Problem Statement
-
-Implement a class `Shape` with three subclasses: `Circle`, `Triangle`, and `Square`. Each class should have `draw()` and `erase()` methods that override the base class methods. The `Shape` class should also have a `randshape()` method that randomly generates an instance of one of the subclasses.
-
-### Implementation Details
-
-- `Shape` is the base class with default `draw()` and `erase()` methods.
-- `Circle`, `Triangle`, and `Square` override these methods with specific behavior.
-- `randshape()` generates a random shape instance.
-- The `ShapeDemo` class contains the `main` method to test the implementation.
-
-### How to Run
-
-1. Compile and run `ShapeDemo.java`.
-2. Observe the random shape generation and method overriding in action.
-
----
-
-## Question 2: Hospital Management System
-
-### Problem Statement
-
-Design a Hospital Management System using inheritance. Create a base class `HospitalStaff` with `name`, `age`, and `role` attributes, and a `work()` method. Extend this class into `Doctor` and `Nurse` with specific attributes and method overrides.
-
-### Implementation Details
-
-- `HospitalStaff` is the base class with a `work()` method.
-- `Doctor` extends `HospitalStaff` and includes a `specialization` attribute.
-- `Nurse` extends `HospitalStaff` and includes `yearsOfExperience`.
-- The `HospitalManagementSystem` class contains the `main` method to test the implementation.
-
-### How to Run
-
-1. Compile and run `HospitalManagementSystem.java`.
-2. Observe role-based behavior using method overriding.
 
 -------------------------------------------------------------------
 
