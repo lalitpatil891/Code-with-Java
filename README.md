@@ -6,8 +6,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
 ## 📂 Contents
 
-- **Object-Oriented Programming (OOP)** – ***Inheritance, Encapsulation, method overriding, polymorphism
-***Random Object Generation*** – Using `Math.random()` , ***Factory Method***,***User Input Handling – Using `Scanner` to take input dynamically*** ,***Conditional Logic***  
+- **Object-Oriented Programming (OOP)** – Inheritance, Encapsulation, method overriding, polymorphism, Random Object Generation – Using `Math.random()`, Factory Method, User Input Handling – Using `Scanner` to take input dynamically, Conditional Logic...  
 1)  [Shape Hierarchy – Geometric shape classification](#question-1-shape-hierarchy)
 2)  [Hospital Management System – Real-world application of OOP](#question-2-hospital-management-system)
 3)  [Student Grade Calculator](#student-grade-calculator)
