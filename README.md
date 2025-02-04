@@ -8,7 +8,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
 - **🧵 Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
 
-   1) [Shape and Hospital Management System](#-Shape-and-hospital-management-system)          
+   1) [Shape and Hospital Management System](#shape-and-hospital-management-system)          
    2) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
 
 
@@ -74,40 +74,15 @@ Requesting user rating...
 User rated the ride: 5 star
 ```
 
-## 🛠 How to Run
-
-1. Clone the repository:
-   ```sh
-   git clone <repository_url>
-   ```
-2. Navigate to the project directory:
-   ```sh
-   cd ola-cab-booking
-   ```
-3. Compile and run the Java program:
-   ```sh
-   javac OlaRidingApp.java
-   java OlaRidingApp
-   ```
-
 ## 🏗 Technologies Used
 
 - Java
 - Multithreading (Thread class)
 - `join()` and `start()` methods for execution sequence
 
-## 💡 How to Use
-
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/lalitpatil891/CodeWithJava.git
-   ```
-2. Open the project in any Java IDE (Eclipse, IntelliJ, or VS Code).
-3. Run individual programs as needed.
-
 ---------------------------------------------------------------
 ## Shape and Hospital Management System
-"DateOfAssingment: 30-JAN-2025".
+"DateOfAssingment: 27-DEC-2024".
 
 ## Question 1: Shape Hierarchy
 
@@ -149,8 +124,15 @@ Design a Hospital Management System using inheritance. Create a base class `Hosp
 
 -------------------------------------------------------------------
 
+## 💡 How to Use
 
 
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/lalitpatil891/CodeWithJava.git
+   ```
+2. Open the project in any Java IDE (Eclipse, IntelliJ, or VS Code).
+3. Run individual programs as needed.
 
 ## 🤝 Contributions & Feedback
 
