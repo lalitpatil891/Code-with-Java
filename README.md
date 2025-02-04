@@ -7,8 +7,10 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 ## 📂 Contents
 
 - **🧵 Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
-              
-   1) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
+
+   1) [Shape and Hospital Management System](#-Shape-and-hospital-management-system)          
+   2) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
+
 
 ---------------------------------------------------------------------------------------------------------------------
 ### 🚖 OLA Cab Booking Process - Multithreading in Java    
@@ -103,6 +105,53 @@ User rated the ride: 5 star
 2. Open the project in any Java IDE (Eclipse, IntelliJ, or VS Code).
 3. Run individual programs as needed.
 
+---------------------------------------------------------------
+## Shape and Hospital Management System
+"DateOfAssingment: 30-JAN-2025".
+
+## Question 1: Shape Hierarchy
+
+### Problem Statement
+
+Implement a class `Shape` with three subclasses: `Circle`, `Triangle`, and `Square`. Each class should have `draw()` and `erase()` methods that override the base class methods. The `Shape` class should also have a `randshape()` method that randomly generates an instance of one of the subclasses.
+
+### Implementation Details
+
+- `Shape` is the base class with default `draw()` and `erase()` methods.
+- `Circle`, `Triangle`, and `Square` override these methods with specific behavior.
+- `randshape()` generates a random shape instance.
+- The `ShapeDemo` class contains the `main` method to test the implementation.
+
+### How to Run
+
+1. Compile and run `ShapeDemo.java`.
+2. Observe the random shape generation and method overriding in action.
+
+---
+
+## Question 2: Hospital Management System
+
+### Problem Statement
+
+Design a Hospital Management System using inheritance. Create a base class `HospitalStaff` with `name`, `age`, and `role` attributes, and a `work()` method. Extend this class into `Doctor` and `Nurse` with specific attributes and method overrides.
+
+### Implementation Details
+
+- `HospitalStaff` is the base class with a `work()` method.
+- `Doctor` extends `HospitalStaff` and includes a `specialization` attribute.
+- `Nurse` extends `HospitalStaff` and includes `yearsOfExperience`.
+- The `HospitalManagementSystem` class contains the `main` method to test the implementation.
+
+### How to Run
+
+1. Compile and run `HospitalManagementSystem.java`.
+2. Observe role-based behavior using method overriding.
+
+-------------------------------------------------------------------
+
+
+
+
 ## 🤝 Contributions & Feedback
 
 Feel free to fork this repository, raise issues, or suggest improvements.
@@ -110,4 +159,3 @@ Feel free to fork this repository, raise issues, or suggest improvements.
 ## 📜 License
 
 This project is open-source and can be modified as needed.
-
