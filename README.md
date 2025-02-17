@@ -18,10 +18,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
 - **Collections** – Covers List, Set, Map, Queue, Deque, Collections utility class, and iterators.
 
-    1) [Cab Customer Service](#-ola-cab-booking-process---multithreading-in-java)
-
-
-
+    1) [Cab Customer Service](#cab-customer-service)
 
 ------------------------------------------------------------------------------------------------------
 ## Student Grade Calculator
