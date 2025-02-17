@@ -15,10 +15,15 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
    1) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
 
+- **Logical Arrays** – Covers boolean arrays, conditional indexing, masking, and logical operations.
+
+  1) [MCQ Or Logical Programs](#)
 
 - **Collections** – Covers List, Set, Map, Queue, Deque, Collections utility class, and iterators.
 
     1) [Cab Customer Service](#cab-customer-service)
+
+
 
 ------------------------------------------------------------------------------------------------------
 ## Student Grade Calculator
