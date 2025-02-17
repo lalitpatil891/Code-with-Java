@@ -37,7 +37,7 @@ public class holdMultiStudentObjDynamically {
 			}
 
 			System.out.println("Printing the student Object");
-			
+
 			for(Student stu : students)
 			{
 				System.out.println(stu);
