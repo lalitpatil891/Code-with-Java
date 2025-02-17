@@ -16,6 +16,13 @@ This repository contains **Java-related tasks, projects, and practice exercises*
    1) [OLA Cab Booking Process - Multithreading in Java](#-ola-cab-booking-process---multithreading-in-java)
 
 
+- **Collections** – Covers List, Set, Map, Queue, Deque, Collections utility class, and iterators.
+
+    1) [Cab Customer Service](#-ola-cab-booking-process---multithreading-in-java)
+
+
+
+
 ------------------------------------------------------------------------------------------------------
 ## Student Grade Calculator
 
@@ -164,7 +171,49 @@ User rated the ride: 5 star
 - `join()` and `start()` methods for execution sequence
 
 ---------------------------------------------------------------
+## Cab Customer Service
 
+### Description
+This project implements a simple cab customer service system in Java. It includes three classes:
+- `CabCustomer`: Represents a cab customer with details like ID, name, pickup/drop locations, distance traveled, and phone number.
+- `CabCustomerService`: Manages customer records and calculates billing based on ride distance.
+- `CabCustomerServiceTester`: Tests the functionalities of the system.
+
+### Features
+- **Add Customer**: Stores customer details in an ArrayList.
+- **Identify Returning Customers**: Checks if a customer has booked before using their phone number.
+- **Calculate Billing**:
+  - First-time users ride for free.
+  - Rides up to 4 km cost ₹80.
+  - Rides beyond 4 km cost ₹80 + ₹6 per km.
+- **Print Bill**: Displays the final bill for each ride.
+
+### Usage
+1. Clone the repository.
+2. Compile and run `CabCustomerServiceTester.java`.
+3. Observe the output for different test cases.
+
+### Example Output
+```
+John Please pay your bill of Rs.0.0
+Smith Please pay your bill of Rs.180.0
+John Please pay your bill of Rs.80.0
+```
+
+### Technologies Used
+- Java
+- ArrayList for customer storage
+
+### How to Run
+1. Install Java (if not already installed).
+2. Compile the program:
+   ```sh
+   javac CabCustomerServiceTester.java
+   ```
+3. Run the program:
+   ```sh
+   java CabCustomerServiceTester
+   ```
 -------------------------------------------------------------------
 
 ## 💡 How to Use
