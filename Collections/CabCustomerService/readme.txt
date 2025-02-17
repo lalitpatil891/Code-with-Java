@@ -1,63 +1,41 @@
-Cab Customer Service
---------------------
-Description
+Assingment Date : 17 Feb 2025
+---------------------
 
-This project implements a simple cab customer service system in Java. It includes three classes:
+Three classes are given to you,
+CabCustomer
+CabCustomerService
+CabCustomerServiceTester
 
-CabCustomer: Represents a cab customer with details like ID, name, pickup/drop locations, distance traveled, and phone number.
+Define the following in the class CabCustomer
+private : custId int, customerName String, pickupLocation String,dropLocation String, distance int,phone String
+          Generate Getter/Setter for the all fields.
+          Implement the No Argument constructor.
+          Implement/Generate the parameterized constructor in the order as defined above, i.e.,  custId,Name,Pickup,Drop,Distance,Phone
 
-CabCustomerService: Manages customer records and calculates billing based on ride distance.
+Define the following in the  class CabCustomerService and write logics in the following methods:
+private : Generic ArrayList to represent list of CabCustomers.
+public : addCabCustomer() : Add the customer object parameter to the ArrayList
+			    isFirstCustomer(): Check whether the customer object parameter is already existing in arrayList.
 
-CabCustomerServiceTester: Tests the functionalities of the system.
+Note : If phone number of a customer matches with any of the phone numbers of the array list, then consider it as a existing customer, otherwise consider the customer as new customer.
 
-Features
+       calculateBill() should calculate and return the customer bill based on following rules
+       1) if the customer is new return 0;
+       2) if the customer's travel distance is below or equal
+          to 4 kms then return 80 (Rs).
+       3) if the customer travel distance is above 4 kms calculate bill 80 + 6 per each km.
+		 Ex: Any distance for new customer return 0;
+		     distance 4 return 80
+                     distance 6 return 80 + 6 * 6;
+printBill() which should return the bill of the customer object parameter in the following format:
 
-Add Customer: Stores customer details in an ArrayList.
+            output : JOHN Please pay your bill of Rs.0.0
+	             SMITH Please pay your bill of Rs.180.0
 
-Identify Returning Customers: Checks if a customer has booked before using their phone number.
+	Note :
+	   Assume one customer books only one cab at a time.
+	   No charge for customer booking the cab for the first time.
+	   Customer's phone number is key to test a new customer or old customer.
+	   Distance should be treated as kilometers
 
-Calculate Billing:
-
-First-time users ride for free.
-
-Rides up to 4 km cost ₹80.
-
-Rides beyond 4 km cost ₹80 + ₹6 per km.
-
-Print Bill: Displays the final bill for each ride.
-
-Usage
-
-Clone the repository.
-
-Compile and run CabCustomerServiceTester.java.
-
-Observe the output for different test cases.
-
-Example Output
-
-John Please pay your bill of Rs.0.0
-Smith Please pay your bill of Rs.180.0
-John Please pay your bill of Rs.80.0
-
-Technologies Used
-
-Java
-
-ArrayList for customer storage
-
-How to Run
-
-Install Java (if not already installed).
-
-Compile the program:
-
-javac CabCustomerServiceTester.java
-
-Run the program:
-
-java CabCustomerServiceTester
-
-Contribution
-
-Feel free to fork the repository and submit pull requests with improvements or additional features.
+A CabCustomerServiceTester is given with main() where you can create various objects and test them.
