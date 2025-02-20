@@ -1,6 +1,6 @@
 //Q22) Insert a new element in the array at middle position
 
-package logicalArray.lectureArrayPrograms;
+//package logicalArray.lectureArrayPrograms;
 
 import java.util.Arrays;
 

@@ -1,0 +1,30 @@
+Working with predefined functional interfaces.
+----------------------------------------------
+1) Predicate<T>			: public boolean test(T x)
+2) Consumer<T>			: public void accept(T x)
+3) Supplier<T>			: public T get()
+4) Function<T,R>		: public R apply(T x)
+5) BiPredicate<T, U>	: public bollean test(T t, U u)
+6) BiConsumer<T,U>		: public void accept(T t, U u)
+7) BiFunction<T,U,R>	: public R apply(T t, U u)
+8) unaryOperator<T>		: public T apply(T x)
+9) BinaryOperator<T>	: public T apply(T x, T y)
+10) ToIntFunction<T>	: public int applyAsInt(T x)
+11) ToLongFunction<T>	: public long applyAsLong(T x)
+12) ToDoubleFunction<T>	: public double applyAsDouble(T x)
+
+ToIntFunction<T> functional interface:
+--------------------------------------
+-> It is a predefined functional interface available in java.util.function sub package.
+-> It is a fuctional interface in java that represents a function that takes an argument of type T and returns an int value. This is typically used in streams when you need to perform operations that result in primitive in value.
+
+@FunctionalInterface
+public interface ToIntFunction<T>
+{
+	public int applyAsInt(T value);
+}
+
+ToDoubleFunction<T>
+--------------------
+-> It will accept anything as T but the return value is double.
+
