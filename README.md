@@ -88,15 +88,6 @@ Enter elements: 3 4 5 6
 - Elements from both lists are merged into a new list while checking for duplicates.
 - The final list is displayed without any repeated elements.
 
-## Contributing
-
-Feel free to fork this repository, submit pull requests, or suggest improvements.
-
-## License
-
-This project is licensed under the MIT License.
-
-
 -------------------------------------------------------------------------------------------------
 ## [Student Grade Calculator](StudentGradeCalculator)
 
