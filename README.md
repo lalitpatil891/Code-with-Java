@@ -23,10 +23,71 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 - **Collections** – Covers List, Set, Map, Queue, Deque, Collections utility class, and iterators.
 
     1) [Cab Customer Service](#cab-customer-service)
+    2) [ListReverser](#listreverser)
+    3) [Java Program to Merge Lists & Remove Duplicates](#)
 
+--------------------------------------------------------------------------------------
+    # [Java Program to Merge Lists & Remove Duplicates](#)
 
+    ## Overview
 
-------------------------------------------------------------------------------------------------------
+    `RemoveDuplicateFromListELC` is a Java program that merges two lists provided by the user and removes duplicate elements, displaying the final list with unique values.
+
+    ## Features
+
+    - Accepts two lists of integers from the user.
+    - Merges both lists.
+    - Removes duplicate elements.
+    - Displays the merged list with unique values.
+
+    ## Program Structure
+
+    ```
+    ├── RemoveDuplicateFromListELC.java
+    ```
+
+    ## How to Run
+
+    1. **Navigate to the project directory.**
+
+    2. **Compile the Java program:**
+
+       ```bash
+       javac RemoveDuplicateFromListELC.java
+       ```
+
+    3. **Run the program:**
+
+       ```bash
+       java RemoveDuplicateFromListELC
+       ```
+
+    ## Sample Input/Output
+
+    **Example 1:**
+
+    ```
+    Enter the size of the first list: 4
+    Enter elements: 1 2 3 4
+    Enter the size of the second list: 4
+    Enter elements: 3 4 5 6
+    [1, 2, 3, 4, 5, 6]
+    ```
+
+    **Example 2:**
+
+    ```
+    4 1 2 3 4 4 3 4 5 6
+    [1, 2, 3, 4, 5, 6]
+    ```
+
+    ## Code Explanation
+
+    - **Scanner** is used to read input from the user.
+    - Two lists are stored using `ArrayList<Integer>`.
+    - Elements from both lists are merged into a new list while checking for duplicates.
+    - The final list is displayed without any repeated elements.
+-------------------------------------------------------------------------------------------------
 ## [Student Grade Calculator](StudentGradeCalculator)
 
 ✅ Object-Oriented Programming (OOP) – , Inheritance, and Method Overriding  
@@ -273,6 +334,59 @@ This Java program demonstrates an Employee Management System with inheritance, m
   - Earns a 1,000 bonus if typing speed > 70 and accuracy > 80.
   - Bonus is applied only once even if speed/accuracy improves further.
 
+--------------------------------------------------------------
+# [ListReverser]
+
+## Overview
+`ReverseListELC` is a simple Java program that takes a list of integers from the user, reverses it, and displays the reversed list.
+
+## Features
+- User inputs the size of the list.
+- Accepts list elements from the user.
+- Reverses the list using Java's `Collections.reverse()`.
+- Displays the reversed list.
+
+## Program Structure
+```
+├── ReverseListELC.java
+```
+
+## How to Run
+
+1. **Navigate to the project directory.**
+
+2. **Compile the Java program:**
+   ```bash
+   javac ReverseListELC.java
+   ```
+
+3. **Run the program:**
+   ```bash
+   java ReverseListELC
+   ```
+
+## Sample Input/Output
+
+**Example 1:**
+```
+Enter the size of the list: 5
+Enter elements of the list:
+4 5 6 7 8
+Reversed list: [8, 7, 6, 5, 4]
+```
+
+**Example 2:**
+```
+Enter the size of the list: 5
+Enter elements of the list:
+5 4 3 2 1
+Reversed list: [1, 2, 3, 4, 5]
+```
+
+## Code Explanation
+- **Scanner** is used to read input from the user.
+- The list is stored using an `ArrayList<Integer>`.
+- `Collections.reverse(list)` is used to reverse the list in place.
 -------------------------------------------------------------------
 ## 💡 How to Use
 
