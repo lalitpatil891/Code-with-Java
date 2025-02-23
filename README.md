@@ -130,7 +130,7 @@ The Student John has 'B' Grade
 ## Shape and Hospital Management System
 "DateOfAssingment: 27-DEC-2024".
 
-## Question 1: [Shape Hierarchy](Shape and Hospital Management System)
+## Question 1: [Shape Hierarchy]([Shape and Hospital Management System](https://github.com/lalitpatil891/CodeWithJava/tree/main/Shape%20and%20Hospital%20Management%20System))
 
 ### Problem Statement
 
@@ -150,7 +150,7 @@ Implement a class `Shape` with three subclasses: `Circle`, `Triangle`, and `Squa
 
 ---
 
-## Question 2: [Hospital Management System](Shape and Hospital Management System)
+## Question 2: [Hospital Management System]([Shape and Hospital Management System](https://github.com/lalitpatil891/CodeWithJava/tree/main/Shape%20and%20Hospital%20Management%20System))
 
 ### Problem Statement
 
