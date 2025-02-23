@@ -345,7 +345,7 @@ This Java program demonstrates an Employee Management System with inheritance, m
   - Bonus is applied only once even if speed/accuracy improves further.
 
 --------------------------------------------------------------
-# [ListReverser](#https://github.com/lalitpatil891/CodeWithJava/tree/main/Collections/ListReverser)
+# [ListReverser](Collections/ListReverser)
 
 ## Overview
 `ReverseListELC` is a simple Java program that takes a list of integers from the user, reverses it, and displays the reversed list.
