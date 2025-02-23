@@ -10,7 +10,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 1)  [Shape Hierarchy – Geometric shape classification](#question-1-shape-hierarchy)
 2)  [Hospital Management System – Real-world application of OOP](#question-2-hospital-management-system)
 3) [Student Grade Calculator](#student-grade-calculator)
-4) [Employee Management System](#employee-mangement-system)
+4) [Employee Management System](#employee-management-system)
 
 - **Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
 
@@ -279,7 +279,7 @@ John Please pay your bill of Rs.80.0
    java CabCustomerServiceTester
    ```
 -------------------------------------------------------------------
-# [Employee Management System]()
+# [Employee Management System](https://github.com/lalitpatil891/CodeWithJava/tree/main/enum%20In%20java/Employee%20Management%20System)
 
 ## Overview
 This Java program demonstrates an Employee Management System with inheritance, method overriding, and enums. It includes the following classes:
