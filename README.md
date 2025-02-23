@@ -168,7 +168,7 @@ Design a Hospital Management System using inheritance. Create a base class `Hosp
 1. Compile and run `HospitalManagementSystem.java`.
 2. Observe role-based behavior using method overriding.
 ------------------------------------------------------------------------------------------------------
-### 🚖 [OLA Cab Booking Process - Multithreading in Java]()    
+### 🚖 [OLA Cab Booking Process - Multithreading in Java](https://github.com/lalitpatil891/CodeWithJava/tree/main/OLA%20Cab%20Booking%20Process%20-%20Multithreading%20in%20Java)    
 "DateOfAssingment: 30-JAN-2025".
 
 This project simulates an OLA Cab Booking Process using multithreading in Java. It consists of six different classes that extend the Thread class (or use anonymous inner classes). Each thread represents a different stage in the cab booking process.
