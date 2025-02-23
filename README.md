@@ -27,26 +27,26 @@ This repository contains **Java-related tasks, projects, and practice exercises*
     3) [Java Program to Merge Lists & Remove Duplicates](#java-program-to-merge-lists--remove-duplicates)
 
 --------------------------------------------------------------------------------------
-# [Java Program to Merge Lists & Remove Duplicates](Collections/MergeListsNoDuplicates)
+## [Java Program to Merge Lists & Remove Duplicates](Collections/MergeListsNoDuplicates)
 
-## Overview
+### Overview
 
 `RemoveDuplicateFromListELC` is a Java program that merges two lists provided by the user and removes duplicate elements, displaying the final list with unique values.
 
-## Features
+### Features
 
 - Accepts two lists of integers from the user.
 - Merges both lists.
 - Removes duplicate elements.
 - Displays the merged list with unique values.
 
-## Program Structure
+### Program Structure
 
 ```
 ├── RemoveDuplicateFromListELC.java
 ```
 
-## How to Run
+### How to Run
 
 1. **Navigate to the project directory.**
 
@@ -62,7 +62,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
    java RemoveDuplicateFromListELC
    ```
 
-## Sample Input/Output
+### Sample Input/Output
 
 **Example 1:**
 
@@ -81,7 +81,7 @@ Enter elements: 3 4 5 6
 [1, 2, 3, 4, 5, 6]
 ```
 
-## Code Explanation
+### Code Explanation
 
 - **Scanner** is used to read input from the user.
 - Two lists are stored using `ArrayList<Integer>`.
@@ -96,20 +96,20 @@ Enter elements: 3 4 5 6
 ✅ User Input Handling – Using `Scanner` to take input dynamically  
 ✅ Conditional Logic – Applying grading criteria using `if-else` conditions  
 
-## Problem Statement
+### Problem Statement
 Create a Java program to determine a student's grade based on their marks. The program should include the following:
 - `Student` class with `name` and `marks` attributes.
 - `StudentGrade` class to store student information and grade.
 - `CalculateStudentGrade` class with a factory method to determine the grade.
 - `StudentGradeCalculator` class with the `main` method to take input and display the result.
 
-## Implementation Details
+### Implementation Details
 - `Student` class contains private fields, a parameterized constructor, getter/setter methods, and an overridden `toString()`.
 - `StudentGrade` class associates a student with a grade and has an overridden `toString()`.
 - `CalculateStudentGrade` has a `calculateGrade(Student student)` method to determine grades based on marks.
 - `StudentGradeCalculator` (ELC class) contains the `main` method for user interaction and program execution.
 
-## How to Run
+### How to Run
 1. Compile all Java files:
    ```sh
    javac Student.java StudentGrade.java CalculateStudentGrade.java StudentGradeCalculator.java
@@ -120,7 +120,7 @@ Create a Java program to determine a student's grade based on their marks. The p
    ```
 3. Enter student details when prompted and view the calculated grade.
 
-## Example Output
+### Example Output
 ```
 Enter Student Name: John
 Enter Student Marks: 85
@@ -280,9 +280,9 @@ John Please pay your bill of Rs.80.0
    java CabCustomerServiceTester
    ```
 -------------------------------------------------------------------
-# [Employee Management System](https://github.com/lalitpatil891/CodeWithJava/tree/main/enum%20In%20java/Employee%20Management%20System)
+## [Employee Management System](https://github.com/lalitpatil891/CodeWithJava/tree/main/enum%20In%20java/Employee%20Management%20System)
 
-## Overview
+### Overview
 This Java program demonstrates an Employee Management System with inheritance, method overriding, and enums. It includes the following classes:
 
 - **Employee**: Base class with attributes like name, employee ID, and salary.
@@ -291,7 +291,7 @@ This Java program demonstrates an Employee Management System with inheritance, m
 - **ManagerType**: Enum defining manager types (HR, SALES).
 - **EmployeeTester**: Main class to test the functionalities.
 
-## Features
+### Features
 - Object-Oriented Programming (OOP) concepts.
 - Method overriding for salary adjustments.
 - Enum usage for Manager types.
@@ -306,7 +306,7 @@ This Java program demonstrates an Employee Management System with inheritance, m
 └── EmployeeTester.java
 ```
 
-## Usage
+### Usage
 1. **Compile the Java files:**
    ```bash
    javac *.java
@@ -326,7 +326,7 @@ This Java program demonstrates an Employee Management System with inheritance, m
    Clerk Salary (after further improvement): 31000.0
    ```
 
-## How It Works
+### How It Works
 - **Manager**: Overrides `setSalary()` to add:
   - 10,000 for HR managers.
   - 5,000 for Sales managers.
@@ -336,23 +336,23 @@ This Java program demonstrates an Employee Management System with inheritance, m
   - Bonus is applied only once even if speed/accuracy improves further.
 
 --------------------------------------------------------------
-# [ListReverser](Collections/ListReverser)
+## [ListReverser](Collections/ListReverser)
 
-## Overview
+### Overview
 `ReverseListELC` is a simple Java program that takes a list of integers from the user, reverses it, and displays the reversed list.
 
-## Features
+### Features
 - User inputs the size of the list.
 - Accepts list elements from the user.
 - Reverses the list using Java's `Collections.reverse()`.
 - Displays the reversed list.
 
-## Program Structure
+### Program Structure
 ```
 ├── ReverseListELC.java
 ```
 
-## How to Run
+### How to Run
 
 1. **Navigate to the project directory.**
 
@@ -366,7 +366,7 @@ This Java program demonstrates an Employee Management System with inheritance, m
    java ReverseListELC
    ```
 
-## Sample Input/Output
+### Sample Input/Output
 
 **Example 1:**
 ```
@@ -384,12 +384,12 @@ Enter elements of the list:
 Reversed list: [1, 2, 3, 4, 5]
 ```
 
-## Code Explanation
+### Code Explanation
 - **Scanner** is used to read input from the user.
 - The list is stored using an `ArrayList<Integer>`.
 - `Collections.reverse(list)` is used to reverse the list in place.
 -------------------------------------------------------------------
-## 💡 How to Use
+### 💡 How to Use
 
 
 1. Clone the repository:
@@ -399,10 +399,3 @@ Reversed list: [1, 2, 3, 4, 5]
 2. Open the project in any Java IDE (Eclipse, IntelliJ, or VS Code).
 3. Run individual programs as needed.
 
-## 🤝 Contributions & Feedback
-
-Feel free to fork this repository, raise issues, or suggest improvements.
-
-## 📜 License
-
-This project is open-source and can be modified as needed.
