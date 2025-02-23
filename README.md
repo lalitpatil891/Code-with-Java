@@ -24,10 +24,10 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
     1) [Cab Customer Service](#cab-customer-service)
     2) [ListReverser](#listreverser)
-    3) [Java Program to Merge Lists & Remove Duplicates](#)
+    3) [Java Program to Merge Lists & Remove Duplicates](#java-program-to-merge-lists--remove-duplicates)
 
 --------------------------------------------------------------------------------------
-# [Java Program to Merge Lists & Remove Duplicates](https://github.com/lalitpatil891/CodeWithJava/tree/69b3799938ad9044f4e58ec97346881daf25f379/Collections/MergeListsNoDuplicates)
+# [Java Program to Merge Lists & Remove Duplicates](Collections/MergeListsNoDuplicates)
 
 ## Overview
 
