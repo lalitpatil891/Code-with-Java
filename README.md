@@ -500,7 +500,7 @@ LinkedHashMap iteration order:
 - Iteration over both maps shows the difference in how they store elements.
 
 -------------------------------------------------------------------
-## [FruitInventoryManagement]()
+## [FruitInventoryManagement](https://github.com/lalitpatil891/CodeWithJava/tree/main/Collections/FruitInventoryManagement)
 
 ### Overview
 The **FruitInventoryManagement** Java program manages a collection of fruits and their quantities using a `HashMap`. It allows adding fruits, checking inventory details, and querying for specific fruits and quantities.
