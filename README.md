@@ -392,7 +392,7 @@ Reversed list: [1, 2, 3, 4, 5]
 
 -------------------------------------------------------------------
 
-## [Comparing HashMap and LinkedHashMap Iteration Order]()
+## [Comparing HashMap and LinkedHashMap Iteration Order](https://github.com/lalitpatil891/CodeWithJava/tree/main/Collections/Comparing%20HashMap%20and%20LinkedHashMap%20Iteration%20Order)
 
 ### Overview
 
