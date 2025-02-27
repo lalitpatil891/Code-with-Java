@@ -557,7 +557,7 @@ Enjoy managing your fruits! 🍎🍌🍊
 
 -------------------------------------------------------------------
 
-## [Hospital Management System]()
+## [Hospital Management System](https://github.com/lalitpatil891/CodeWithJava/tree/main/Collections/Hospital%20Management%20System)
 
 ### Overview
 This Java-based Hospital Management System utilizes the **Map** interface to manage hospital details, treatments, and contact information efficiently. It provides functionalities to add hospitals, retrieve hospital details, and manage a list of treatments offered.
