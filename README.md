@@ -12,7 +12,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 3) [Student Grade Calculator](#student-grade-calculator)
 4) [Employee Management System](#employee-management-system)
 5) [Dynamic Polymorphism in Java – Vehicle Interface Example](dynamic-polymorphism-in-java–vehicle-interface-example)
-6) [Airline Booking System](#airline-booking-system)]
+6) [Airline Booking System](#airline-booking-system)
 
 - **Multithreading & Concurrency** – Covers thread creation, synchronization, executors, etc.
 
@@ -660,7 +660,7 @@ This Java program demonstrates **dynamic polymorphism** using an interface `Vehi
 
 
 -----------------------------------------------------------
-## [Airline Booking System]()
+## [Airline Booking System](https://github.com/lalitpatil891/CodeWithJava/tree/main/OOP/Airline%20Booking%20System)
 
 ## Overview
 The **Airline Booking System** is a Java-based application that allows customers to book tickets for both **domestic** and **international** airlines. The fare is dynamically calculated based on specific business rules such as discounts and taxes.
