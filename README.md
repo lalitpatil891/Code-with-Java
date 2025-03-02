@@ -38,7 +38,7 @@ This repository contains **Java-related tasks, projects, and practice exercises*
     1) [UniqueWords Program](#uniquewords-program)
     2) [Odd Numbers Square Generator](#odd-numbers-square-generator)
     3) [StartWithVowelAndLengthGreaterThanFive](#startwithvowelandlengthgreaterthanfive)
-    4) [SortByLengthAndLexicographically](sortbylengthandlexicographically)
+    4) [SortByLengthAndLexicographically](#sortbylengthandlexicographically)
 --------------------------------------------------------------------------------------
 ## [Java Program to Merge Lists & Remove Duplicates](Collections/MergeListsNoDuplicates)
 
