@@ -787,7 +787,7 @@ Total Selling Price: Rs. 48114.27
 ```
 
 -------------------------------------------------------------------
-## [UniqueWords Program]()
+## [UniqueWords Program](https://github.com/lalitpatil891/Code-with-Java/tree/main/Java%201.8/UniqueWords%20Program)
 
 ### Description
 This Java program reads multiple sentences from the user and extracts a list of all unique words in lowercase while preserving the order in which they appear.
