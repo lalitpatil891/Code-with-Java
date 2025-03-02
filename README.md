@@ -36,6 +36,8 @@ This repository contains **Java-related tasks, projects, and practice exercises*
 
 - **Java 8 features**
     1) [UniqueWords Program](#uniquewords-program)
+    2) [Odd Numbers Square Generator](#odd-numbers-square-generator)
+    3) [StartWithVowelAndLengthGreaterThanFive](#startwithvowelandlengthgreaterthanfive)
 --------------------------------------------------------------------------------------
 ## [Java Program to Merge Lists & Remove Duplicates](Collections/MergeListsNoDuplicates)
 
@@ -856,6 +858,96 @@ public class UniqueWords {
 - A Java compiler (e.g., `javac`)
 
 ----------------------------------------------------------------------
+## [Odd Numbers Square Generator]()
+
+### Description
+This Java program generates an infinite stream of odd numbers using `Stream.iterate()` and computes the square of each odd number up to a given limit `N`. The squared values are collected into a list and printed as output.
+
+### How It Works
+1. Reads an integer `N` from user input.
+2. Generates an infinite stream of odd numbers starting from `1`.
+3. Limits the stream to only odd numbers up to `N`.
+4. Maps each odd number to its square.
+5. Collects the squared values into a list and prints them.
+
+### Sample Input/Output
+### Input:
+```
+10
+```
+### Output:
+```
+[1, 9, 25, 49, 81]
+```
+
+### Technologies Used
+- Java
+- Java Streams API (`Stream.iterate()`, `map()`, `collect()`)
+
+### How to Run
+1. Compile the program:
+   ```
+   javac OddNumbersSquare.java
+   ```
+2. Run the program:
+   ```
+   java OddNumbersSquare
+   ```
+3. Enter a number as input when prompted.
+
+
+--------------------------------------------------------------
+## [StartWithVowelAndLengthGreaterThanFive]()
+
+### Description
+This Java program processes a list of words and filters out the ones that:
+1. Start with a vowel (case-insensitive).
+2. Have a length greater than 5 characters.
+
+The filtered words are collected and printed as output.
+
+### How It Works
+1. Reads an integer `N` from user input, representing the number of words.
+2. Reads `N` words from input.
+3. Uses Java Streams to filter words based on:
+   - First character being a vowel (`a, e, i, o, u` in any case).
+   - Length greater than 5.
+4. Collects and prints the filtered words.
+
+## Sample Input/Output
+### Input:
+```
+5
+Aeroplane
+apple
+egg
+Dog
+Orange
+```
+### Output:
+```
+[Aeroplane, apple, Orange]
+```
+
+### Technologies Used
+- Java
+- Java Streams API (`filter()`, `collect()`)
+- Regular Expressions for filtering
+
+### How to Run
+1. Compile the program:
+   ```
+   javac StartWithVowel.java
+   ```
+2. Run the program:
+   ```
+   java StartWithVowel
+   ```
+3. Enter the number of words and the words themselves.
+
+
+
+-------------------------------------------------------------
 
 ### 💡 How to Use
 
