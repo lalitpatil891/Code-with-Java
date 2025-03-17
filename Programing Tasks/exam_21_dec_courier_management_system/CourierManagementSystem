@@ -1,0 +1,89 @@
+Que 1 :
+=======
+Scenario: Courier Management System.
+
+Courier Class (Base Class)
+-------------------------
+Create a base class Courier that will hold the common properties for a courier.
+
+Requirements:
+This is the base class for all types of couriers (Domestic and International).
+It holds common attributes for couriers and provides methods for displaying details and calculating costs (to be overridden in subclasses).
+
+Attributes:
+courierType (String): The type of courier (e.g., "Domestic", "International").
+weight (double): The weight of the parcel being shipped.
+
+Constructor : 
+Parameters Constructor : Initializes the courier type and weight.
+
+Methods:
+public double calculateCost() : return 0.0;
+public void displayCourierDetails() : Displays the details of the courier, including type and weight.
+
+
+DomesticCourier Class (Subclass of Courier)
+--------------------------------------------
+
+Attributes: NO Attributes
+
+Constructor : Parameterized constructor to initialize parrent Attribute by super().
+
+Methods: 
+Ovveride calculateCost(). which will Calculates and returns the shipping cost for domestic couriers (weight * 50).
+
+
+InternationalCourier Class (Subclass of Courier)
+------------------------------------------------
+
+Attributes: NO Attributes
+
+Constructor : Parameterized constructor to initialize parrent Attribute by super().
+
+Methods: 
+Ovveride calculateCost(). which will Calculates and returns the shipping cost for international couriers (weight * 150).
+
+
+Customer Class
+---------------
+
+Requirements:
+This class represents a customer who "has-a" Courier object.
+It holds customer details and allows displaying both customer and courier information.
+
+
+Attributes:
+name (String): The name of the customer.
+contactNumber (String): The contact number of the customer.
+courier (Courier): A Courier object, demonstrating the HAS-A relationship.
+
+Constructor : Parameterized constructor to initialize its own Attributes.
+
+Methods :
+public void displayCustomerDetails(). which will Displays customer details, including their associated courier information, 
+and uses the instanceof operator to check the courier type and calculate the cost based on the courier type.
+
+
+CourierSystem (Main Class)
+----------------------------
+
+Creates Courier objects (both domestic and international), then creates Customer objects that use those Courier objects.
+Displays the details of each customer using the displayCustomerDetails() method.
+
+
+SAMPLE OUTPUT :
+===============
+
+Customer Name: Alice
+Contact Number: 9876543210
+Courier Type: Domestic
+Weight: 5.0 kg
+Service: Within the country
+Total Cost: 250.0 Rs.
+
+Customer Name: Bob
+Contact Number: 9123456780
+Courier Type: International
+Weight: 3.0 kg
+Service: Across countries
+Total Cost: 450.0 Rs.

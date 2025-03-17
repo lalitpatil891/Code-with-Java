@@ -1,0 +1,86 @@
+Que 2 :
+=======
+
+Movie Theater Simulation with Ticket Price and Object-Oriented Features
+You are tasked with designing a Movie Theater Simulation System using object-oriented principles. This system will demonstrate the following concepts:
+
+Parent Class: Theater
+-------------------------
+Fields:
+private String theaterName 		: Name of the theater.
+
+protected boolean is3DEnabled	: Indicates if the theater supports 3D movies.
+protected int ticketPrice		: Default ticket price for the theater.
+
+Constructor:
+
+A public constructor to initialize theaterName, is3DEnabled, and ticketPrice.
+
+Methods:
+ calculateRevenue(int... tickets): A method to calculate total revenue using the ticketPrice. subclasses.
+public Theater getTheaterDetails(): Returns the current object .
+
+Subclass 1: IMAXTheater
+Extends the Theater class.
+---------------------------
+
+Additional Implementation:
+Here we can set the ticketprice as per your own.
+
+Overrides:
+calculateRevenue(int... tickets): Calculates revenue using the updated ticketPrice of ₹600
+getTheaterDetails(): Returns the object of IMAXTheater type with specific details.
+
+Subclass 2: PremiumTheater
+Extends the Theater class.
+----------------------------
+
+Additional Implementation:
+
+Here we can set the ticketprice as per your own.
+Overrides:
+calculateRevenue(int... tickets): Calculates revenue using the updated ticketPrice of ₹800
+getTheaterDetails(): Returns the object of PremiumTheater type with specific details.
+
+
+External Class: RevenueAnalyzer
+-------------------------------
+
+Method:
+public void analyze(Theater theater, int... tickets): Uses the instanceof operator to identify the type of theater. Calculates revenue for the given ticket sales and displays the total revenue.
+
+Test Class: MovieExperienceSimulator
+------------------------------------
+
+Task:
+Create instances of Theater, IMAXTheater, and PremiumTheater.
+Demonstrate polymorphism using the overridden calculateRevenue() and getTheaterDetails() methods.
+Use the RevenueAnalyzer to analyze ticket revenue for each theater type.
+
+
+Sample Input :
+------------------
+analyzer.analyze(generalTheater, 5, 10);
+
+// IMAX Theater: Tickets - 3, 7
+analyzer.analyze(imaxTheater, 3, 7);
+
+// Premium Theater: Tickets - 2, 6
+analyzer.analyze(premiumTheater, 2, 6);
+
+Sample Output :
+--------------------
+Analyzing General Theater...
+Theater: Generic Theater, 3D Enabled: false, Ticket Price: ₹300
+Analyzing revenue for General Theater...
+Total Revenue: ₹4500
+
+Analyzing IMAX Theater...
+IMAX Theater: ₹600/ticket (Premium experience)
+Analyzing revenue for IMAX Theater...
+Total Revenue: ₹6000
+
+Analyzing Premium Theater...
+Premium Theater: ₹800/ticket (Luxury experience)
+Analyzing revenue for Premium Theater...
+Total Revenue: ₹6400
