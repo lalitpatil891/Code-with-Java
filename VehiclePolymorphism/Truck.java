@@ -1,4 +1,5 @@
 // Truck.java - Subclass implementing Vehicle
+
 class Truck implements Vehicle {
     @Override
     public void start() {
