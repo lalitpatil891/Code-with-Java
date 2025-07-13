@@ -1,0 +1,61 @@
+// ArrayToList.java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class ArrayToList {
+
+    // Static method to convert an array to a list
+    public static List<String> convertToList(String[] inputArray) {
+        // Check if the input array is null
+        if (inputArray == null) {
+            return null; // Return null for null array
+        }
+
+        // Check if the array is empty
+        if (inputArray.length == 0) {
+            return new ArrayList<>(); // Return empty list
+        }
+
+        // Convert array to list using Arrays.asList and wrap it in a new ArrayList
+        return new ArrayList<>(Arrays.asList(inputArray));
+    }
+}
+
+// Tester.java
+import java.util.List;
+import java.util.Scanner;
+
+public class Tester {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Read the number of elements
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        scanner.nextLine(); // Consume the newline
+
+        // Initialize the array
+        String[] inputArray = new String[n];
+
+        // Read the elements
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++) {
+            inputArray[i] = scanner.nextLine();
+        }
+
+        // Convert array to list
+        List<String> resultList = ArrayToList.convertToList(inputArray);
+
+        // Display the result
+        if (resultList == null) {
+            System.out.println("Input array was null.");
+        } else if (resultList.isEmpty()) {
+            System.out.println("Converted List is empty.");
+        } else {
+            System.out.println("Converted List: " + resultList);
+        }
+
+        scanner.close();
+    }
+}
