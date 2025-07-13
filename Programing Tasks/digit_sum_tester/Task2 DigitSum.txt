@@ -1,0 +1,16 @@
+DigitSumTester
+DigitSum Class:
+
+Attributes:
+Stores the number provided by the user.
+int num (private)
+
+Methods:
+getNthDigitFromRight(int position): This method extracts and returns the digit at the specified position from the right. For instance, if position is 1, it returns the last digit. [Return type int]
+
+addFirstAndNthDigit(int position): This method adds the first digit and the digit at the specified position from the right and returns the result. [Return type int]
+
+Main Method:
+Asks the user to input a number and a position (n).
+Creates an instance of DigitSumNth with the provided number.
+Calls the addFirstAndNthDigit() method with the provided position and displays the result.

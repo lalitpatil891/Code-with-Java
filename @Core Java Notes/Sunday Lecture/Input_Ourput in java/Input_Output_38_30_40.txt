@@ -1,0 +1,628 @@
+16-02-2025
+------------
+Input Output in java :
+-----------------------
+In order to perform input and output operation, Java software people has provided a predefined package called java.io.
+
+By using this package we can read the data from keyword (DataInputStream, BufferedRedaer), can create a file, can perform read and write operation to the file.
+
+What is the need of File Handling :
+-----------------------------------
+File handling is nothing but creating a file and performing read and write operation to the file.
+
+As we know to store a value in the program we need to take the support of variable.
+
+Once the execution of the program will be completed then we will not get variable value back so it will be deleted because variables values are available in RAM memory (Primary memory) and It is a volatile memory.
+
+If we want to store the value of the variable permemnently so we can store these values in files (secondary memory) so in future we can retrieve the values from the files.
+
+In order to perform read and write operation in the file we should use stream concept.
+
+Streams in java :
+--------------------
+A Stream is nothing but flow of data or flow of characters to both the end.
+Stream is divided into two categories [Diagram 16-FEB]
+
+1) byte oriented Stream :- 
+------------------------
+It used to handle characters, images, audio and video file in binary format.  
+
+2) character oriented Stream :-
+--------------------------------
+It is used to handle the data in the form of characters or text.
+
+Now byte oriented or binary Stream can be categorized as "InputStream" and "OutputStream". input streams are used to read or receive the data where as output streams are used to write or send the data.
+
+Again Character oriented Stream is divided into Reader and Writer. Reader is used to read() the data from the file where as Writer is used to write the data to the file.
+
+All Streams are represented by classes in java.io package. 
+-----------------------------------------------------------------
+Working with Input Output classes :
+-----------------------------------
+FileOutputStream :
+-------------------
+It is a predefined class available in java.io package. It comes under binary oriented Stream so, If we want to write the data then the data must be available in binary format.
+
+The main purpose of FileOutputStream class is, To create a new file (If already exist then override) as well as write the data in binary format in the specified file.
+
+In order to write the data we can use a predefined method write(byte []b) which accepts byte array as a parameter.
+
+How to convert the String text data into binary format :
+--------------------------------------------------------
+String class has provided a predefined method called getBytes() through which we can convert the String (Collection of Characters) into byte array data as shown below :
+
+               String str = "Hello India";
+	       byte []b = str.getBytes();
+
+//Program that describes how to convert String data into binary :
+-----------------------------------------------------------------
+StringToBinary.java
+--------------------
+package com.ravi.binary_stream;
+
+public class StringToBinary {
+
+	public static void main(String[] args) 
+	{
+		String str = "ABCDEF";
+		  
+		 byte[] binaryData = str.getBytes();
+		 
+		 for(byte data : binaryData)
+		 {
+	        System.out.println(data);		 
+		 }
+	}
+
+}
+
+CreateAndWriteStream.java
+--------------------------
+package com.ravi.binary_stream;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class CreateAndWriteStream {
+
+	public static void main(String[] args) throws IOException 
+	{
+		var fos = new FileOutputStream("D:\\new\\Hyd.txt");
+		
+		try(fos)
+		{
+			String str = "Hyderabad is an IT city";			
+			byte[] byteData = str.getBytes();
+			
+			fos.write(byteData);
+			
+			System.out.println("Data stroed successfully!!!");
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+
+Note : In order to write the String data, first of all we need to convert the data into binary format using getBytes() method
+-----------------------------------------------------------------
+How to read the data from the File in binary format :
+-----------------------------------------------------
+In oorder to read the data from file, We can use a predefined class FileInputStream available in java.io package.
+
+FileInputStream :
+-----------------
+It is a predefined class available in java.io package. By using this class we can read the binary data from the file.
+
+In order to read the data from the file, FileInpyrStream class has provided a predefined method called read().
+
+public int read() :
+-------------------
+It is used to read the data character by character (because It can read only one character at a time) and returns the UNICODE/ASCII value of that particular character. IF DATA IS NOT AVAILABLE IN THE FILE THEN IT WILL RETURN -1 WHICH REPRESENTS EOF i.e. nothing but EndOfFile.
+
+//Program to read the data from the File :
+------------------------------------------
+package com.ravi.binary_stream;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+public class ReadDatafromFile {
+
+	public static void main(String[] args) throws IOException 
+	{
+		var fin = new FileInputStream("D:\\new\\Hyd.txt");
+
+		try(fin)
+		{
+			int i = 0;
+			
+			while(true)
+			{
+				i = fin.read();  
+				if(i==-1)
+				{
+					break;
+				}
+				System.out.print((char)i);				
+			}		
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+
+}
+-----------------------------------------------------------------
+Working with Character Oriented Stream :
+-----------------------------------------
+In order to perform read and write operation, We can use character Stream also.
+
+Reader and Writer both are the abstract classes which represent
+super classes for perfroing all types of input and output operation using character stream.
+
+FileWriter class :
+------------------
+It is a predefined class available in java.io package,By using this class we can create a file and write character data to the file. 
+
+By using this class we can directly write String (collection of characters) Or character array to the file.  
+
+Actually It is a character oriented Stream where as if we work with FileOutputStream class, It is byte oriented Stream.
+
+
+package com.ravi.character_stream;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WritingCharacter {
+
+	public static void main(String[] args) throws IOException 
+	{
+		FileWriter fw = new FileWriter("D:\\new\\Naresh.txt");
+
+		try(fw)
+		{
+			String str = "An insitute in Ameerpet and KBHP";
+			
+			fw.write(str);
+			
+			System.out.println("Data Stored");
+			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+
+}
+-----------------------------------------------------------------
+FileReader :
+------------
+It is a predefined class available in java.io package which will directly read the data in character fromat, here also we have read() methdo which will read the data character by character and returns UNICODE value of that character.
+
+package com.ravi.character_stream;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class ReadingCharacter {
+
+	public static void main(String[] args) throws IOException
+	{
+		FileReader fr = new FileReader("D:\\new\\Naresh.txt");
+
+		 int i=0;
+		while(true)
+		{	    
+		    i = fr.read();
+		    if(i==-1)
+		    {
+		    	break;
+		    }
+		    System.out.print((char)i);
+		}
+	}
+
+}
+------------------------------------------------------------------
+***Serialization and Deserialization :
+--------------------------------------
+*** Serialization and De-Serialization :
+----------------------------------------
+It is a technique through which we can store the object data in a file. 
+
+Storing the object data into a file is called Serialization on the other hand Reading the object data from a file is called De-serialization.
+
+In order to perform serialization, a class must implements Serializable interfcae, predefined marker interface in java.io package.
+
+Java.io package has also provided a predfined class called ObjectOutputStream to perform serialization i.e writing Object data to a file using writeObject() method.
+
+where as ObjectInputStream is also a predefined class available in java.io package through which we can read the Object data from a file using readObject(). The return type of readObject() is Object.
+
+While reading the object data from the file, if the object is not available in the file then it will throw an execption java.io.EOFException. (End of file Exception)
+
+package com.ravi.ser_der_employee;
+
+import java.io.Serializable;
+import java.util.Scanner;
+
+public class Employee implements Serializable
+{
+	private Integer employeeId;
+	private String employeeName;
+	private Double employeeSalary;
+
+	public Employee(Integer employeeId, String employeeName, Double employeeSalary) {
+		super();
+		this.employeeId = employeeId;
+		this.employeeName = employeeName;
+		this.employeeSalary = employeeSalary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeSalary="
+				+ employeeSalary + "]";
+	}
+	
+	public static Employee getEmployeeObject()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Employee Id :");
+		int id = sc.nextInt();
+		System.out.print("Enter Employee Name :");
+		String name = sc.nextLine();
+		name = sc.nextLine();
+		System.out.print("Enter Employee Salary :");
+		double sal = sc.nextDouble();
+		
+		return new Employee(id, name, sal);
+		
+		
+		
+	}
+}
+
+package com.ravi.ser_der_employee;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.Scanner;
+
+public class StoreEmployeeObject {
+
+	public static void main(String[] args) throws IOException 
+	{
+		var fout = new FileOutputStream("D:\\new\\Employee.txt");
+		var oos = new ObjectOutputStream(fout);
+		var scanner = new Scanner(System.in);
+		
+		
+		try(oos; fout; scanner)
+		{
+			System.out.println("How many objects you want to write :");
+			int noOfObj = scanner.nextInt();
+			
+			for(int i=1; i<=noOfObj; i++)
+			{
+				Employee employee = Employee.getEmployeeObject();
+				oos.writeObject(employee);
+			}
+			System.out.println("Object Data stored Successfully!!!!");			
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+
+	}
+
+}
+
+package com.ravi.ser_der_employee;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class RetrieveEmployeeObject {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException 
+	{
+		var fin = new FileInputStream("D:\\new\\Employee.txt");
+		var ois = new ObjectInputStream(fin);
+		
+		try(ois; fin)
+		{
+			 Employee emp = null;
+			 
+			 while((emp = (Employee)ois.readObject()) !=null)
+			 {
+				 System.out.println(emp);
+			 }	
+		}
+		catch(java.io.EOFException e)
+		{
+			System.err.println("End of file is reached!!!!");
+			
+		}
+		
+		
+	}
+
+}
+==================================================================
+Another Program :
+------------------
+transient keyword in java :
+----------------------------
+While performing serialization operation, If we don't want to serialize any particular field then we should declare that field with transient keyword.
+Decalring transient keyword on a particular field will not serailzed that field and we will get default value.
+
+Example :
+----------
+public class Employee implements Serializable 
+{	
+	private transient int employeeId;
+	private transient String employeeName;
+	private transient Double employeeSalary;
+
+}
+
+Note : In the Employee class variables are declared with transient keyword so they will not serialized and we will get default value for all the fields.
+
+employeeId -> 0
+employeeName -> null
+employeeSalary -> null
+
+Product.java
+-------------
+package com.ravi.ser_der_employee;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Product implements Serializable
+{
+	private transient Integer productId;
+	private String productName;
+	private LocalDate manufacturedDate;
+
+	public Product(Integer productId, String productName, LocalDate manufacturedDate) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
+		this.manufacturedDate = manufacturedDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", manufacturedDate="
+				+ manufacturedDate + "]";
+	}
+	
+	
+	public static Product getProductObject()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Product Id :");
+		int pid = sc.nextInt();
+		System.out.print("Enter Product Name :");
+		String pname = sc.nextLine();
+		pname = sc.nextLine();
+		LocalDate now = LocalDate.now();
+		
+		return new Product(pid, pname, now);
+	}
+	
+
+}
+
+package com.ravi.ser_der_employee;
+
+import java.io.Serializable;
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class Product implements Serializable
+{
+	private transient Integer productId;
+	private String productName;
+	private LocalDate manufacturedDate;
+
+	public Product(Integer productId, String productName, LocalDate manufacturedDate) {
+		super();
+		this.productId = productId;
+		this.productName = productName;
+		this.manufacturedDate = manufacturedDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", manufacturedDate="
+				+ manufacturedDate + "]";
+	}
+	
+	
+	public static Product getProductObject()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Product Id :");
+		int pid = sc.nextInt();
+		System.out.print("Enter Product Name :");
+		String pname = sc.nextLine();
+		pname = sc.nextLine();
+		LocalDate now = LocalDate.now();
+		
+		return new Product(pid, pname, now);
+	}
+	
+
+}
+
+package com.ravi.ser_der_employee;
+
+import java.io.EOFException;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+public class RetrieveProductObject {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException 
+	{
+		var fin = new FileInputStream("D:\\new\\Product.txt");
+		var ois = new ObjectInputStream(fin);
+		
+		try(ois; fin)
+		{
+			Product prod = null;
+			
+			while((prod = (Product)ois.readObject()) !=null)
+			{
+				System.out.println(prod);
+			}			
+			
+		}
+		catch(EOFException e)
+		{
+			System.err.println("End of file has reached");
+		}
+		
+		
+		
+
+	}
+
+}
+==================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

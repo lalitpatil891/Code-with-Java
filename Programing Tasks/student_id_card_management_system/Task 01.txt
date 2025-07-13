@@ -1,0 +1,72 @@
+AdminCheckerTester
+
+Class Descriptions Student and ID Card Management System
+
+IDCard Class
+
+Attributes
+
+cardNumber (String) The unique ID card number.
+issueDate (String) The date on which the ID card was issued.
+
+instituteName (String) The name of the institute. 
+It is common for all ID cards and should be initialized using an instance initializer block.
+
+Methods
+displayDetails() Displays the details of the ID card.
+
+
+Take one more BLC class
+
+IDCardMaker Class
+
+Methods
+static wearIDCard(String cardNumber, String issueDate) Creates and returns an IDCard object using the given details. This is a static factory method.
+Take another BLC class 
+
+Student Class
+
+Attributes
+name (String) The name of the student.
+age (int) The age of the student.
+idCard (IDCard) The ID card assigned to the student.
+
+Methods
+Method Name assignIDCard() Assigns the given ID card to the student.
+Return Type  void
+Parameter  IDCard idCard
+
+displayDetails() Displays the details of the student and their ID card (if assigned).
+
+Main (AdminChecker Class)
+
+This class should demonstrate the following
+Use the IDCardMaker class to create an ID card.
+
+Create a Student object.
+
+Assign the ID card to the student.
+
+Display the student's details along with their ID card details.
+
+
+Sample Input 
+-------------------
+Example  1
+---------------
+IDCard idCard = IDCardMaker.wearIDCard(ID12345, 01-01-2023);
+Student student = new Student(Alice, 20);
+student.assignIDCard(idCard);
+student.displayDetails();
+
+
+Sample Output 
+--------------------
+
+Creating ID Card...
+Student Name Alice
+Age 20
+ID Card Details
+Institute Name Global Institute of Technology
+ID Card Number ID12345
+Issue Date 01-01-2023

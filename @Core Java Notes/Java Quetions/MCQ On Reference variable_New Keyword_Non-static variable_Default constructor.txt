@@ -1,0 +1,417 @@
+Ques - 1
+----------
+What is the purpose of the new keyword in Java?
+
+A. To create a new class
+B. To call a method in a class
+C. To create a new object instance
+D. To define a new variable
+
+Answer:
+
+Ques - 2
+----------
+What happens if you do not use the new keyword when creating an object in Java?
+
+A. The object will be created but not initialized
+B. A compile-time error occurs
+C. The object will be created using the default constructor
+D. The object will be created using a static method
+
+Answer:
+
+Ques - 3
+----------
+Given the following code, what will be the output?
+
+public class Test {
+    public static void main(String[] args) {
+        Test obj = new Test();
+        System.out.println(obj);
+    }
+}
+
+A. The memory address of the obj object
+B. The string representation of the obj object
+C. null
+D. A compile-time error
+
+Answer:
+
+Ques - 4
+----------
+Which of the following statements correctly creates an instance of a class Person with a default constructor?
+
+A. Person p = Person();
+B. Person p = new Person;
+C. Person p = new Person();
+D. Person p = new Person[];
+
+Answer:
+
+Ques - 5
+----------
+Which of the following is true about the new keyword?
+
+A. It can only be used within the main method
+B. It can be used to call static methods
+C. It can be used to invoke constructors
+D. It can be used to create a package
+
+Answer:
+
+Ques - 6
+----------
+What is an object in Java?
+
+A. A blueprint for creating classes
+B. An instance of a class
+C. A collection of methods
+D. A data type
+
+Answer:
+
+Ques - 7
+----------
+Which of the following statements is true regarding object references in Java?
+
+A. Two references to the same object can exist simultaneously.
+B. A single reference can point to multiple objects simultaneously.
+C. A new object is created each time a reference is assigned.
+D. References cannot be reassigned to different objects.
+
+Answer:
+
+Ques - 8
+----------
+What happens when the new keyword is used in Java?
+
+A. A new variable is declared
+B. Memory is allocated for a new object
+C. A class is defined
+D. A method is called
+
+Answer:
+
+Ques - 9
+----------
+What is the purpose of the new keyword in the following code?
+
+Person p = new Person();
+A. To declare a variable of type Person
+B. To define the Person class
+C. To create a new instance of the Person class and allocate memory for it
+D. To call a method named Person
+
+Answer:
+
+Ques - 10
+----------
+Which of the following statements is true regarding object references in Java?
+
+A. Two references to the same object can exist simultaneously.
+B. A single reference can point to multiple objects simultaneously.
+C. A new object is created each time a reference is assigned.
+D. References cannot be reassigned to different objects.
+
+Answer:
+
+Ques - 11
+--------------
+Which of the following statements is true about non-static variables in Java?
+
+A. Non-static variables are shared among all instances of a class.
+B. Non-static variables are also known as class variables.
+C. Each instance of a class has its own copy of non-static variables.
+D. Non-static variables must be initialized at the time of declaration.
+
+Answer:
+
+Ques - 12
+--------------
+What is the effect of modifying a non-static variable through one reference on another reference to the same object?
+
+A. It changes the value for all instances of the class.
+B. It changes the value only for the modified reference.
+C. It changes the value for all references to the same object.
+D. It does not change the value for any references.
+
+Answer:
+
+Ques - 13
+--------------
+Which of the following correctly describes the lifecycle of a non-static variable?
+
+A. It is created when the class is loaded and destroyed when the class is unloaded.
+B. It is created when an instance of the class is created and destroyed when the instance is destroyed.
+C. It is created when the class is first referenced and destroyed when the program ends.
+D. It is created when the variable is first used and destroyed when the variable goes out of scope.
+
+Answer:
+
+Ques - 14
+--------------
+When are non-static variables initialized in Java?
+
+A. When the class is loaded into memory.
+B. When an instance of the class is created.
+C. When the JVM starts.
+D. When the method where they are declared is called.
+
+Answer:
+
+Ques - 15
+-------------
+Which of the following can access a non-static variable directly?
+
+A. A static method in the same class.
+B. An instance method in the same class.
+C. A static method in a different class.
+D. Any method in any class without creating an instance.
+
+Answer:
+
+Ques - 16
+-------------
+How can a non-static variable be accessed from outside its class?
+
+A. Directly by the variable name.
+B. By using the class name followed by the variable name.
+C. By creating an instance of the class and using the instance followed by the variable name.
+D. By using the this keyword.
+
+Answer:
+
+Ques - 17
+-------------
+Which of the following statements is false about non-static variables?
+
+A. They are initialized to default values if not explicitly initialized.
+B. They can be accessed from static methods using the class name.
+C. They can have different values for different instances of a class.
+D. They are defined at the class level but outside any method.
+
+Answer:
+
+Ques - 18
+-------------
+What does a reference variable in Java store?
+
+A. The value of the variable
+B. The address of the object it refers to
+C. The size of the object it refers to
+D. The class definition of the object it refers to
+
+Answer: 
+
+Ques - 19
+-------------
+What happens when you assign one reference variable to another?
+
+A. A new copy of the object is created.
+B. Both reference variables point to the same object.
+C. The object is deleted.
+D. The reference variables point to different objects.
+
+Answer: 
+
+Ques - 20
+-------------
+Which of the following statements about reference variables is true?
+
+A. A reference variable can be assigned to a primitive type variable.
+B. A reference variable can be reassigned to refer to a different object.
+C. A reference variable must be initialized when it is declared.
+D. A reference variable cannot be null.
+
+Answer: 
+
+Ques - 21
+-------------
+Which of the following best describes a reference variable in Java?
+
+A. A variable that holds the data of a primitive type.
+B. A variable that directly contains the memory address of another variable.
+C. A variable that is used to refer to objects created in the heap memory.
+D. A variable that contains a copy of another variable's value.
+
+Answer: 
+
+
+Ques - 22
+-------------
+What does assigning null to a reference variable indicate?
+
+A. The reference variable is pointing to a valid object but with no data.
+B. The reference variable is not referencing any object.
+C. The reference variable has an undefined value.
+D. The reference variable is pointing to an empty object.
+
+Answer: 
+
+
+Ques - 23
+--------------
+What will be the output of the following code?
+
+class MyClass {
+    int x = 10;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        obj1.x = 20;
+        System.out.println(obj1.x + " " + obj2.x);
+    }
+}
+A. 10 10
+B. 20 10
+C. 20 20
+D. 10 20
+
+Answer: 
+
+Ques - 24
+----------
+Given the following code, how many MyClass objects are created?
+
+class MyClass {
+    int x;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        MyClass obj3 = obj1;
+    }
+}
+A. 1
+B. 2
+C. 3
+D. 4
+
+Answer: 
+
+Ques - 25
+----------
+What will be the output of the following code?
+
+class MyClass {
+    int x = 100;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = obj1;
+        obj2.x = 50;
+        System.out.println(obj1.x);
+    }
+}
+A. 0
+B. 50
+C. 100
+D. A compile-time error
+
+Answer: 
+
+Ques - 26
+----------
+What is the output of the following code?
+
+public class Test {
+    int x;
+    public static void main(String[] args) {
+        Test obj1 = new Test();
+        obj1.x = 5;
+        Test obj2 = new Test();
+        obj2.x = 10;
+        System.out.println(obj1.x + " " + obj2.x);
+    }
+}
+A. 0 0
+B. 5 10
+C. 10 5
+D. 5 5
+
+Answer: 
+
+Ques - 27
+----------
+What will be the output of the following code?
+
+class MyClass {
+    int x;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        obj1.x = 30;
+        MyClass obj2 = new MyClass();
+        obj2.x = obj1.x;
+        obj1.x = 40;
+        System.out.println(obj1.x + " " + obj2.x);
+    }
+}
+A. 30 30
+B. 40 30
+C. 40 40
+D. 30 40
+
+Answer:
+
+Ques - 28
+--------------
+Given the following code, how many times is the non-static variable x initialized?
+
+class MyClass {
+    int x = 3;
+}
+
+public class Test {
+    public static void main(String[] args) {
+        MyClass obj1 = new MyClass();
+        MyClass obj2 = new MyClass();
+        MyClass obj3 = new MyClass();
+    }
+}
+A. 1
+B. 2
+C. 3
+D. 4
+
+Answer: 
+
+Ques - 29
+-------------
+What is a default constructor in Java?
+
+A. A constructor that is explicitly defined by the programmer.
+B. A constructor that initializes all instance variables to their default values.
+C. A constructor that is automatically provided by the Java compiler if no constructors are defined.
+D. A constructor that can be used to initialize static variables.
+
+Answer: 
+
+Ques - 30
+-------------
+What happens if a class defines at least one constructor explicitly?
+
+A. The default constructor is still provided by the Java compiler.
+B. The default constructor is not provided by the Java compiler.
+C. The class will have no constructors available.
+D. The class must be initialized with values.
+
+Answer: 
+
+
+
+
+
+
+
+
