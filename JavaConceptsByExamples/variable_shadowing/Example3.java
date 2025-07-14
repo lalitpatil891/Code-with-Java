@@ -6,7 +6,7 @@ public class Example3 {
 
 		//System.out.println("Sum of a&b is :"+ (a+b));
 		int c = a+b;
-		
+
 		return c;
 	}
 
@@ -17,7 +17,7 @@ public class Example3 {
 		int a = 10, b = 80;
 //		System.out.println("sum is: "+e1.add(10, 20));
 		System.out.println("Sum is: "+e1.add(a,b));
-		
-	
+
+
 	}
 }
