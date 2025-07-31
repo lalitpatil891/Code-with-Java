@@ -1,0 +1,53 @@
+What is Collection?
+-------------------
+Collections framework is nothing but handling individual Objects (Collection Interface) and Group of objects (Map interface).
+We know only object can move from one network to another network.
+A collections framework is a class library to handle group of Objects.
+It is implemented by using java.util package.
+It provides an architecture to store and manipulate group of objects.
+All the operations that we can perform on data such as searching, sorting, insertion and deletion can be done by using collections framework because It is the data structure of Java.
+The simple meaning of collections is single unit of Objects.
+-------------------------------------------------------------
+It provides the following sub interfaces:
+1) List (Accept duplicate elements)
+2) Set (Not accepting duplicate elements)
+3) Queue (Storing and Fetching the elements based on some order i.e FIFO)
+Note: Collection is a predefined interface available in java.util package whereas Collections is a predefined utility class which is available from JDK 1.2V which contains only static methods (Constructor is private)
+
+Collection Hierarchy
+---------------------
+Iterable (I) [1.5]
+  ├── Iterator (I) [1.2]
+  └── ListIterator (I) [1.2]
+       ├── forEach(Consumer<T> cons)  // Java 1.8
+       └── spliterator();             // Java 1.8
+  ⮑ forEach loop supported
+
+Collection (I) [1.2]
+  ├── List (I) [1.2]
+  ├── Set (I) [1.2]
+  └── Queue (I) [1.5]
+
+  Key Notes:
+  Iterable is the root interface added in Java 1.5, supports enhanced for-each loop.
+  Collection extends Iterable.
+  Major subinterfaces of Collection:
+  List (ordered, duplicates allowed)
+  Set (no duplicates)
+  Queue (FIFO operations, added in Java 1.5)
+  Iterator and ListIterator are used to traverse collections.
+  From Java 1.8, methods like forEach(Consumer) and spliterator() were added.
+
+-------------------------------------------------------------------------------
+
+Methods of Collection interface:
+--------------------------------
+a) public boolean add(E element) : It is used to add an item/element in the in the collection.
+b) public boolean addAll(Collection c) : It is used to insert the specified collection elements in the existing collection(For merging the Collection)
+c) public boolean retainAll(Collection c) :- It is used to retain all the elements from existing element. (Common Element)
+d) public boolean removeAll(Collection c) :- It is used to delete all the elements from the existing collection.
+e) public boolean remove(Object element) :- It is used to delete an element from the collection based on the object.
+f) public int size() :- It is used to find out the size of the Collection [Total number of elements available]
+g) public void clear() :- It is used to clear all the elements at once from the Collection.
+
+All the above methods of Collection interface will be applicable to all the sub interfaces like List, Set and Queue.
