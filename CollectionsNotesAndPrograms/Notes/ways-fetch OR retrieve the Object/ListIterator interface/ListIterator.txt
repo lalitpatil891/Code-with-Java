@@ -1,0 +1,22 @@
+-------------------------
+ListIterator<E> interface
+-------------------------
+It is a predefined interface available in java.util package and it is the sub interface of Iterator available from JDK 1.2v.
+It is used to retrieve the Collection object in both the direction i.e in forward direction as well as in backward direction. Here the inner class name is LstItr class extends from Itr class.
+
+public ListIterator listIterator();
+
+Example
+
+ListIterator lit =   fruits.listIterator();
+
+1) public boolean hasNext() :- It will verify the element is available in the next position or not, if available it will return true otherwise it will return false.
+
+2) public Object next() :- It will return the next position collection object.
+
+3) public boolean hasPrevious() :- It will verify the element is available in the previous position or not, if available it will return true otherwise it will return false.
+
+4) public Object previous() :- It will return the previous position collection object.
+
+
+Note Apart from these 4 methods we have add(), set() and remove() method in ListIterartor interface.  
