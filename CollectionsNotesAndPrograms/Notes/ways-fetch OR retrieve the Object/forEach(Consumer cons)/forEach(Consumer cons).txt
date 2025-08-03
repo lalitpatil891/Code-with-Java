@@ -1,0 +1,106 @@
+Q. How forEach(Consumer<T>) method works internally ?
+-------------------------------------------------
+forEach() method is available from JDK 1.8V.
+This forEach() method is used iterate the elements from the source.
+This forEach() method is available in the following 3 places:
+1) Iterable (JDK 1.5)
+2) Map interface (JDK 1.2)
+3) Stream interface (JDK 1.8)
+Here, we are talking about forEach(Consumer<T> cons) method of Iterable interface.
+forEach(Consumer<T> cons) method of Iterable interface internally uses for each loop.
+---
+Case 1: By using Anonymous inner class :
+package com.ravi.collection;
+
+import java.util.Vector;
+import java.util.function.Consumer;
+
+public class ForEachMethodInternalDemo1 {
+
+	public static void main(String[] args)
+	{
+		 Vector<String> listOfCity = new Vector<>();
+	       listOfCity.add("Hyderabad");
+	       listOfCity.add("Kolkata");
+	       listOfCity.add("Pune");
+	       listOfCity.add("Indore");
+	       listOfCity.add("Mumbai");
+
+	       //Anonymous inner class for Consumer<T>
+	       Consumer<String> cons = new Consumer<String>()
+	       {
+				@Override
+				public void accept(String city)
+				{
+					System.out.println(city.toUpperCase());
+				}
+		   };
+	       listOfCity.forEach(cons);
+	}
+}
+---
+Case 2
+package com.ravi.collection;
+
+import java.util.Vector;
+import java.util.function.Consumer;
+
+public class ForEachMethodInternalDemo1 {
+
+	public static void main(String[] args)
+	{
+		  Vector<String> listOfCity = new Vector<>();
+	       listOfCity.add("Hyderabad");
+	       listOfCity.add("Kolkata");
+	       listOfCity.add("Pune");
+	       listOfCity.add("Indore");
+	       listOfCity.add("Mumbai");
+
+	       //Lambda Expression
+	       Consumer<String> cons = city -> System.out.println(city.toUpperCase());
+
+	       listOfCity.forEach(cons);
+	}
+}
+---
+Case 3
+package com.ravi.collection;
+
+import java.util.Vector;
+import java.util.function.Consumer;
+
+public class ForEachMethodInternalDemo1 {
+
+	public static void main(String[] args)
+	{
+		Vector<String> listOfCity = new Vector<>();
+	       listOfCity.add("Hyderabad");
+	       listOfCity.add("Kolkata");
+	       listOfCity.add("Pune");
+	       listOfCity.add("Indore");
+	       listOfCity.add("Mumbai");
+
+	       listOfCity.forEach(city -> System.out.println(city.toUpperCase()));
+	}
+}
+---
+Case 4 [Method Reference]
+package com.ravi.collection;
+
+import java.util.Vector;
+import java.util.function.Consumer;
+
+public class ForEachMethodInternalDemo1 {
+
+	public static void main(String[] args)
+	{
+	       Vector<String> listOfCity = new Vector<>();
+	       listOfCity.add("Hyderabad");
+	       listOfCity.add("Kolkata");
+	       listOfCity.add("Pune");
+	       listOfCity.add("Indore");
+	       listOfCity.add("Mumbai");
+
+	       listOfCity.forEach(System.out::println);
+	}
+}
