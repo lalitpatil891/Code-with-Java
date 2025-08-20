@@ -10,8 +10,8 @@ public class VectorDemo2 {
 	public static void main(String[] args)
 	{
 	
-		List<Integer> list = new Vector<>();
-		
+		Vector<Integer> list = new Vector<Integer>(5,2);
+				
 		int x[] = {22, 20, 10, 40, 15, 58};
 		
 		//Adding array values to Vector
