@@ -1,0 +1,22 @@
+Stack<E>
+=========
+•	public class Stack<E> extends Vector<E>
+•	It is a predefined class available in java.util package. It is the sub class of Vector class introduced from JDK 1.0 so, It is also a legacy class.
+•	It is a linear data structure that is used to store the Objects in LIFO (Last In first out) order.
+•	Inserting an element into a Stack is known as push operation  where as extracting an element from the top of the stack is known as pop operation.
+•	It throws an exception called java.util.EmptyStackException, if Stack is empty and we want to fetch the element.
+•	It has only one constructor as shown below
+•	Stack s = new Stack();
+•	Will create empty Stack Object.
+
+Methods
+--------
+public E push(Object o) :- To insert an element in the bottom of the Stack.
+
+public E pop() :- To remove and return the element from the top of the Stack.
+
+public E peek() :- Will fetch the element from top of the Stack without removing.
+
+public boolean empty() :- Verifies whether the stack is empty or not (return type is boolean)
+
+public int search(Object o) :- It will search a particular element in the Stack and it returns OffSet position (int value). If the element is not present in the Stack it will return -1
