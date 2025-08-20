@@ -102,6 +102,6 @@ Output:
        ArrayList insertion order after adding F: [A, B, C, D, E, F, G]
 ```
 
-![Explanation with diagram]();
+![Explanation with diagram](https://github.com/lalitpatil891/Code-with-Java/blob/main/CollectionsNotesAndPrograms/Notes/List/ArrayList%20(Class%20-%20implements%20List)/java-arraylist-program.png);
 
 
