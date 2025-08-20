@@ -104,4 +104,52 @@ Output:
 
 ![Explanation with diagram](https://github.com/lalitpatil891/Code-with-Java/blob/main/CollectionsNotesAndPrograms/Notes/List/ArrayList%20(Class%20-%20implements%20List)/java-arraylist-program.png);
 
+---
+
+### Important Methods of `ArrayList`
+
+1. **`public List subList(int fromIndex, int toIndex)`**
+
+   * Returns a **portion of the list** between `fromIndex` (inclusive) and `toIndex` (exclusive).
+   * Useful for working on a subset of elements without creating a new list.
+
+2. **`public boolean contains(Object element)`**
+
+   * Checks whether the list contains the specified element.
+   * Returns `true` if the element exists, otherwise `false`.
+
+3. **`public boolean removeIf(Predicate<T> filter)`**
+
+   * Removes elements that match the given condition (predicate).
+   * Example: `list.removeIf(x -> x % 2 == 0); // removes even numbers`
+
+4. **`public void trimToSize()`**
+
+   * Reduces the **capacity** of the ArrayList to its current size.
+   * Helps optimize memory usage.
+
+5. **`public void ensureCapacity(int minCapacity)`**
+
+   * Ensures the ArrayList can hold at least `minCapacity` elements without resizing.
+   * Prevents frequent **array resizing** during bulk insertions.
+   * Still remains dynamically growable beyond the specified capacity.
+
+---
+
+### Time Complexity of `ArrayList`
+
+* **Insertion/Deletion (middle or beginning):** `O(n)`
+
+   * Because elements need to be shifted.
+   * Not efficient for frequent insertions/deletions in the middle.
+
+* **Insertion at end (amortized):** `O(1)`
+
+   * Except when resizing happens (then `O(n)` due to copying).
+
+* **Retrieval (`get(index)`):** `O(1)`
+
+   * Direct access using index since internally ArrayList uses arrays.
+   * Implements **`RandomAccess`** marker interface for fast random access.
+
 
