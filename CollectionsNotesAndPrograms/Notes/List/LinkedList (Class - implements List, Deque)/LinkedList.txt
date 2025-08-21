@@ -1,0 +1,310 @@
+----------
+LinkedList
+----------
+In order to insert and delete the element in middle of the list frequently, we introduced LinkedList class.
+public class LinkedList<E> extends AbstractSequentialList<E> implements List<E>, Deque<E>, Cloneable, Serializable
+It is a predefined class available in java.util package under List interface from JDK 1.2v.
+It is ordered by index position like ArrayList except the elements (nodes) are doubly linked to one another. This linkage provide us new method for adding and removing the elements from the middle of LinkedList.
+It stores the elements in non-contiguous memory location.
+*The important thing is, LikedList may iterate more slowely than ArrayList but LinkedList is a good choice when we want to insert or delete the elements frequently in the list.
+From jdk 1.6 onwards LinkedList class has been enhanced to support basic queue operation by implementing Deque<E> interface.
+LinkedList methods are not synchronized.
+It inserts the elements by using Doubly linked List so insertion and deleteion is very easy.
+ArrayList is using Dynamic array data structure but LinkedList class is using LinkedList (Doubly LinkedList) data structure.
+At the time of searching an element, It will start searching from Head node OR tail node OR closer one based on the index.
+**Here Iterators are Fail Fast Iterator.
+
+Constructor
+-----------
+It has 2 constructors
+1) LinkedList list1 = new LinkedList();
+    It will create a LinkedList object with 0 capacity.
+
+2) LinkedList list2 = new LinkedList(Collection c);
+    Interconversion between the collection
+
+Methods of LinkedList class
+---------------------------
+1) void addFirst(Object o)
+2) void addLast(Object o)
+3) Object getFirst()
+4) Object getLast()
+5) Object removeFirst()
+6) Object removeLast()
+The time complexcity for insertion and deletion is O(1) The time complexcity for seraching O(n) because it serach the elemnts using node reference.
+--------------------------------------------------------------------
+import java.util.LinkedList;
+
+public class MyLinkedList
+{
+	private static class Node
+	{
+		int item;
+		Node next;
+
+		public Node(int item)
+		{
+			this.item = item;
+			this.next = null;
+		}
+	}
+
+	public static void main(String[] args)
+	{
+		Node node1 = new Node(100);
+		Node node2 = new Node(200);
+		Node node3 = new Node(300);
+
+		node1.next = node2;
+		node2.next = node3;
+
+
+		System.out.println(node1.item);
+		System.out.println(node1.next.item);
+		System.out.println(node1.next.next.item);
+	}
+}
+--------------------------------------------------------------------
+package com.ravi.linked_list;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+public class LinkedListDemo
+{
+ public static void main(String args[])
+ {
+      LinkedList<Object> list=new LinkedList<>();
+	  list.add("Ravi");
+	  list.add("Vijay");
+	  list.add("Ravi");
+	  list.add(null);
+	  list.add(42);
+
+	  System.out.println("1st Position Element is :"+list.get(1));
+
+	  //Iterator interface
+
+	   Iterator<Object> itr = list.iterator();
+	   itr.forEachRemaining(System.out::println); //JDK 1.8
+  }
+}
+
+Note : From this program, It is clear that LinkedList works on the basis of index.
+---------------------------------------------------------------------
+package LinkedList;
+
+import java.util.LinkedList;
+
+public class LinkedList3 {
+	public static void main(String args[]) {
+		LinkedList<String> list = new LinkedList<>();
+		list.add("Item 2");
+		list.add("Item 3");
+		list.add("Item 4");
+		list.add("Item 5");
+		list.add("Item 6");
+		list.add("Item 7");
+		list.add("Item 9");
+
+		list.add(0, "Item 0");
+		list.add(1, "Item 1");
+		list.add(8, "Item 8");
+		list.add(9, "Item 10");
+
+		System.out.println(list);
+
+		list.remove("Item 5");
+		System.out.println(list);
+
+		list.removeLast();
+		System.out.println(list);
+
+		list.removeFirst();
+		System.out.println(list);
+
+		list.set(0, "Ajay");
+		list.set(1, "Vijay");
+		list.set(2, "Anand");
+		list.set(3, "Aman");
+		list.set(4, "Suresh");
+		list.set(5, "Ganesh");
+		list.set(6, "Ramesh");
+
+		list.forEach(x -> System.out.println(x));
+	}
+}
+
+Note: From the above program it is clear that we can insert or delete an element in the LinkedList with good time complexity.
+---------------------------------------------------------------------
+package com.ravi.linked_list;
+
+//Methods of LinkedList class
+import java.util.LinkedList;
+public class LinkedListDemo2
+{
+    public static void main(String[] argv)
+    {
+          LinkedList<String> list = new LinkedList<>();
+
+          list.addFirst("Ravi");  //     Rahul
+          list.add("Rahul");
+          list.addLast("Anand");
+
+          System.out.println(list.getFirst());
+          System.out.println(list.getLast());
+
+          list.removeFirst();
+          list.removeLast();
+
+          System.out.println(list); //[Rahul]
+    }
+}
+--------------------------------------------------------------
+package com.ravi.linked_list;
+//ListIterator methods (add(), set(), remove())
+import java.util.*;
+public class LinkedListDemo3
+{
+	public static void main(String[] args)
+	{
+		LinkedList<String> city = new LinkedList<> ();
+
+		ListIterator<String> lt = city.listIterator();
+
+          	while(lt.hasNext())
+		  {
+			String cityName =  lt.next();
+
+			if(cityName.equals("Kolkata"))
+			{
+                 	lt.remove();
+			}
+			else if(cityName.equals("Hyderabad"))
+			{
+                 	lt.add("Ameerpet");
+			}
+			else if(cityName.equals("Pune"))
+			{
+                 	lt.set("Mumbai");
+			}
+		}
+		city.forEach(System.out::println);
+	}
+}
+
+Here there is no ConcurrentModificationException because ListIterator is modifying the structure by it's own method hence there is no problem because it is internal structure modification.
+--------------------------------------------------------------
+package com.ravi.linked_list;
+//Insertion, deletion, displaying and exit
+
+package LinkedList;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class LinkedList6 {
+	public static void main(String args[]) {
+		List<Integer> linkedList = new LinkedList<>();
+		Scanner scanner = new Scanner(System.in);
+
+		while (true) {
+			System.out.println("Linked List: " + linkedList); // []
+			System.out.println("1. Insert Element");
+			System.out.println("2. Delete Element");
+			System.out.println("3. Display Element");
+			System.out.println("4. Exit");
+
+			System.out.print("Enter your choice: ");
+			int choice = scanner.nextInt();
+
+			switch (choice) {
+			case 1:
+				System.out.print("Enter the element to insert: ");
+				int elementToAdd = scanner.nextInt();
+				linkedList.add(elementToAdd);
+				break;
+			case 2:
+				if (linkedList.isEmpty()) {
+System.out.println("Linked list is empty. Nothing to delete.");
+				} else {
+					System.out.print("Enter the element to delete: ");
+					int elemenetToDelete = scanner.nextInt();
+
+			boolean remove = linkedList.remove(Integer.valueOf(elemenetToDelete));
+
+			if (remove) {
+		System.out.println("Element " + elemenetToDelete + " is deleted Successfully");
+					} else {						System.out.println("Element " + elemenetToDelete + " not available is the LinkedList");
+					}
+
+				}
+				break;
+
+			case 3:
+				System.out.println("Elements in the linked list.");
+				linkedList.forEach(System.out::println);
+				break;
+
+			case 4:
+				System.out.println("Exiting the program.");
+				scanner.close();
+				System.exit(0);
+			default:
+				System.out.println("Invalid choice. Please try again.");
+			}
+		}
+	}
+}
+------------------------------------------------------------
+//LinkedList list = new LinkedList(Collection coll)
+package com.ravi.linked_list;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
+public class LinkedListDemo5 {
+
+	public static void main(String[] args)
+	{
+
+		List<String> listOfName = Arrays.asList("Ravi","Rahul","Ankit", "Rahul");
+
+		LinkedList<String> list = new LinkedList<>(listOfName);
+		list.forEach(System.out::println);
+	}
+
+}
+
+package com.ravi.linked_list;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+record Product(Integer productId, String productName)
+{
+
+}
+
+public class LinkedListDemo6 {
+
+	public static void main(String[] args)
+	{
+		List<Product> listOfProduct = new LinkedList<Product>();
+		listOfProduct.add(new Product(1, "ApplePhone"));
+		listOfProduct.add(new Product(2, "MiPhone"));
+		listOfProduct.add(new Product(3, "VivoPhone"));
+
+		System.out.println("Is list empty :"+listOfProduct.isEmpty());
+
+		Iterator<Product> iterator = listOfProduct.iterator();
+iterator.forEachRemaining(prod -> System.out.println(prod.productName().toUpperCase()));
+
+		Product product = listOfProduct.get(1);
+		System.out.println(product.productName());
+	}
+}
+
