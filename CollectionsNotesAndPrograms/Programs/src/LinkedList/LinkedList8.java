@@ -33,8 +33,9 @@ public class LinkedList8 {
 
 
 /*
-Ravi
-Rahul
-Ankit
-Rahul
+Is list empty :false
+APPLEPHONE
+MIPHONE
+VIVOPHONE
+MiPhone
 */

@@ -1,0 +1,22 @@
+Set in Java (interface Set<E>)
+-----------
+A set in Java is an unordered collection of unique elements or objects. In other words, a set is a collection of elements that are not stored in a particular order.
+
+Elements are simply added to the set without any control over where they go. For example, in many applications, we do not need to care about the order of elements in a collection.
+
+Consider the below figure where a set of books by topics is not arranged. A collection of elements is not stored in a particular order into a set. Such a collection of elements without order is called set in Java.
+
+We can add elements in a set and iterate over all elements in a set. It will grow dynamically when elements are stored in it. We can also check whether a particular element is present in the set.
+
+A set will not allow duplicate elements. That means an element can exist only once in the set. If we try to add the same element that is already present in the set, then it is not stored in the set. That’s why each element in a set is unique.
+
+Set in Java can be used to remove duplicate elements from the collection.
+
+Set holds a single reference to an object. It does not provide two references to the same object, two references to null, or references to two objects a and b such that a.equals(b).
+
+When to Use Set in Java Programming?
+1. If you want to represent a group of individual elements as a single entity where duplicates are not allowed and insertion order is not preserved then we should go for the Set.
+
+2. If your requirement is to get unique elements, set is the best choice for this.
+
+3. If you want to remove duplicate elements without maintaining the insertion order from the non-set collection, you should go for set.
