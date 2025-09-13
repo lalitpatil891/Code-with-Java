@@ -1,0 +1,67 @@
+List<E> interface
+-----------------
+It is the sub interface of Collection interface introduced from JDK 1.2V.
+
+It is internally an Array so it stores the object in a sequence order by using index.
+
+Here we can store the object by using index because List interface has provided add(int index, E element) method which will add the object based on the index position.
+
+List interface can accept duplicate elements.
+
+We can perform sorting operation directly by using sort(Comparator<T> cmp) method or by using Collections.sort(List<E> list) interface as a parameter.
+
+We can iterate the elements of List interface by using Iterator and ListIterator interface.
+---------------------------------------------------------------
+List interface Hierarchy
+java.lang.Iterable (Interface)
+       |
+       |--> java.util.Collection (Interface)
+                 |
+                 |--> java.util.List (Interface)
+                 |         |
+                 |         |--> ArrayList (Class - implements List)
+                 |         |--> LinkedList (Class - implements List, Deque)
+                 |         |--> Vector (Class - implements List)
+                 |                 |
+                 |                 |--> Stack (Class - extends Vector)
+                 |
+              Stack...
+
+-------------------------------------------------------------
+Behaviour of List interface Specific classes
+-----------------------------------------------
+1) It stores the elements on the basis of index because internally it is using array concept.
+2) It can accept duplicate, homogeneous and heterogeneous elements.
+3) It stores everything in the form of Object.
+4) When we accept the collection classes without generic concept then compiler generates a warning message because It is unsafe object.
+5) By using generic (<>) (JDK 1.5V) we can eliminate compilation warning and still we can take homogeneous as well as heterogeneous. (Vector<Object>)
+6) In list interface few classes are dynamically Growable like Vector and ArrayList. 
+
+--------------------------------------------------------------------
+List<E> interface Methods
+--------------------------
+1) public boolean isEmpty() :- Verify whether List is empty or not
+
+2) public void clear() :- Will clear all the elements, Basically List will become empty.
+
+3) public int size() :- To get the size of the Collections(Total number of elements are available in the collection)
+
+4) public void add(int index, Object o) :- Insert the element based on the index position.
+
+5) public boolean addAll(int index, Collection c) :- Insert the Collection based on the index position
+
+6) public Object get(int index) :- To retrieve the element based on the index position
+
+7) public Object set(int index, Object o) :- To override or replace the existing element based on the index position
+
+8) public Object remove(int index) :- remove the element based on the index position
+
+9) public boolean remove(Object element) :-  remove the element based on the object element, It is the Collection interface method extended by List interface
+
+10) public int indexOf() :- index position of the element
+
+11) public int lastIndex() :- last index position of the element
+
+12) public Iterator iterator() :- To fetch or iterate or retrieve the elements from Collection in forward direction only.
+
+13) public ListIterator listIterator() :- To fetch or iterate or retrieve the elements from Collection in forward and backward direction.

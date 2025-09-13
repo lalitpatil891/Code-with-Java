@@ -1,0 +1,27 @@
+HashSet<E> [UNORDERED, UNSORTED, NO DUPLICATES]
+-----------------------------------------------
+public class HashSet<E> extends AbstractSet<E> implements Set<E>, Clonabale, Serializable
+
+It is a predefined class available in java.util package under Set interface and introduced from JDK 1.2V.
+It is an unsorted and unordered set.
+It accepts hetrogeneous and homogeneous both kind of data.
+It uses Hashtable data structure, default capacity is 16 that means 16 buckets will be created internally.
+*It uses the hashcode of the object being inserted into the Collection. Using this hashcode it finds the bucket location.
+It doesn't contain any duplicate elements as well as It does not maintain any order while iterating the elements from the collection.
+It can accept one null value.
+HashSet methods are not synchronized.
+HashSet is used for fast searching operation.
+It has constant performance in all the operations like insert, delete and search.
+------------
+It contains 4 types of constructors
+1) HashSet hs1 = new HashSet();
+    It will create the HashSet Object with default capacity is 16. The default load fator or Fill Ratio is 0.75   (75% of HashSet is filled up then new HashSet Object will be created having double capacity)
+
+2) HashSet hs2 = new HashSet(int initialCapacity);
+    will create the HashSet object with user specified capacity.
+
+3) HashSet hs3 = new HashSet(int initialCapacity, float loadFactor);
+    we can specify our own initialCapacity and loadFactor(by default load factor is 0.75)
+
+4) HashSet hs4 = new HashSet(Collection c);
+    Interconversion of Collection.

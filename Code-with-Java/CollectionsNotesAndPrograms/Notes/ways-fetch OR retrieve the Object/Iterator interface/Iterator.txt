@@ -1,0 +1,18 @@
+-----------
+Iterator<E>
+-----------
+It is a predefined interface available in java.util package available from 1.2 version.
+It is used to fetch/retrieve the elements from the Collection in forward direction only because it is also a cursor.
+It is also using private inner class i.e Itr class.
+
+public Iterator iterator();
+
+Example
+
+Iterator itr = listOfCity.iterator();
+
+Now, Iterator interface has provided two methods
+
+public boolean hasNext() :- It will verify, the element is available in the next position or not, if available it will return true otherwise it will return false.
+
+public Object next() :- It will return the collection object and move the cursor to the element object.

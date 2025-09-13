@@ -1,0 +1,19 @@
+-----------
+Enumeration
+-----------
+It is a predefined interface available in java.util package from JDK 1.0 onwards(Legacy interface).
+We can use Enumeration interface to fetch or retrieve the Objects one by one from the Collection because it is a cursor.
+We can create Enumeration object by using elements() method of the legacy Collection class. Internally it uses anonymous inner class object.
+public Enumeration elements();
+Enumeration interface contains two methods :
+1) public Enumeration elements();       // Returns the Enumeration object
+2) public boolean hasMoreElements();    // Checks if more elements are available
+3) public Object nextElement();         // Returns next element from collection
++------------------------------+
+| Hyderabad   [0]             |  <== First element
+| Kolkata     [1]             |
+| Pune                        |
+| Indore                      |
+| Mumbai                      |  <== Last element
++------------------------------+
+Note It will only work with legacy Collections classes.

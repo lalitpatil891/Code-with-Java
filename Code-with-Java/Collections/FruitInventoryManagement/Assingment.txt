@@ -1,0 +1,42 @@
+FruitInventoryManagement
+------------------------
+You are tasked with implementing a simple Java program that manages a collection of fruits and their quantities using a HashMap.
+Create a ELC class FruitInventoryManagement :
+Add fruits and their quantities to the HashMap.
+Display the total number of entries in the HashMap.
+Check if the HashMap is empty.
+Retrieve and print the quantity of a specific fruit.
+Check if a specific fruit exists in the HashMap.
+Check if a specific quantity exists in the HashMap.
+
+Sample Output :
+Added Apple: 50
+Added Banana: 30
+Added Orange: 20
+Total number of entries: 3
+HashMap is not empty.
+
+Quantity for Apple: 50
+Quantity for Banana: 30
+
+Orange exists in the records.
+Mango does not exist in the records.
+
+Quantity 20 exists in the records.
+Quantity 100 does not exist in the records.
+Sample Input
+Added Apple: 50
+Added Banana: 30
+Added Orange: 20
+Sample Output
+Total number of entries: 3
+HashMap is not empty.
+
+Quantity for Apple: 50
+Quantity for Banana: 30
+
+Orange exists in the records.
+Mango does not exist in the records.
+
+Quantity 20 exists in the records.
+Quantity 100 does not exist in the records.

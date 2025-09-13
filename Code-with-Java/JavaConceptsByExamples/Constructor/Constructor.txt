@@ -1,0 +1,115 @@
+Constructor [Introduction]
+---------------------------
+If the name of the class and name of the method both are exactly same and It does not contain any return type then it is called Constructor.
+
+Example :
+-----------
+public class Test
+{
+   public Test() //Constructor
+   {
+   }
+}
+---------------------------------------------------------------
+In java, Whenever we write a class and If we don't write any kind of constructor then automatically compiler will add one
+default no argument constructor in the class at the time of compilation.
+
+Demo.java
+-----------
+public class Demo
+{
+   //Programmer has not provided any constructor
+}
+
+javac Demo.java (Compilation)
+[After compilation Demo.class file will be generated]
+
+Demo.class
+----------
+public class Demo
+{
+  public Demo() //Default No Argument Constructor [Added by
+  {                                             java compiler]
+  }
+}
+
+*Every java class must have at-least one constructor either
+ explicitly written by user OR implicitly added by java compiler.
+
+The access modifier of default no argument constructor [added by java compiler] will depend upon class access modifier that means, If the class is public then default no argument constructor will also be public otherwise not.
+
+Example :
+---------
+public class Test
+{
+}
+
+javac Test.java [java compiler will compile and add default
+                 constructor]
+
+javap Test.class [To see the Constructor added by java compiler]
+===============================================================
+02-11-2024
+-----------
+Why compiler is adding default constructor to our class :
+---------------------------------------------------------
+We have 2 reasons that why compiler is adding default constructor :
+
+1) Without default constructor, Object creation is not possible in java by using new keyword, if the class does not contain user-defined constructor.
+
+2) As we know only class level variables are having default values so,  default constructor will initialize all the instance variables with default values with the help of new keyword.
+
+ Data type - Default value
+   byte  - 0
+   short - 0
+   int   - 0
+   long  - 0
+   float - 0.0
+   double - 0.0
+   char - (space) '\u0000'
+   boolean - false
+   String - null
+   Object - null (For any class i.e reference variable the default value is null)
+
+Program that describes new keyword is repsonsible to allocate
+the default values for non static variables :
+--------------------------------------------
+2 files :
+---------
+Student.java
+-------------
+package com.ravi.oop;
+
+public class Student
+{
+  int rollNumber;
+  String studentName;
+  double studentFees;
+
+
+  public void getStudentData()
+  {
+	System.out.println("Roll Number is :"+rollNumber);
+	System.out.println("Student Name is :"+studentName);
+	System.out.println("Student Fees is:"+studentFees);
+
+  }
+
+}
+
+StudentDemo.java
+-----------------
+package com.ravi.oop;
+
+public class StudentDemo
+{
+	public static void main(String[] args)
+	{
+		Student raj = new Student();
+		raj.getStudentData();
+
+	}
+
+}
+
+Here we will get output as default values i.e 0 , null and 0.0

@@ -1,0 +1,169 @@
+---------------------------------
+public boolean equals(Object obj)
+---------------------------------
+It is a predefined non static method of Object class which is used to compare two objects based on the memory reference OR memory address as shown in the program below :
+package com.ravi.equals;
+
+class Customer
+{
+	private int customerId;
+	private String customerName;
+
+	public Customer(int customerId, String customerName)
+	{
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+	}
+}
+
+public class EqualsDemo1 {
+
+	public static void main(String[] args)
+	{
+		Customer c1 = new Customer(111, "Scott");
+		Customer c2 = new Customer(111, "Scott");
+
+		System.out.println(c1.equals(c2));
+
+	}
+
+}
+
+Note : It will return false because equals(Object obj) method of Object class is used to compare two objects based on the memory reference/Memory address.
+--------------------------------------------------------------
+If we want to compare two Objects based on the content but not based on the memory address then we should override equals(Object obj) method from Object class as shown below
+
+package com.ravi.equals;
+
+class Customer
+{
+	private int customerId;
+	private String customerName;
+
+	public Customer(int customerId, String customerName)
+	{
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return this.customerId;
+	}
+
+
+	@Override
+	public boolean equals(Object obj)
+	{
+       	//1st Object data
+		int id1 = this.customerId;
+		String name1 = this.customerName;
+
+		//2nd Object data
+		Customer c2 = (Customer) obj;
+		int id2 = c2.customerId;
+		String name2 = c2.customerName;
+
+		if(id1 == id2 && name1.equals(name2))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+}
+
+public class EqualsDemo1 {
+
+	public static void main(String[] args)
+	{
+		Customer c1 = new Customer(111, "Scott");
+		Customer c2 = new Customer(111, "Scott");
+
+		System.out.println(c1.equals(c2));
+
+		System.out.println(c1.hashCode()+" : "+c2.hashCode());
+	}
+}
+
+WE SHOULD ALWAYS OVERRIDE HASHCODE AND EQUALS BOTH THE METHODS TOGETHER
+All the Wrapper classes and String class have overriden both the methods.
+--------------------------------------------------------------
+package com.ravi.equals;
+
+class Product
+{
+	private Integer pid;
+	private String pname;
+	public Product(Integer pid, String pname)
+{
+		super();
+		this.pid = pid;
+		this.pname = pname;
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return this.pid;
+	}
+
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		if(obj instanceof Product)
+		{
+			Product p2 = (Product) obj;
+
+			if(this.pid == p2.pid && this.pname.equals(p2.pname))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			System.err.println("Comparison is not possible!!");
+			return false;
+		}
+	}
+}
+
+public class EqualsDemo2 {
+
+	public static void main(String[] args)
+	{
+		Product p1 = new Product(111, "Scott");
+		Student s1 = new Student(111, "Scott");
+
+		System.out.println(p1.equals(s1));
+		System.out.println(p1.equals(null));
+
+		System.out.println("..............");
+		Product p2 = new Product(222, "Scott");
+		System.out.println(p1.equals(p2));
+	}
+}
+
+class Student
+{
+	private int sid;
+	private String sname;
+
+	public Student(int sid, String sname)
+{
+		super();
+		this.sid = sid;
+		this.sname = sname;
+	}
+}
+

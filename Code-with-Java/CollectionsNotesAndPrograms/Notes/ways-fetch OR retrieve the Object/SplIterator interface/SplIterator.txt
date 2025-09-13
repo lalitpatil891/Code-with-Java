@@ -1,0 +1,11 @@
+---------------------
+SplIterator interface
+---------------------
+It is a predefined interface available in java.util package from java 1.8 version.
+
+It is a cursor through which we can fetch the elements from the Collection [Collection, array, Stream]
+
+It is the combination of hasNext() and next() method.
+
+It is using forEachRemaining(Consumer<T> cons) method for fetching the elements.
+----

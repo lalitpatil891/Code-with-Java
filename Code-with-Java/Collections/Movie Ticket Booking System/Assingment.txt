@@ -1,0 +1,45 @@
+Movie Ticket Booking System
+------------------------------
+
+MovieTicketELC
+ A multiplex cinema wants to maintain a system for managing movie ticket
+   bookings. The system should:
+   - Allow users to book tickets for a movie.
+   - Allow users to cancel a booking.
+   - Show all booked seats in order of booking.
+   - Get the total number of booked seats.
+Collection to Use: ArrayList<String>
+Class: MovieTicketBooking
+Variables:
+ArrayList<String> bookedSeats --> Stores the list of booked seats in the order of booking.
+Methods:
+     - bookTicket(String seatNumber): Books a ticket.
+     - cancelTicket(String seatNumber): Cancels a ticket if it exists.
+     - displayBookedSeats(): Displays all booked seats.
+     - getTotalBookings(): Returns the total number of booked tickets.
+
+Test Cases
+MovieTicketBooking booking = new MovieTicketBooking();
+booking.bookTicket("A1");
+booking.bookTicket("B2");
+booking.bookTicket("C3");
+booking.displayBookedSeats();
+System.out.println("Total Bookings: " + booking.getTotalBookings());
+booking.cancelTicket("B2");
+booking.displayBookedSeats();
+Expected Output:
+Booked Seats: [A1, B2, C3]
+Total Bookings: 3
+Booked Seats after cancellation: [A1, C3]
+Sample Input
+booking.bookTicket("A1");
+booking.bookTicket("B2");
+booking.bookTicket("C3");
+booking.displayBookedSeats();
+System.out.println("Total Bookings: " + booking.getTotalBookings());
+Sample Output
+Ticket booked: A1
+Ticket booked: B2
+Ticket booked: C3
+Booked Seats: [A1, B2, C3]
+Total Bookings: 3

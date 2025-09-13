@@ -1,0 +1,76 @@
+Que 2 : 
+========
+
+Devloping  Job Portal Simulation :
+-----------------------------------------
+
+Parent Class: JobPortal
+----------------------------
+
+Fields:
+
+private String portalName			: Name of the job portal.
+protected boolean isPremium		    : Indicates if the job portal offers premium services.
+protected int subscriptionFee		: Default subscription fee for the job portal.
+
+Constructor:
+
+A public constructor to initialize portalName, isPremium, and subscriptionFee.
+Methods:
+
+public int calculateEarnings(int... users): A method to calculate total earnings using subscriptionFee. 
+
+public JobPortal getPortalDetails(): Returns the current object.
+
+Create a class PremiumJobPortal which is subclass of JobPortal class.
+-------------------------------------
+Additional Implementation:
+Set the subscription fee as ₹2000.
+
+Overrides:
+calculateEarnings(int... users): Calculates earnings using the updated subscriptionFee of ₹2000.
+getPortalDetails(): Returns the object of PremiumJobPortal type with specific details.
+
+Create a class FreelanceJobPortal
+-----------------------------------
+
+which is subclass of JobPortal class.
+
+Additional Implementation:
+Set the subscription fee as ₹1000.
+
+Overrides:
+calculateEarnings(int... users): Calculates earnings using the updated subscriptionFee of ₹1000.
+getPortalDetails(): Returns the object of FreelanceJobPortal type with specific details.
+
+External Class: RevenueAnalyzer
+-------------------------------
+
+Method:
+public void analyze(JobPortal portal, int... users): Uses the instanceof operator to identify the type of job portal. Calculates earnings for the given number of users and displays the total earnings.
+
+Test Class: JobPortalSimulator
+----------------------------------
+
+Task:
+
+Create instances of JobPortal, PremiumJobPortal, and FreelanceJobPortal.
+Demonstrate polymorphism using the overridden calculateEarnings() and getPortalDetails() methods.
+Use the RevenueAnalyzer to analyze subscription earnings for each portal type.
+
+Sample Output :
+--------------------
+[just for reference the total cost varriying based on your input ]
+
+Analyzing Generic Vehicle...
+Analyzing booking cost for General Vehicle...
+Total Cost: ₹8000
+
+Analyzing Luxury Car...
+Analyzing booking cost for Luxury Car...
+Total Cost: ₹30000
+
+Analyzing Economy Bike...
+Analyzing booking cost for Economy Bike...
+Total Cost: ₹4000
+
