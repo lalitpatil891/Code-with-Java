@@ -4,7 +4,7 @@
  *  Create an obj of the rectangle class and call this methods
  */
 
-package com.nit.mayurTasks;
+package mayurTasks;
 
 class Rectangle {
 	public double width;

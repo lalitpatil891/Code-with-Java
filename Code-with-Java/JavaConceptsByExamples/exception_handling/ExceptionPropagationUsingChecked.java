@@ -1,4 +1,4 @@
-package com.nit.exception_handling;
+package exception_handling;
 
 import java.util.Scanner;
 
@@ -27,9 +27,7 @@ public class ExceptionPropagationUsingChecked {
 
 		Class.forName(className);
 		sc.close();
-
 	}
-
 }
 
 class Fooo {

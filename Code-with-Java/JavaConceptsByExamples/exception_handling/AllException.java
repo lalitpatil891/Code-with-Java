@@ -1,4 +1,4 @@
-package com.nit.exception_handling;
+package exception_handling;
 
 public class AllException {
 

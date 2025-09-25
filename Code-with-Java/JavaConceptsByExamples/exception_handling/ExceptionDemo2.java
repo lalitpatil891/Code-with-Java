@@ -1,4 +1,4 @@
-package com.nit.exception_handling;
+package exception_handling;
 
 import java.util.Scanner;
 
@@ -26,8 +26,8 @@ public class ExceptionDemo2 {
 		    System.out.println("Catch block");
 			System.err.println("Y value never 0.");
 			
-			System.out.println(e.getMessage());
-			System.out.println(e.toString());
+			System.out.println("Get message method: "+e.getMessage());
+			System.out.println("toString method: "+e.toString());
 			e.printStackTrace();
 		}
 		

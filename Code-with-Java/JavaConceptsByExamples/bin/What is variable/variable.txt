@@ -1,0 +1,13 @@
+What is variable?
+-----------------
+A variable is the name of the given memory location.
+It Store the data randomly in the memory.
+
+int x= 100;
+int y =  200;
+
+x = x+ 300;
+
+
+variable =  Vary + able
+            Change + able

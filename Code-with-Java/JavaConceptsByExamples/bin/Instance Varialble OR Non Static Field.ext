@@ -1,0 +1,139 @@
+Instance Variable OR Non Static Field :
+----------------------------------------
+It is a class Level Variable.
+
+If a non static variable is declared inside a class and outside of the method then it is called Instance Variable OR non static Field.
+
+An instance variable life starts at the time of creating the object that means without an object we can't think abount instance variable.
+
+public class Test
+{
+	int x = 100;
+
+	public static void main(String[] args)
+	{
+		System.out.println("x value is :"+x); //error
+	}
+}
+
+The scope of an instance variable is within the same class as well as outside of the class but It depends upon the access modifier we have applied on the instance variable.
+
+Instance variables are represented as an Object properties so whenever we want to represent Object level data/variable/properties then we should instance/non static variable.
+
+public class Employee
+{
+  int employeeId;  //Instance Variable OR Non Static field
+}
+===============================================================
+Initializing the Object properties using Method without parameter (Using Scanner class) :
+----------------------------------
+2 files :
+----------
+Customer.java
+--------------
+package com.ravi.oop;
+
+import java.util.Scanner;
+
+//BLC
+public class Customer
+{
+   int customerId;
+   String customerName;
+   double customerBill;
+
+   //Initialize the Object Properties
+   public void setCustomerData()
+   {
+	   Scanner sc = new Scanner(System.in);
+	   System.out.print("Enter Customer Id :");
+	   customerId = sc.nextInt();
+	   System.out.print("Enter Customer Name :");
+	   customerName = sc.nextLine();
+	   customerName = sc.nextLine();
+	   System.out.print("Enter Customer Bill :");
+	   customerBill = sc.nextDouble();
+	   sc.close();
+   }
+
+   //Printing the Object Properties
+   public void getCustomerData()
+   {
+	   System.out.println("Customer Id is :"+customerId);
+	   System.out.println("Customer Name is :"+customerName);
+	   System.out.println("Customer Bill is :"+customerBill);
+   }
+
+
+}
+
+CustomerDemo.java
+------------------
+package com.ravi.oop;
+
+public class CustomerDemo {
+
+	public static void main(String[] args)
+	{
+		Customer scott = new Customer();
+		scott.setCustomerData();
+		scott.getCustomerData();
+
+	}
+
+}
+---------------------------------------------------------------
+Initializing the object properties using parameter variable :
+-------------------------------------------------------------
+2 files :
+---------
+Employee.java
+---------------
+package com.ravi.oop;
+
+public class Employee
+{
+   int employeeId;
+   String employeeName;
+
+   public void setEmployeeData(int id, String name)
+   {
+	   employeeId = id;
+	   employeeName = name;
+   }
+
+   public void getEmployeeData()
+   {
+	   System.out.println("Employee id is :"+employeeId);
+	   System.out.println("Employee name is :"+employeeName);
+   }
+
+
+
+}
+
+EmployeeDemo.java
+------------------
+package com.ravi.oop;
+
+public class EmployeeDemo {
+
+	public static void main(String[] args)
+	{
+		Employee john = new Employee();
+		john.setEmployeeData(111, "John");;
+		john.getEmployeeData();
+
+		Employee martin = new Employee();
+		martin.setEmployeeData(222, "Martin");
+		martin.getEmployeeData();
+	}
+
+}
+
+Note : Upto here, We know total 3 ways to initialize the object
+properties which are as follows :
+
+   1) Using Object reference(raj.rollNumber = 122)
+   2) Using Method without parameter (Scanner class)
+   3) Using Method with Parameter (Park Story)

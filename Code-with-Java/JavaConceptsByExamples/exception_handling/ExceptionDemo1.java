@@ -1,4 +1,4 @@
-package com.nit.exception_handling;
+package exception_handling;
 
 class Foo
 {
@@ -20,3 +20,11 @@ public class ExceptionDemo1 {
 	}
 
 }
+
+/**
+ * Exception in thread "main" java.lang.Error: Unresolved compilation problem:
+ * No exception of type Foo can be thrown; an exception type must be a subclass
+ * of Throwable
+ * 
+ * at exception_handling.ExceptionDemo1.main(ExceptionDemo1.java:13)
+ */

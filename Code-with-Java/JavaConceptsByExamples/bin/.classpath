@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="command_line_argument/|Instance Variable OR Non Static Field/|oop/|instance_block/|Constructor/|integral_literal/|Instance Variable OR Non Static Field/Real-life Class Example Mobile/" kind="src" path=""/>
+	<classpathentry kind="src" path="command_line_argument"/>
+	<classpathentry kind="src" path="Constructor"/>
+	<classpathentry kind="src" path="instance_block"/>
+	<classpathentry excluding="Real-life Class Example Mobile/" kind="src" path="Instance Variable OR Non Static Field"/>
+	<classpathentry kind="src" path="Instance Variable OR Non Static Field/Real-life Class Example Mobile"/>
+	<classpathentry kind="src" path="integral_literal"/>
+	<classpathentry kind="src" path="oop"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
