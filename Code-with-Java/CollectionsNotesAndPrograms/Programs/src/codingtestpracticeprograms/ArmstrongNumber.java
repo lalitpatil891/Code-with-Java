@@ -6,7 +6,7 @@ public class ArmstrongNumber {
 
 	public static void main(String[] args) {
 		
-		 int num = 9474;
+		 int num = 947400;
 		 int tempCount = num;
 		 int org= num;
 		 int ans = 0;
