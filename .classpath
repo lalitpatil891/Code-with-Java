@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="Collections/CabCustomerService"/>
-	<classpathentry kind="src" path="MCQ_Tasks"/>
-	<classpathentry kind="src" path="Shape and Hospital Management System"/>
-	<classpathentry kind="src" path="StudentGradeCalculator"/>
-	<classpathentry kind="output" path="bin"/>
-</classpath>
