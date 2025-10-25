@@ -1,0 +1,254 @@
+Logical Notes (18-FEB)
+
+public abstract Stream<T> filter(Predicate<T> p) :
+----------------------------------------------------
+It is a predfined method of Stream interface. It is used to select/filter elements as per the Predicate passed as an argument. It is basically used to filter the elements based on boolean condition.
+
+
+Q1) Retrieve all the even number from Array using Stream API
+
+    public int[] toArray() : IntStream method to convert the IntStream
+                             into array.
+
+package com.ravi.filter;
+
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class FilterDemo1 {
+
+    public static void main(String[] args)
+    {
+        //Retrieve all the even number from Array
+        int []arr = {10,15,20,25,30,35,40,45,50};
+       
+        IntStream stream = Arrays.stream(arr);
+       
+        int[] array = stream.filter(num -> num %2==0).toArray();
+
+        System.out.println(Arrays.toString(array));    
+    }
+
+}
+----------------------------------------------------------------------
+
+2) Retrieve cities which starts with 'H' character in String array
+
+package com.ravi.filter;
+
+import java.util.Arrays;
+import java.util.stream.Stream;
+
+public class FilterDemo2
+{
+    public static void main(String[] args)
+    {
+        //Retrieve cities which starts with 'H' character
+        String []cities = {"Hyderabad", "Jaipur", "Haryana", "Indore", "Chennai"};
+       
+        Stream<String> stream = Arrays.stream(cities);
+
+        Object[] array = stream.filter(str -> str.startsWith("H")).toArray();
+       
+        System.out.println(Arrays.toString(array));
+       
+       
+    }
+
+}
+---------------------------------------------------------------------
+3) WAP to print all the array elements which are divisible by 3 and 5
+
+package com.ravi.filter;
+import java.util.Arrays;
+
+public class FilterDemo3 {
+
+    public static void main(String[] args)
+    {        
+            Integer[] numbers = {15, 20, 30, 45, 60, 75, 90, 100};
+
+            // Filtering numbers divisible by both 3 and 5
+             Object[] array = Arrays.stream(numbers)
+                 .filter(n -> n % 3 == 0 && n % 5 == 0)
+                      .toArray();
+
+             System.out.println(Arrays.toString(array));
+    }
+
+}
+
+---------------------------------------------------------------------
+4) WAP to print all the names whose length is greater than 3 from String array
+
+package com.ravi.filter;
+
+import java.util.Arrays;
+
+public class FilterDemo4 {
+
+    public static void main(String[] args)
+    {
+        String[] words = {"Scott", "Raj", "Riya", "Smith", "Stream"};
+
+        // Filtering words with more than 4 characters
+        Arrays.stream(words)
+             .filter(word -> word.length() > 4).forEach(System.out::println);
+    }
+
+}
+
+---------------------------------------------------------------------
+5) WAP to filter all the prime number from the given array.
+
+package com.ravi.filter;
+
+import java.util.Arrays;
+
+public class FilterDemo5
+{
+    public static void main(String[] args) {
+        int[] numbers = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13};
+
+        // Filtering prime numbers
+        int[] primeNumbers = Arrays.stream(numbers)
+                                   .filter(FilterDemo5::isPrime)
+                                   .toArray();
+
+        System.out.println("Prime Numbers: " + Arrays.toString(primeNumbers));
+    }
+
+    // Method to check if a number is prime
+    private static boolean isPrime(int num)
+    {
+        if (num < 2)
+        {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++)
+        {
+            if (num % i == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+======================================================================
+public Stream map(Function<? super T,? extends R> mapper) :
+-----------------------------------------------------------
+It is a predefined method of Stream interface.
+
+It takes Function (Predefined functional interafce ) as a parameter.
+
+It performs intermediate operation and consumes single element from input Stream and produces single element to output Stream. (1:1 transformation)
+
+Here mapper function is functional interface which takes one input and provides one output.
+
+
+6) WAP to add number 5 to each element of the array
+
+package com.ravi.map;
+
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class MapDemo1 {
+
+    public static void main(String[] args)
+    {
+        int []arr = {10,20,30,40,50,60};        
+        //Add number 5 to each element of the array
+       
+        IntStream stream = Arrays.stream(arr);
+        int[] array = stream.map(num -> num+5).toArray();
+       
+        System.out.println(Arrays.toString(array));    
+
+    }
+
+}
+----------------------------------------------------------------------
+7) WAP to find the cube of all the even number of the Array.
+
+package com.ravi.map;
+
+import java.util.Arrays;
+
+public class MapDemo2 {
+
+    public static void main(String[] args)
+    {
+        int []arr = {1,2,3,4,5,6,7,8};
+        int[] array = Arrays.stream(arr).
+                filter(num -> num%2==0).
+                   map(num -> num*num*num).toArray();
+
+        System.out.println(Arrays.toString(array));
+    }
+
+}
+----------------------------------------------------------------------
+8) WAP to find the length of each word in the array.
+
+package com.ravi.map;
+
+import java.util.Arrays;
+
+public class MapDemo3 {
+
+    public static void main(String[] args) {
+        // Find the length of each word in the array
+
+        String[] players = { "Rohit", "Virat", "Bumrah", "Shami" };
+        Arrays.stream(players).map(String::length).
+                    forEach(System.out::println);
+
+    }
+
+}
+---------------------------------------------------------------------
+9) WAP to replace all the negative numbers of an array with 0
+
+package com.ravi.map;
+
+import java.util.Arrays;
+
+public class MapDemo4 {
+
+    public static void main(String[] args)
+    {
+        //Replace all negative Numbers with Zero
+        int []arr = {-9, 34, -1, -7, 67, 34};
+       
+        int[] array = Arrays.stream(arr).map(num -> num < 0 ? 0 : num).toArray();
+       
+        System.out.println("Original Array ");
+        System.out.println(Arrays.toString(arr));
+       
+        System.out.println("Array after replacing negative value : ");
+        System.out.println(Arrays.toString(array));        
+    }
+
+}
+---------------------------------------------------------------------
+10) WAP to extract first character from the given String Array
+
+package com.ravi.map;
+
+import java.util.Arrays;
+
+public class MapDemo5 {
+
+    public static void main(String[] args)
+    {
+        //Extract First character from the given String
+       
+        String names[] = {"Jaya","Aryan","Vaibhav","Abha"};
+       
+        Arrays.stream(names).map(str -> str.charAt(0)).
+                   forEach(System.out::print);
+    }
+
+}

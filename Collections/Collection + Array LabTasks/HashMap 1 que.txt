@@ -1,0 +1,165 @@
+ComparingHashMapAndLinkedHashMap
+Comparing Iteration Order in HashMap and LinkedHashMap
+Objective:
+Write a Java program to compare the iteration order of HashMap and LinkedHashMap. The program should demonstrate how these two data structures store and iterate over their elements.
+
+Create a ELC class : 
+
+Create a method compareIterationOrder():
+method name : compareIterationOrder()
+modifiers : private, static
+return type : void
+Initialize two maps: a HashMap and a LinkedHashMap.
+Insert the same set of key-value pairs into both maps from and int[] of numbers and String[] of numbers.
+
+Iterate through each map and print the keys and values to show the difference in iteration order.
+Use the provided keys and values: {1, "One"}, {2, "Two"}, {3, "Three"}, {4, "Four"}, {5, "Five"}.
+
+In the main method, call compareIterationOrder() to execute the comparison.
+
+Test case 1 : 
+Input:
+{1, "One"}, {2, "Two"}, {3, "Three"}, {4, "Four"}, {5, "Five"}
+Expected Output:
+HashMap iteration order:
+3 -> Three
+5 -> Five
+1 -> One
+2 -> Two
+4 -> Four
+
+LinkedHashMap iteration order:
+1 -> One
+2 -> Two
+3 -> Three
+4 -> Four
+5 -> Five
+
+Test Case 2:
+Input:
+{10, "Ten"}, {20, "Twenty"}, {30, "Thirty"}, {40, "Forty"}, {50, "Fifty"}
+Expected Output:
+HashMap iteration order:
+30 -> Thirty
+50 -> Fifty
+10 -> Ten
+20 -> Twenty
+40 -> Forty
+
+LinkedHashMap iteration order:
+10 -> Ten
+20 -> Twenty
+30 -> Thirty
+40 -> Forty
+50 -> Fifty
+------------------------------------
+
+For Taking input from scanner use given scenario
+
+Enter number of elements:
+5
+Enter key
+10
+Enter value
+Ten
+Enter key
+20
+Enter value
+Twenty
+Enter key
+30
+Enter value
+Thirty
+Enter key
+40
+Enter value
+Forty
+Enter key
+50
+Enter value
+Fifty
+HashMap iteration order:
+50 -> Fifty
+20 -> Twenty
+40 -> Forty
+10 -> Ten
+30 -> Thirty
+-------
+Output:-
+LinkedHashMap iteration order:
+10 -> Ten
+20 -> Twenty
+30 -> Thirty
+40 -> Forty
+50 -> Fifty
+
+----------------------------
+Sample Input
+5
+10
+Ten
+20
+Twenty
+30
+Thirty
+40
+Forty
+50
+Fifty
+Sample Output
+HashMap iteration order:
+50 -> Fifty
+20 -> Twenty
+40 -> Forty
+10 -> Ten
+30 -> Thirty
+
+LinkedHashMap iteration order:
+10 -> Ten
+20 -> Twenty
+30 -> Thirty
+40 -> Forty
+50 -> Fifty
+
+========================================
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Scanner;
+
+public class ComparingHashMapAndLinkedHashMap {
+
+	public static void main(String[] args) {
+
+		
+		compareIterationOrder();
+		
+	}
+
+	private static void compareIterationOrder() {
+
+
+		HashMap<Integer, String> list1 = new HashMap<>();
+		LinkedHashMap<Integer, String> list2 = new LinkedHashMap<>();
+
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		sc.nextLine();
+		for (int i = 0; i < num; i++) {
+			// System.out.println("Enter key "+i+" : " );
+			int number = sc.nextInt();
+			
+			// System.out.println("Enter Value"+i+ " : ");
+			String strName = sc.next();
+		
+		list2.put(number, strName);
+		list1.put(number, strName);
+		
+		}
+		System.out.println("HashMap iteration order:");
+		list1.forEach((k,v) -> System.out.println(k+" -> "+v));
+        System.out.println();
+        System.out.println("LinkedHashMap iteration order:");
+        list2.forEach((k,v) -> System.out.println(k+" -> "+v));
+    }	
+}

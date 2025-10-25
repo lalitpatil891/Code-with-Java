@@ -1,0 +1,252 @@
+What is a method ?
+------------------
+* It is a self defined block which is mainly used for writing the business logic, calculating some result OR printing some data and so on.
+
+Types of Methods:
+1) Predefined method
+2) Userdefined method
+
+Advantages of Methods:
+1) Modularity
+2) Reuasability
+3) Easy to understand
+4) Easy debugging
+
+All possible combinations of methods with OR without return type:
+----------------------------------------------------------------
+1) Method without return type(void) and no parameters
+Example: 
+	public void greet(){
+	}
+---
+2) Method without return type(void) and no parameters
+Example:
+	public void doSum(int x, int y)
+	{
+	}
+---
+3) Method with return value without parameter
+Example:
+	public String greet(){
+	   return "Hello Everyone";
+	}
+---
+4) Method with return type and parameter
+Example:
+	public int doSum(int x , int y){
+	   return x+y;
+	}
+
+======================================
+
+public class MethodOverloading {
+
+    public static void main(String[] args){
+
+		
+	System.out.println("Hello welcome to heyderabad");
+    }
+}
+
+
+What is Method Overloading?
+---------------------------
+Allows us to write two or more methods in the same class or in super and sub classes such that method names are same, but they differ in their parameter list which are as follows:
+
+a) Number of Parameter
+b) Type of Parameter
+c) Order of Parameter (Sequence of data type)
+
+a) Number of Parameter
+public void display(int a) { }
+public void display(int a, int b) { }
+
+b) Type of Parameter
+public void show(int a) {}
+public void show (double a) { }
+
+c) Order of Parameter (Sequence of data type)
+public void test(int a, double b) { }
+public void test(double a, int b)
+
+-----
+Rules for Method Overloading
+- 1. Methods must have the same name.
+- 2. Must differ in number, type, or order of parameters.
+- 3. Return type alone cannot distinguish overloaded methods.
+- 4. Access modifiers can change.
+- 5. Static methods can be overloaded.
+- 6. Type promotion applies automatically.
+- 7. Cannot overload by only changing return type.
+
+
+Best Example of Method Overloading
+-----------------------
+public void println();
+public void println(boolean);
+public void println(char);
+public void println(int);
+public void println(long);
+public void println(float);
+public void println(double);
+public void println(char[]);
+public void println(java.lang.String
+
+
+Advantage Method Overloading
+----------------------------
+The advantage of method overloading is that the same method name can be reused for different functionalities, allowing refinement of the method to handle different types or numbers of parameters.
+
+In System.out.print() and System.out.println(), the methods print() and println() are the best examples of Method Overloading — they are defined multiple times in the PrintStream class with different parameter types (like int, char, String, boolean, etc.).
+
+
+Method Overloading Resolution
+-----------------------------
+In order to learn Method Overloading Resolution, We must have 3 basic concepts
+
+- Var args in Java
+- Widening (implicit type conversion) in Java
+- Autoboxing in Java
+
+
+- Var args in Java
+------------------
+* It stands for variable argument. It is a new concept which 
+* It is represented by exactly 3 dots().
+* Internally It is an array so It can accept multiple values.
+
+
+class Test
+{
+public void input (int ...x)
+  {
+     System.out.println("Executed");
+  }
+}
+
+public class VarArgsDemo1
+{
+   public static void main(String[] args)
+   {
+  Test t1 = new Test();
+  t1.input();
+  t1.input(5);
+  t1.input(5,10);
+  †1.input(5.10.15):
+  t1.input(5,10,15,20);
+}
+
+Ex3-
+
+class Demo {
+    public void acceptHetro(Object... x)
+    {
+	for(Object o : x){
+	  System.out.println(o);
+	}
+    }	
+}
+
+public class VarArgsDemo3 {
+   public static void main(String [] args){
+   
+	Demo d1 = new Demo();
+	d1.acceptHetro(1,12.90); 
+   }
+}
+
+Ex4
+----
+//var args must be only one and last parameter
+class Sample {
+   /* 
+   public void accept(int ...y)  //error
+    {
+    }
+   
+     public void accept(int ...x, int y )  //error
+    { 
+    }
+
+     public void accept(int x, int ...y )  //
+    {
+    }		
+
+   */	
+}
+
+public class VarArgsDemo3 {
+   public static void main(String [] args){
+   
+	Demo d1 = new Demo();
+	d1.acceptHetro(1,12.90); 
+   }
+}
+
+Real time example on var args
+-------------------------------
+Shopping Cart
+public void calculateBill (double ...prices)
+{
+I
+}
+Customer c1 = new Customer();
+4 items
+Customer c2 = new Customer();
+8 items
+
+---
+
+
+Type promotion
+--------------
+byte -> short -> int -> long -> float -> double
+
+char -> int -> long -> float -> double
+
+
+
+=================
+Widening (implicit type conversion) in Java
+-------------------------------------------
+
+
+
+AutoBoxing
+-----------
+Converting the primitive data type into corresponding wrapper object.
+public class AutoBoxing
+{
+   public static void main(String[] args)
+   {
+      //Autoboxing
+byte b = 12;
+Byte obj = Byte.valueOf(b);
+//Unboxing
+Byte x = 90;
+//Unboxing Wrapper to Primitive
+byte byteValue = x.byteValue();
+short shortValue = x.shortValue();
+int intValue = x.intValue();
+long longValue = x.longValue();
+float floatValue = x.floatValue();
+double doubleValue = x.doubleValue();
+}
+}
+
+
+When we call an overloaded method, the compiler decides which method to invoke by using following rules:
+Exact Match Rule
+Type Promotion (Widening) Rule
+Nearest Type Rule
+WAV Rule
+
+
+
+
+
+
+
+
+
+
