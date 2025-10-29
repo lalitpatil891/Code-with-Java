@@ -446,23 +446,38 @@ public class Tester {
 		list.stream().filter(e -> e.getName().startsWith("L")).forEach(System.out::println);
 		
 
-		// 46. Group Employees by Age and List Only Unique Salaries:- Group employees by
-		// age and display a list of unique salaries for each age group.
+		// 46. Group Employees by Age and List Only Unique Salaries:- Group employees by age and display a list of unique salaries for each age group.
 		System.out.println(RED+ "*** Group employees by age and display a list of unique salaries for each age group. ***" + RESET);
+		list.stream().collect(Collectors.groupingBy(Employee::getAge, Collectors.mapping(Employee::getSalary, Collectors.toSet())))
+			.forEach((key, value) -> System.out.println("Age : "+key+" Salary : "+value));
+		
+		// 47. Find Employees with the Same Salary:- Identify and display employees who have the same salary.
+		System.out.println(RED + "*** Identify and display employees who have the same salary. ***" + RESET);
+		list.stream()
+		  .collect(Collectors.groupingBy(Employee::getSalary)) // group by salary
+		  .entrySet().stream()                                 // loop on each group
+		  .filter(e -> e.getValue().size() > 1)                // same salary 
+		  .forEach(e -> {
+		      System.out.println(e.getKey());                  // salary
+		      e.getValue().forEach(System.out::println);       // salary emps
+		  });
+
+		// 48. Find the Employee with the Shortest Name Among Male Employees:- Find the male employee with the shortest name.
+		System.out.println(RED + "*** Find the male employee with the shortest name. ***" + RESET);
+		list.stream().filter(e -> e.getGender().equalsIgnoreCase("Male"))
+					.min(Comparator.comparingInt(n -> n.getName().length())).ifPresent(System.out::println);
+		
+		
+		// 49. Find the Most Common Salary Value:- Determine the salary value that appears most frequently among the employees.
+		System.out.println(RED + "*** Determine the salary value that appears most frequently among the employees. ***" + RESET);
+
+		list.stream()
+		    .collect(Collectors.groupingBy(Employee::getSalary, Collectors.counting())) // group & count
+		    .entrySet().stream() // map to stream
+		    .max(Map.Entry.comparingByValue()) // find highest count
+		    .ifPresent(e -> System.out.println("Most common salary: " + e.getKey()));
 
 		
-		// 47. Find Employees with the Same Salary:- Identify and display employees who
-		// have the same salary.
-		System.out.println(RED + "*** Identify and display employees who have the same salary. ***" + RESET);
-
-		// 48. Find the Employee with the Shortest Name Among Male Employees:- Find the
-		// male employee with the shortest name.
-		System.out.println(RED + "*** Find the male employee with the shortest name. ***" + RESET);
-
-		// 49. Find the Most Common Salary Value:- Determine the salary value that
-		// appears most frequently among the employees.
-		System.out.println(
-				RED + "*** Determine the salary value that appears most frequently among the employees. ***" + RESET);
 
 		// 50. Find the Oldest Employee with the Lowest Salary:- Find the oldest
 		// employee with the lowest salary.
