@@ -476,13 +476,25 @@ public class Tester {
 		    .entrySet().stream() // map to stream
 		    .max(Map.Entry.comparingByValue()) // find highest count
 		    .ifPresent(e -> System.out.println("Most common salary: " + e.getKey()));
+		
+		// 50. Find the Oldest Employee with the Lowest Salary:- Find the oldest employee with the lowest salary.
+		System.out.println(RED + "*** Find the oldest employee with the lowest salary. ***" + RESET);
+		
+		int maxAge = list.stream()
+			    .mapToInt(Employee::getAge)
+			    .max()
+			    .orElseThrow();
+
+			Employee employee6 = list.stream()
+			    .filter(k -> k.getAge() == maxAge)
+			    .min(Comparator.comparingDouble(Employee::getSalary))
+			    .orElseThrow();
+
+			System.out.println(employee6);
 
 		
-
-		// 50. Find the Oldest Employee with the Lowest Salary:- Find the oldest
-		// employee with the lowest salary.
-		System.out.println(RED + "*** Find the oldest employee with the lowest salary. ***" + RESET);
-
+		
+		
 		// 51. Filter Employees by Gender:- Retrieve a list of all female employees.
 		System.out.println(RED + "*** Retrieve a list of all female employees. ***" + RESET);
 
