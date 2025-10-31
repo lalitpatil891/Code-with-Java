@@ -496,12 +496,11 @@ public class Tester {
 		System.out.println(RED + "*** Retrieve a list of all female employees. ***" + RESET);
 		list.stream().filter(e -> e.getGender().equalsIgnoreCase("Female")).forEach(System.out::println);
 		
-		
 		// 52. Filter Employees by Age:- Get a list of employees older than 30 years.
 		System.out.println(RED + "*** Get a list of employees older than 30 years. ***" + RESET);
-
-		// 53. Filter Employees by Salary:- Find employees with a salary greater than
-		// $50,000.
+		list.stream().filter(e -> e.getAge() > 30).forEach(System.out::println);
+		
+		// 53. Filter Employees by Salary:- Find employees with a salary greater than $50,000.
 		System.out.println(RED + "*** Find employees with a salary greater than $50,000. ***" + RESET);
 
 		// 54. Map Employee Names:- Create a list of employee names (Strings).
