@@ -522,7 +522,11 @@ public class Tester {
 
 		// 56. Find Maximum Salary:- Find the employee with the highest salary.
 		System.out.println(RED + "*** Find the employee with the highest salary. ***" + RESET);
-
+		Employee highestPaid = list.stream()
+		    .max(Comparator.comparingDouble(Employee::getSalary))
+		    .orElse(null);
+		System.out.println("Employee with Highest Salary: " + highestPaid);
+		
 		// 57. Group Employees by Gender:- Group employees by gender and return a map
 		// with gender as the key and a list of employees as the value.
 		System.out.println(RED + " ***return a map with gender as the key and a list of employees ***" + RESET);
