@@ -506,10 +506,11 @@ public class Tester {
 		    .filter(e -> e.getSalary() > 50000)
 		    .forEach(System.out::println);
 
-		
 		// 54. Map Employee Names:- Create a list of employee names (Strings).
 		System.out.println(RED + "*** Create a list of employee names (Strings). ***" + RESET);
-
+		List<String> emps = list.stream().map(e -> e.getName()).toList();
+		System.out.println(emps);
+		
 		// 55. Calculate Average Salary:- Calculate the average salary of all employees.
 		System.out.println(RED + "*** Calculate the average salary of all employees. ***" + RESET);
 
