@@ -513,6 +513,12 @@ public class Tester {
 		
 		// 55. Calculate Average Salary:- Calculate the average salary of all employees.
 		System.out.println(RED + "*** Calculate the average salary of all employees. ***" + RESET);
+		double avgSalary = list.stream()
+			    .mapToDouble(Employee::getSalary)
+			    .average()
+			    .orElse(0.0);
+
+			System.out.println("Average Salary of Employees: " + avgSalary);
 
 		// 56. Find Maximum Salary:- Find the employee with the highest salary.
 		System.out.println(RED + "*** Find the employee with the highest salary. ***" + RESET);
