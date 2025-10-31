@@ -502,7 +502,11 @@ public class Tester {
 		
 		// 53. Filter Employees by Salary:- Find employees with a salary greater than $50,000.
 		System.out.println(RED + "*** Find employees with a salary greater than $50,000. ***" + RESET);
+		list.stream()
+		    .filter(e -> e.getSalary() > 50000)
+		    .forEach(System.out::println);
 
+		
 		// 54. Map Employee Names:- Create a list of employee names (Strings).
 		System.out.println(RED + "*** Create a list of employee names (Strings). ***" + RESET);
 
