@@ -540,7 +540,9 @@ public class Tester {
 
 		// 59. Sum of All Salaries:- Calculate the total sum of salaries for all employees.
 		System.out.println(RED + "*** Calculate the total sum of salaries for all employees. ***" + RESET);
-
+		Double totalSalaryIs =list.stream().mapToDouble(Employee::getSalary).sum();
+		System.out.println("Total Salary of All Employees: "+totalSalaryIs);
+		
 		// 60. Sort the employees by their names in alphabetical order.
 		System.out.println(RED + "*** Sort the employees by their names in alphabetical order. ***" + RESET);
 
