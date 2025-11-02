@@ -527,10 +527,15 @@ public class Tester {
 		    .orElse(null);
 		System.out.println("Employee with Highest Salary: " + highestPaid);
 		
-		// 57. Group Employees by Gender:- Group employees by gender and return a map
-		// with gender as the key and a list of employees as the value.
+		// 57. Group employees by gender and return a map with gender as the key and a list of employees as the value.
 		System.out.println(RED + " ***return a map with gender as the key and a list of employees ***" + RESET);
-
+		Map<String, List<Employee>> groupByGender = list.stream().collect(Collectors.groupingBy(Employee::getGender));
+		groupByGender.forEach((gender, empList) -> {
+		    System.out.println("Gender: " + gender);
+		    empList.forEach(System.out::println);
+		    System.out.println("--------------------------------");
+		});
+		
 		// 58. Count Male Employees:- Count the number of male an female employees.
 		System.out.println(RED + "*** Count the number of male and female employees. ***" + RESET);
 
