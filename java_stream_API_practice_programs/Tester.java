@@ -545,7 +545,8 @@ public class Tester {
 		
 		// 60. Sort the employees by their names in alphabetical order.
 		System.out.println(RED + "*** Sort the employees by their names in alphabetical order. ***" + RESET);
-
+		list.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
+		
 		// Second Highest Salary:
 		System.out.println(RED + "*** Second Highest Salary: ***" + RESET);
 
