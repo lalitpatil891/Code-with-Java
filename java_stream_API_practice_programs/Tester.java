@@ -417,18 +417,17 @@ public class Tester {
 		System.out.println(RED + "*** Get a list of employee names in uppercase. ***" + RESET);
 		list.stream().map(e -> e.getName().toUpperCase()).forEach(System.out::println);
 
-		// 44. Calculate the salary range (minimum and maximum) for each distinct age group.
-		System.out.println(RED + "*** Calculate the salary range (minimum and maximum) for each distinct age group. ***" + RESET);
-			Map<Integer, DoubleSummaryStatistics> salaryRangeByAge =
-					list.stream().
-					collect(Collectors.groupingBy(
-							Employee::getAge, //Grouping by age
-							Collectors.summarizingDouble(Employee::getSalary)
-							));
-			salaryRangeByAge.forEach((age, stats) -> 
-					System.out.println("Age: "+age+ " | Min Salary: "+stats.getMin() + " | Max Salary: "+stats.getMax())); 
+		// 44. Calculate the salary range (minimum and maximum) for each distinct age
+		// group.
+		System.out.println(
+				RED + "*** Calculate the salary range (minimum and maximum) for each distinct age group. ***" + RESET);
+		Map<Integer, DoubleSummaryStatistics> salaryRangeByAge = list.stream()
+				.collect(Collectors.groupingBy(Employee::getAge, // Grouping by age
+						Collectors.summarizingDouble(Employee::getSalary)));
+		salaryRangeByAge.forEach((age, stats) -> System.out
+				.println("Age: " + age + " | Min Salary: " + stats.getMin() + " | Max Salary: " + stats.getMax()));
 
-				// OR
+		// OR
 		list.stream().collect(
 				Collectors.groupingBy(Employee::getAge, Collectors.collectingAndThen(Collectors.toList(), employees -> {
 					double min = employees.stream().mapToDouble(Employee::getSalary).min().orElseThrow();
@@ -440,107 +439,106 @@ public class Tester {
 				}))).forEach((age, salary) -> System.out.println("Age : " + age + " - " + "Min Salary : "
 						+ salary.get("min") + " Max Salary : " + salary.get("max")));
 
-		
-		// 45. Filter Employees by First Name Initial:- Retrieve employees whose first name starts with a specific initial (e.g., 'A').
-		System.out.println(RED+ "*** Retrieve employees whose first name starts with a specific initial (e.g., 'E'). ***" + RESET);
+		// 45. Filter Employees by First Name Initial:- Retrieve employees whose first
+		// name starts with a specific initial (e.g., 'A').
+		System.out.println(RED
+				+ "*** Retrieve employees whose first name starts with a specific initial (e.g., 'E'). ***" + RESET);
 		list.stream().filter(e -> e.getName().startsWith("L")).forEach(System.out::println);
-		
 
-		// 46. Group Employees by Age and List Only Unique Salaries:- Group employees by age and display a list of unique salaries for each age group.
-		System.out.println(RED+ "*** Group employees by age and display a list of unique salaries for each age group. ***" + RESET);
-		list.stream().collect(Collectors.groupingBy(Employee::getAge, Collectors.mapping(Employee::getSalary, Collectors.toSet())))
-			.forEach((key, value) -> System.out.println("Age : "+key+" Salary : "+value));
-		
-		// 47. Find Employees with the Same Salary:- Identify and display employees who have the same salary.
-		System.out.println(RED + "*** Identify and display employees who have the same salary. ***" + RESET);
+		// 46. Group Employees by Age and List Only Unique Salaries:- Group employees by
+		// age and display a list of unique salaries for each age group.
+		System.out.println(RED
+				+ "*** Group employees by age and display a list of unique salaries for each age group. ***" + RESET);
 		list.stream()
-		  .collect(Collectors.groupingBy(Employee::getSalary)) // group by salary
-		  .entrySet().stream()                                 // loop on each group
-		  .filter(e -> e.getValue().size() > 1)                // same salary 
-		  .forEach(e -> {
-		      System.out.println(e.getKey());                  // salary
-		      e.getValue().forEach(System.out::println);       // salary emps
-		  });
+				.collect(Collectors.groupingBy(Employee::getAge,
+						Collectors.mapping(Employee::getSalary, Collectors.toSet())))
+				.forEach((key, value) -> System.out.println("Age : " + key + " Salary : " + value));
 
-		// 48. Find the Employee with the Shortest Name Among Male Employees:- Find the male employee with the shortest name.
+		// 47. Find Employees with the Same Salary:- Identify and display employees who
+		// have the same salary.
+		System.out.println(RED + "*** Identify and display employees who have the same salary. ***" + RESET);
+		list.stream().collect(Collectors.groupingBy(Employee::getSalary)) // group by salary
+				.entrySet().stream() // loop on each group
+				.filter(e -> e.getValue().size() > 1) // same salary
+				.forEach(e -> {
+					System.out.println(e.getKey()); // salary
+					e.getValue().forEach(System.out::println); // salary emps
+				});
+
+		// 48. Find the Employee with the Shortest Name Among Male Employees:- Find the
+		// male employee with the shortest name.
 		System.out.println(RED + "*** Find the male employee with the shortest name. ***" + RESET);
 		list.stream().filter(e -> e.getGender().equalsIgnoreCase("Male"))
-					.min(Comparator.comparingInt(n -> n.getName().length())).ifPresent(System.out::println);
-		
-		
-		// 49. Find the Most Common Salary Value:- Determine the salary value that appears most frequently among the employees.
-		System.out.println(RED + "*** Determine the salary value that appears most frequently among the employees. ***" + RESET);
+				.min(Comparator.comparingInt(n -> n.getName().length())).ifPresent(System.out::println);
 
-		list.stream()
-		    .collect(Collectors.groupingBy(Employee::getSalary, Collectors.counting())) // group & count
-		    .entrySet().stream() // map to stream
-		    .max(Map.Entry.comparingByValue()) // find highest count
-		    .ifPresent(e -> System.out.println("Most common salary: " + e.getKey()));
-		
-		// 50. Find the Oldest Employee with the Lowest Salary:- Find the oldest employee with the lowest salary.
+		// 49. Find the Most Common Salary Value:- Determine the salary value that
+		// appears most frequently among the employees.
+		System.out.println(
+				RED + "*** Determine the salary value that appears most frequently among the employees. ***" + RESET);
+
+		list.stream().collect(Collectors.groupingBy(Employee::getSalary, Collectors.counting())) // group & count
+				.entrySet().stream() // map to stream
+				.max(Map.Entry.comparingByValue()) // find highest count
+				.ifPresent(e -> System.out.println("Most common salary: " + e.getKey()));
+
+		// 50. Find the Oldest Employee with the Lowest Salary:- Find the oldest
+		// employee with the lowest salary.
 		System.out.println(RED + "*** Find the oldest employee with the lowest salary. ***" + RESET);
-		
-		int maxAge = list.stream()
-			    .mapToInt(Employee::getAge)
-			    .max()
-			    .orElseThrow();
 
-			Employee employee6 = list.stream()
-			    .filter(k -> k.getAge() == maxAge)
-			    .min(Comparator.comparingDouble(Employee::getSalary))
-			    .orElseThrow();
+		int maxAge = list.stream().mapToInt(Employee::getAge).max().orElseThrow();
 
-			System.out.println(employee6);
+		Employee employee6 = list.stream().filter(k -> k.getAge() == maxAge)
+				.min(Comparator.comparingDouble(Employee::getSalary)).orElseThrow();
+
+		System.out.println(employee6);
 
 		// 51. Filter Employees by Gender:- Retrieve a list of all female employees.
 		System.out.println(RED + "*** Retrieve a list of all female employees. ***" + RESET);
 		list.stream().filter(e -> e.getGender().equalsIgnoreCase("Female")).forEach(System.out::println);
-		
+
 		// 52. Filter Employees by Age:- Get a list of employees older than 30 years.
 		System.out.println(RED + "*** Get a list of employees older than 30 years. ***" + RESET);
 		list.stream().filter(e -> e.getAge() > 30).forEach(System.out::println);
-		
-		// 53. Filter Employees by Salary:- Find employees with a salary greater than $50,000.
+
+		// 53. Filter Employees by Salary:- Find employees with a salary greater than
+		// $50,000.
 		System.out.println(RED + "*** Find employees with a salary greater than $50,000. ***" + RESET);
-		list.stream()
-		    .filter(e -> e.getSalary() > 50000)
-		    .forEach(System.out::println);
+		list.stream().filter(e -> e.getSalary() > 50000).forEach(System.out::println);
 
 		// 54. Map Employee Names:- Create a list of employee names (Strings).
 		System.out.println(RED + "*** Create a list of employee names (Strings). ***" + RESET);
 		List<String> emps = list.stream().map(e -> e.getName()).toList();
 		System.out.println(emps);
-		
+
 		// 55. Calculate Average Salary:- Calculate the average salary of all employees.
 		System.out.println(RED + "*** Calculate the average salary of all employees. ***" + RESET);
-		double avgSalary = list.stream()
-			    .mapToDouble(Employee::getSalary)
-			    .average()
-			    .orElse(0.0);
+		double avgSalary = list.stream().mapToDouble(Employee::getSalary).average().orElse(0.0);
 
-			System.out.println("Average Salary of Employees: " + avgSalary);
+		System.out.println("Average Salary of Employees: " + avgSalary);
 
 		// 56. Find Maximum Salary:- Find the employee with the highest salary.
 		System.out.println(RED + "*** Find the employee with the highest salary. ***" + RESET);
-		Employee highestPaid = list.stream()
-		    .max(Comparator.comparingDouble(Employee::getSalary))
-		    .orElse(null);
+		Employee highestPaid = list.stream().max(Comparator.comparingDouble(Employee::getSalary)).orElse(null);
 		System.out.println("Employee with Highest Salary: " + highestPaid);
-		
-		// 57. Group employees by gender and return a map with gender as the key and a list of employees as the value.
+
+		// 57. Group employees by gender and return a map with gender as the key and a
+		// list of employees as the value.
 		System.out.println(RED + " ***return a map with gender as the key and a list of employees ***" + RESET);
 		Map<String, List<Employee>> groupByGender = list.stream().collect(Collectors.groupingBy(Employee::getGender));
 		groupByGender.forEach((gender, empList) -> {
-		    System.out.println("Gender: " + gender);
-		    empList.forEach(System.out::println);
-		    System.out.println("--------------------------------");
+			System.out.println("Gender: " + gender);
+			empList.forEach(System.out::println);
+			System.out.println("--------------------------------");
 		});
-		
+
 		// 58. Count Male Employees:- Count the number of male an female employees.
 		System.out.println(RED + "*** Count the number of male and female employees. ***" + RESET);
 
-		// 59. Sum of All Salaries:- Calculate the total sum of salaries for all
-		// employees.
+		Map<String, Long> genderCount = list.stream()
+				.collect(Collectors.groupingBy(Employee::getGender, Collectors.counting()));
+		genderCount.forEach((g, c) -> System.out.println(g + " : " + c));
+
+		// 59. Sum of All Salaries:- Calculate the total sum of salaries for all employees.
 		System.out.println(RED + "*** Calculate the total sum of salaries for all employees. ***" + RESET);
 
 		// 60. Sort the employees by their names in alphabetical order.
