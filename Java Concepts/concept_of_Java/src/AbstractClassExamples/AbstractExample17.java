@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* 
  *17) Abstract methods can be declared as final. True or False?

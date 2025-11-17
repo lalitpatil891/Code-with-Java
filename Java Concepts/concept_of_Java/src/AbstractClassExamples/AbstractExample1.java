@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 /*Below class ABC doesn’t have even a single abstract method, but it has been declared as abstract. Is it correct?
 Yes, it is correct. abstract classes may or may not have abstract methods. */
 

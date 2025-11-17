@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 /*
  * Below code snippet is showing compilation error? Can you suggest the corrections?
  * -> Class B must implement inherited abstract method A.add() or else it must be declared as abstract.

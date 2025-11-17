@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* 5) Is the following program written correctly? If yes, what value “result” variable will hold if you run the program?
  * 

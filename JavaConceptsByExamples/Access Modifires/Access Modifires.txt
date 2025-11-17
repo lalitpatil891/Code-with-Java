@@ -1,0 +1,43 @@
+Notes - Access modifires
+------------------------
+Access Modifiers in Java are used to control the visibility of fields, methods, classes and constructors.
+
+
+| Modifier                  | Visible To                                         | Visibility Level |
+| ------------------------- | -------------------------------------------------- | ---------------- |
+| **private**               | Only within the same class                         | 🔒 Lowest        |
+| **default** (no modifier) | Same package                                       | 🟡 Medium        |
+| **protected**             | Same package + subclasses (even in other packages) | 🟠 Higher        |
+| **public**                | Everywhere                                         | 🔓 Highest       |
+
+
++ protected means accessible in same package + subclasses,
+
+
+We can’t create sub classes to that class which has only private constructors.
+
+Inner classes can be private, but outer classes can not be private.
+
+protected members of a class are inherited to any sub class.
+
+private inner Class B can not be instantiated outside the Class A.
+
+
+Class with default (no) access modifiers can not have subclass outside the package.
+
+We can declare a class as protected but only inner class. Outer class can not be protected.
+
+protected members of a class are inherited to sub classes outside the package.
+we can’t instantiate a class outside the package which has only protected constructors.
+
+static members of a class can be private.
+
+ A .java file can have maximum one public class.
+
+private methods are not at all inherited.
+
+Outer class can’t be private.
+
+
+
+

@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
  
 /*
  * 11) Can we declare abstract methods as static?

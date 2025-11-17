@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* 
  *  7) Can you identify the error in the below code?

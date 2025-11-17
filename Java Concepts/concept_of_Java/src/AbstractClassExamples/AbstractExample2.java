@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 /*2) Why the below class is showing compilation error?
  *  Because, abstract methods must not have a body.
  * */

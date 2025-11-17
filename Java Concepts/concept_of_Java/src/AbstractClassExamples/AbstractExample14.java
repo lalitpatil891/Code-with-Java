@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* 
 14) Can we keep static initialization blocks inside an abstract class?

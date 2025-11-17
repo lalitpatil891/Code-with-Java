@@ -1,0 +1,87 @@
+# ⚡ **1) `throw` → You *throw* an exception manually**
+
+### ✔ Used **inside a method/block**
+
+### ✔ Creates and throws an exception object
+
+### ✔ Only **one** exception at a time
+
+Example:
+
+```java
+throw new ArithmeticException("Cannot divide by zero");
+```
+
+**Think:**
+👉 *“throw = I throw the exception right now.”*
+
+---
+
+# ⚡ **2) `throws` → You *announce* that a method may throw exception(s)**
+
+### ✔ Used **in method declaration**
+
+### ✔ Tells the compiler that this method might throw one or more checked exceptions
+
+### ✔ Does NOT throw anything by itself
+
+Example:
+
+```java
+void readFile() throws IOException {
+    // method may throw IOException
+}
+```
+
+**Think:**
+👉 *“throws = I am warning you that this method might throw exceptions.”*
+
+---
+
+# ⚡ **3) `Throwable` → Parent class of ALL errors & exceptions**
+
+### ✔ Superclass of:
+
+* `Exception`
+* `Error`
+
+### ✔ Can be used to catch **anything** (not recommended normally)
+
+Example:
+
+```java
+catch (Throwable t) {
+    System.out.println("Caught anything!");
+}
+```
+
+**Think:**
+👉 *“Throwable = Daddy of both Errors and Exceptions.”*
+
+---
+
+# 🎯 **SUPER EASY TRICK TO REMEMBER**
+
+### **throw → action**
+
+You *throw* the ball (exception).
+
+### **throws → warning**
+
+You *warn* that you **might** throw the ball.
+
+### **Throwable → family**
+
+The entire **family** of things that can be thrown.
+
+---
+
+# ⭐ Quick Comparison Table
+
+| Keyword       | Where used?      | Meaning                             | Example                        |
+| ------------- | ---------------- | ----------------------------------- | ------------------------------ |
+| **throw**     | Inside method    | Throws (creates) exception manually | `throw new RuntimeException()` |
+| **throws**    | Method signature | Declares possible exceptions        | `void m() throws IOException`  |
+| **Throwable** | Class name       | Superclass of Error & Exception     | `catch(Throwable t)`           |
+
+---

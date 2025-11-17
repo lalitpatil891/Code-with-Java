@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* 
  * 8) Can we declare protected methods in an interface?

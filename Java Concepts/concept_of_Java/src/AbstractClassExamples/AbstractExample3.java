@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* Which class is instantiable? Class A or Class B?
  * 

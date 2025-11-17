@@ -1,4 +1,4 @@
-package concept_of_Java;
+package AbstractClassExamples;
 
 /* 
  * 12) Is the below program written correctly? If yes, what will be the output?
