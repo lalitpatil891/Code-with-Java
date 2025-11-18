@@ -6,7 +6,7 @@ public class Test7 {
 		 	
 		    int a=1, b=2;
          
-	        System.out.println(--b - ++a + ++b - --a);
+	        System.out.println(--b - ++a + ++b - --a);  //0
 	}
 
 }
