@@ -20,7 +20,7 @@ public class AbstractExample4 {
 	public static void main(String [] args)
 	{
 		 A a = new B();
-	        a.add();  // Output: Add method implemented in B
+	     a.add();  // Output: Add method implemented in B
 	}
 }
 
