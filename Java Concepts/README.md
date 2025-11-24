@@ -1001,5 +1001,91 @@ Child c = (Child) p;  // downcasting
 
 ---
 
+# ✅ **1. What is the use of Wrapper Classes?**
+
+Wrapper classes are used to **convert primitive data types into objects**.
+They help when working with **collections**, **serialization**, and **object-based APIs**.
+Primitive → Object (Integer, Double, Boolean, etc.)
+
+---
+
+# ✅ **2. List of Wrapper Classes**
+
+| Primitive | Wrapper Class |
+| --------- | ------------- |
+| byte      | Byte          |
+| short     | Short         |
+| int       | Integer       |
+| long      | Long          |
+| float     | Float         |
+| double    | Double        |
+| char      | Character     |
+| boolean   | Boolean       |
+
+---
+
+# ✅ **3. Wrapper Class Methods (Important Ones)**
+
+### **Integer class important methods**
+
+* `parseInt(String)` → converts string to int
+* `valueOf(int)` → returns Integer object
+* `toString(int)` → converts int to string
+
+### **Double / Float**
+
+* `parseDouble(String)`
+* `valueOf(double)`
+
+### **Character**
+
+* `isDigit(ch)`
+* `isLetter(ch)`
+* `isUpperCase(ch)`
+* `isLowerCase(ch)`
+
+### **Boolean**
+
+* `parseBoolean(String)`
+* `valueOf(boolean)`
+
+(Just mention 2–3 in interview.)
+
+---
+
+# ✅ **4. Auto-Boxing**
+
+Automatic conversion of **primitive → wrapper object**.
+
+Example:
+
+```java
+int a = 10;
+Integer x = a;   // auto-boxing
+```
+
+---
+
+# ✅ **5. Auto-Unboxing**
+
+Automatic conversion of **wrapper object → primitive**.
+
+Example:
+
+```java
+Integer x = 20;
+int a = x;       // auto-unboxing
+```
+
+---
+
+# 🔹 **Short summary (easy to speak):**
+
+* Wrapper classes convert primitive to object.
+* Required for collections like `ArrayList`.
+* Auto-boxing → primitive to object.
+* Auto-unboxing → object to primitive.
+
+---
 
  
