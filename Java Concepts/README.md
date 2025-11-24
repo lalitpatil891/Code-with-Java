@@ -1864,3 +1864,387 @@ Its main features are encapsulation, inheritance, polymorphism, and abstraction.
 OOP makes code reusable, secure, and easier to manage.”
 
 ---
+
+# ✅ **What is Data Hiding?**
+
+* Data hiding means keeping the internal data **private** from outside classes.
+* Only methods (getters/setters) can access or modify that data.
+* Purpose: security and control.
+
+---
+
+# ✅ **What is Encapsulation?**
+
+* Encapsulation means wrapping **variables + methods** inside a class.
+* We make variables **private** and provide **public getters/setters**.
+* It protects data and controls how data is accessed.
+
+---
+
+# ✅ **Understanding Getter & Setter**
+
+### **Getter**
+
+* Used to read private variable value.
+
+```java
+public int getAge() { return age; }
+```
+
+### **Setter**
+
+* Used to modify private variable value.
+
+```java
+public void setAge(int age) { this.age = age; }
+```
+
+---
+
+# ✅ **Need for Encapsulation**
+
+* To protect data from unauthorized access.
+* To control how values are set or validated.
+* To make code easy to maintain and extend.
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“Encapsulation means binding data and methods inside a class.
+We hide data using private variables and expose them through getters and setters.
+This gives security, control, and clean code structure.”
+
+---
+
+# ✅ **What is Inheritance?**
+
+* Inheritance allows one class to use properties of another class.
+* The class that gives properties → **Parent (Super class)**
+* The class that receives → **Child (Sub class)**
+* It improves **code reuse**.
+
+---
+
+# ✅ **Rules for Java Inheritance**
+
+* Use `extends` keyword.
+* Private members are **not inherited**.
+* Constructors are **not inherited**.
+* Java does **not** support multiple inheritance using classes.
+* But multiple inheritance is possible with **interfaces**.
+
+---
+
+# ✅ **Types of Inheritance in Java**
+
+1. **Single** → One parent, one child
+2. **Multilevel** → A → B → C
+3. **Hierarchical** → One parent, many children
+4. **Multiple (Not supported with classes)**
+5. **Hybrid (Not supported with classes)**
+
+---
+
+# ✅ **Understanding `super` Keyword**
+
+* `super` is used to access **parent class** members.
+* Used for:
+  ✔ calling parent variable
+  ✔ calling parent method
+  ✔ calling parent constructor → `super()`
+
+---
+
+# ✅ **super vs this**
+
+| Keyword   | Refers To            |
+| --------- | -------------------- |
+| **this**  | Current class object |
+| **super** | Parent class object  |
+
+---
+
+# ✅ **super() vs this()**
+
+| Keyword     | Meaning                                     |
+| ----------- | ------------------------------------------- |
+| **this()**  | Calls another constructor of **same class** |
+| **super()** | Calls constructor of **parent class**       |
+
+### Rules:
+
+* Must be the **first line** in a constructor.
+* Cannot use `this()` and `super()` together.
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“Inheritance allows a child class to reuse code from a parent class using `extends`.
+We use `super` to call parent variables, methods, or constructors.
+`this()` calls constructor of same class, while `super()` calls parent constructor.”
+
+---
+
+# ✅ **What is Method Signature?**
+
+* Method signature includes **method name + parameter list**.
+* Return type is **not** part of the signature.
+
+---
+
+# ✅ **What is Polymorphism?**
+
+* Polymorphism means **one thing in many forms**.
+* In Java, it allows the same method name to behave differently.
+* It increases flexibility and reusability.
+
+---
+
+# ✅ **Types of Polymorphism**
+
+### **1. Compile-time Polymorphism (Static)**
+
+* Achieved using **Method Overloading**.
+* Decided by compiler.
+
+### **2. Runtime Polymorphism (Dynamic)**
+
+* Achieved using **Method Overriding**.
+* Decided at runtime based on object.
+
+---
+
+# ✅ **Method Overloading**
+
+* Same method name, **different parameter list**.
+* Return type can be same or different.
+* Happens inside the **same class**.
+
+### Example:
+
+```java
+void show(int a) {}
+void show(int a, String b) {}
+```
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“Polymorphism means one method behaving in different ways.
+We have compile-time polymorphism using overloading and runtime polymorphism using overriding.
+Method signature is method name plus parameters.”
+
+---
+
+# ✅ **Method Overriding**
+
+* Overriding means **child class provides its own implementation** of a parent class method.
+* Method name, parameters, and return type must be **same** as parent.
+* Achieves **runtime polymorphism**.
+
+### Example:
+
+```java
+class A { void show(){} }
+class B extends A { void show(){} } // overriding
+```
+
+---
+
+# ✅ **Rules for Method Overriding**
+
+* Must be in **inheritance** (parent-child).
+* Method signatures must match.
+* Access modifier in child **cannot be more restrictive**.
+* Private, static, and final methods **cannot** be overridden.
+
+---
+
+# ✅ **Overloading vs Overriding**
+
+| Feature         | Overloading                            | Overriding                        |
+| --------------- | -------------------------------------- | --------------------------------- |
+| Definition      | Same method name, different parameters | Same method name, same parameters |
+| Location        | Same class                             | Parent–child classes              |
+| Type            | Compile-time polymorphism              | Runtime polymorphism              |
+| Return type     | Can change                             | Should be same or covariant       |
+| Access Modifier | No restriction                         | Cannot be more restrictive        |
+
+---
+
+# 🎤 **Interview 2–3 Line Comparison Answer**
+
+“Overloading happens in the same class with different parameters and is compile-time.
+Overriding happens in inheritance with the same method signature and is runtime polymorphism.”
+
+---
+
+# ✅ **Annotations (Simple Explanation)**
+
+* Annotations give **extra information to compiler or JVM**.
+* They do not affect program logic.
+
+### Common Annotations:
+
+* **@Override** → tells compiler that we are overriding a method.
+* **@Deprecated** → marks method as outdated.
+* **@SuppressWarnings** → hides compiler warnings.
+* **@FunctionalInterface** → ensures interface has only one abstract method.
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“Annotations give metadata to compiler/JVM. The most common one is `@Override` which checks that a method is actually overriding the parent method. They help reduce errors and improve code clarity.”
+
+---
+Here are **short, simple, interview-ready notes** for **Abstraction, Abstract Class, Interface, Functional Interface, Marker Interface** — perfect to speak in an interview.
+
+---
+
+# ✅ **What is Abstraction?**
+
+* Abstraction means **showing only essential features and hiding internal details**.
+* Example: We drive a car but don’t know engine code.
+
+---
+
+# ✅ **How can we achieve Abstraction?**
+
+* Using **abstract classes** (partial abstraction).
+* Using **interfaces** (full abstraction).
+
+---
+
+# ✅ **What is an Abstract Method?**
+
+* A method with **no body**, only declaration.
+* Child class must provide implementation.
+
+```java
+abstract void show();
+```
+
+---
+
+# ✅ **Abstract Class**
+
+* A class declared with `abstract` keyword.
+* It can have both **abstract and non-abstract** methods.
+* Cannot be instantiated.
+
+---
+
+# ✅ **Rules for Abstract Class**
+
+* Must use `extends` to inherit.
+* Cannot create objects.
+* Can have constructors, static methods, and variables.
+* Child class must implement all abstract methods.
+
+---
+
+# 🎤 **2–3 Line Interview Answer**
+
+“Abstraction hides internal details and shows only required things.
+We achieve abstraction using abstract classes and interfaces.
+Abstract class can have abstract and normal methods.”
+
+---
+
+# ---------------------------
+# ✅ **What is Interface?**
+
+* Interface is a **100% abstract structure** (before Java 8).
+* It contains abstract methods, and child class must implement them.
+
+---
+
+# ✅ **Interface vs Abstract Class**
+
+| Feature     | Abstract Class            | Interface                                                                    |
+| ----------- | ------------------------- | ---------------------------------------------------------------------------- |
+| Methods     | Abstract + normal methods | Only abstract methods (before Java 8), default/static methods (after Java 8) |
+| Variables   | Can have variables        | Only `public static final` constants                                         |
+| Inheritance | Single inheritance        | Multiple inheritance                                                         |
+| Constructor | Can have                  | Cannot have                                                                  |
+
+---
+
+# 🎤 **Simple Interview Line**
+
+“Abstract class provides partial abstraction while interface gives full abstraction.
+Interface supports multiple inheritance but abstract class doesn’t.”
+
+---
+
+# ---------------------------
+
+# ✅ **Rules for Java Interface**
+
+* All variables are **public static final** by default.
+* All methods are **public abstract** (except default & static).
+* A class implements interface using `implements`.
+* One class can implement multiple interfaces.
+
+---
+
+# ---------------------------
+
+# ✅ **How Multiple Inheritance is achieved?**
+
+* Java does not support multiple inheritance using classes.
+* But a class can implement **multiple interfaces**, achieving multiple inheritance in a safe way.
+
+```java
+class A {}
+interface X {}
+interface Y {}
+class B extends A implements X, Y {}
+```
+
+---
+
+# ---------------------------
+# ✅ **Functional Interface**
+
+* Interface with **only one abstract method**.
+* Used in Lambda Expressions.
+
+Example:
+
+```java
+@FunctionalInterface
+interface MyInterface {
+    void show();
+}
+```
+
+---
+
+# ------------------------
+
+# ✅ **Marker Interface**
+
+* Interface with **no methods**.
+* Used for providing metadata or special behavior.
+
+Examples:
+
+* `Serializable`
+* `Cloneable`
+* `RandomAccess`
+
+---
+
+# 🎤 **2–3 Line Interview Answer**
+
+“Interface is used to achieve full abstraction and multiple inheritance.
+Functional interface has one abstract method and is used with lambdas.
+Marker interface has no methods and just marks a class for special behavior.”
+
+---
+
