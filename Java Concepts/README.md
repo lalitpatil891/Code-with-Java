@@ -1088,4 +1088,225 @@ int a = x;       // auto-unboxing
 
 ---
 
+**Control Statements** + **logical programs**
+
+---
+
+# ⭐ **1. Selection Statements**
+
+Used to make decisions in a program.
+
+---
+
+## ✅ **if Statement**
+
+Runs a block only if condition is true.
+
+```java
+if (age > 18) {
+    System.out.println("Adult");
+}
+```
+
+---
+
+## ✅ **if-else Statement**
+
+Chooses between two blocks.
+
+```java
+if (marks >= 35)
+    System.out.println("Pass");
+else
+    System.out.println("Fail");
+```
+
+---
+
+## ✅ **if-else-if (Ladder)**
+
+Used for multiple conditions.
+
+```java
+if (marks >= 75)
+    System.out.println("Distinction");
+else if (marks >= 60)
+    System.out.println("First Class");
+else
+    System.out.println("Pass");
+```
+
+---
+
+# ⭐ Logical Programs on if / if-else / if-else-if
+
+### **1. Check positive, negative, zero**
+
+```java
+if (n > 0) System.out.println("Positive");
+else if (n < 0) System.out.println("Negative");
+else System.out.println("Zero");
+```
+
+### **2. Find biggest of two numbers**
+
+```java
+if (a > b) System.out.println(a + " is bigger");
+else System.out.println(b + " is bigger");
+```
+
+### **3. Find biggest of three numbers**
+
+```java
+if (a > b && a > c)
+    System.out.println(a + " is biggest");
+else if (b > c)
+    System.out.println(b + " is biggest");
+else
+    System.out.println(c + " is biggest");
+```
+
+---
+
+# ⭐ **2. Understanding switch-case**
+
+Used when you have multiple fixed values.
+
+```java
+switch (day) {
+    case 1: System.out.println("Mon"); break;
+    case 2: System.out.println("Tue"); break;
+    default: System.out.println("Invalid");
+}
+```
+
+✔ Good for menu-driven programs
+✔ Works with int, char, String
+
+---
+
+# ⭐ **3. Iteration (Looping) Statements**
+
+---
+
+## ✅ **while Loop**
+
+Condition checked first → may run 0 times.
+
+```java
+while (i <= 5) {
+    System.out.println(i);
+    i++;
+}
+```
+
+---
+
+## ✅ **do-while Loop**
+
+Runs at least once because condition is checked later.
+
+```java
+do {
+    System.out.println(i);
+    i++;
+} while (i <= 5);
+```
+
+---
+
+## ⭐ **Understanding for loop**
+
+Used when you know how many times to repeat.
+
+```java
+for (int i = 1; i <= 5; i++) {
+    System.out.println(i);
+}
+```
+
+---
+
+# ⭐ Logical Programs on for loop
+
+### **1. Print 1 to 10**
+
+```java
+for (int i = 1; i <= 10; i++)
+    System.out.print(i + " ");
+```
+
+### **2. Print even numbers**
+
+```java
+for (int i = 2; i <= 20; i += 2)
+    System.out.print(i + " ");
+```
+
+### **3. Sum of first 10 numbers**
+
+```java
+int sum = 0;
+for (int i = 1; i <= 10; i++)
+    sum += i;
+System.out.println(sum);
+```
+
+---
+
+# ⭐ **Understanding for-each loop**
+
+Used for arrays or collections.
+Easy way to read values, but cannot update index.
+
+```java
+int[] arr = {10, 20, 30};
+for (int x : arr) {
+    System.out.println(x);
+}
+```
+
+---
+
+# ⭐ **Jump Statements**
+
+---
+
+## ✅ **break**
+
+Stops the loop immediately.
+
+```java
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) break;
+    System.out.print(i + " ");
+}
+```
+
+---
+
+## ✅ **continue**
+
+Skips the current iteration.
+
+```java
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) continue;
+    System.out.print(i + " ");
+}
+```
+
+---
+
+## ✅ **return**
+
+Exits the method.
+
+```java
+if (age < 18)
+    return; // stops method execution
+```
+
+---
+
  
