@@ -3001,3 +3001,78 @@ public int compare(Student s1, Student s2)
 * Methods: **hasMoreElements(), nextElement()**.
 
 ---
+# ⭐ **Java Utility Classes**
+
+---
+
+## 🔵 **StringTokenizer**
+
+* Used to **split a string** into tokens based on a delimiter.
+* Faster and older alternative to `String.split()`.
+* Methods: `nextToken()`, `hasMoreTokens()`.
+
+---
+
+## 🔵 **Date (java.util.Date)**
+
+* Represents **date and time** in milliseconds.
+* Mostly **deprecated** and replaced by `LocalDate`, `LocalTime`, `LocalDateTime` in Java 8+.
+
+---
+
+## 🔵 **Calendar**
+
+* Used to manipulate **date and time** like add, subtract days, months.
+* More flexible than `Date`, but still older API.
+
+---
+
+## 🔵 **Formatting Date and Time (SimpleDateFormat)**
+
+* Used to **format and parse** dates.
+* Example formats: `"dd/MM/yyyy"`, `"HH:mm:ss"`.
+
+```java
+SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+```
+
+---
+
+## 🔵 **Locale**
+
+* Represents **region or language settings** (India, US, France).
+* Used for **regional formatting** like currency, date, messages.
+
+---
+
+## 🔵 **Formatter**
+
+* Used to format output similar to C’s `printf`.
+* Supports placeholders like `%d`, `%s`, `%f`.
+
+```java
+System.out.printf("Age: %d", age);
+```
+
+---
+
+## 🔵 **Random Class**
+
+* Used to generate **random numbers**.
+* Methods: `nextInt()`, `nextDouble()`, `nextBoolean()`.
+
+---
+
+## 🔵 **Arrays Class**
+
+* Utility class for **array operations**.
+* Methods: `sort()`, `binarySearch()`, `copyOf()`, `equals()`, `toString()`.
+
+---
+
+## 🔵 **Collections Class**
+
+* Utility class for **collection operations**.
+* Methods: `sort()`, `reverse()`, `shuffle()`, `min()`, `max()`, `synchronizedList()`.
+
+---
