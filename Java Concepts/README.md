@@ -1494,3 +1494,58 @@ At member level, we have **public, protected, default, and private**.
 Private is most restricted, public is fully open.”
 
 ---
+
+***`this` keyword***:
+
+---
+
+# ✅ **Understanding `this` Keyword**
+
+### **What is `this`?**
+
+* `this` is a reference variable in Java that refers to **current object**.
+* It is used inside methods, constructors, or blocks.
+
+---
+
+# ✅ **Uses of `this` Keyword**
+
+### **1. To refer current object**
+
+```java
+this.name = name;
+```
+
+* Used when local variable and instance variable have same name.
+
+### **2. To call current class method**
+
+```java
+this.show();
+```
+
+### **3. To call current class constructor**
+
+```java
+this(10);   // calling another constructor
+```
+
+### **4. To pass current object as argument**
+
+```java
+method(this);
+```
+
+### **5. To return current object**
+
+```java
+return this;
+```
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“`this` keyword refers to the current object. We use it to access instance variables, call methods or constructors of the same class, and to avoid naming conflicts between local and instance variables.”
+
+---
