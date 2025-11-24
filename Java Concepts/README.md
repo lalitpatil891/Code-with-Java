@@ -742,6 +742,170 @@ static {
 
 ---
 
+Here are **static keyword (logical session)** and some **logical programs** using static.
+
+---
+
+# ✅ **static Keyword (Logical Understanding)**
+
+### **1. What does static logically mean?**
+
+Static means **class-level** memory.
+It loads **only once** when the class loads.
+All objects **share the same static member**.
+
+---
+
+### **2. When do we use static logically?**
+
+* When a value is **common for all objects**
+* When we need a **utility method** (like `Math.max()`)
+* When we want **class-level counters**, IDs, or constants
+* When initialization must run **once** (static block)
+
+---
+
+# 🔹 **Logical Programs Using static**
+
+---
+
+## **Program 1: Count number of objects created**
+
+```java
+class Test {
+    static int count = 0;
+
+    Test() {
+        count++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        new Test();
+        new Test();
+        new Test();
+        System.out.println("Objects created: " + Test.count);
+    }
+}
+```
+
+**Logic:** static variable keeps common count → increases for every object.
+
+---
+
+## **Program 2: Generate unique roll numbers**
+
+```java
+class Student {
+    static int seq = 100;
+    int roll;
+
+    Student() {
+        roll = seq++;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+        System.out.println(s1.roll);
+        System.out.println(s2.roll);
+    }
+}
+```
+
+**Logic:** static value increases → gives unique numbers.
+
+---
+
+## **Program 3: Static block demo**
+
+```java
+class Demo {
+    static {
+        System.out.println("Static block executed");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main method executed");
+    }
+}
+```
+
+**Logic:** static block runs **before main()**, only once.
+
+---
+
+## **Program 4: Using static method for utility logic**
+
+```java
+class Calc {
+    static int square(int x) {
+        return x * x;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Calc.square(5));
+    }
+}
+```
+
+**Logic:** No object needed → static method works as utility.
+
+---
+
+## **Program 5: Accessing both static and instance members**
+
+```java
+class Demo {
+    static int a = 10;
+    int b = 20;
+
+    void show() {
+        System.out.println(a + b);
+    }
+
+    static void display() {
+        System.out.println(a);
+        // System.out.println(b); // ❌ Not allowed
+    }
+}
+```
+
+**Logic:**
+
+* Instance method can access both.
+* Static method can access only static.
+
+---
+
+## **Program 6: Use static block to initialize static data**
+
+```java
+class Sample {
+    static int x;
+
+    static {
+        x = 50;
+        System.out.println("Static initialized");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        System.out.println(Sample.x);
+    }
+}
+```
+
+**Logic:** static block sets value before main runs.
+
+---
+
 
 
  
