@@ -2584,3 +2584,206 @@ If you override `equals()`, always override `hashCode()`.
 | Eligibility | unreachable objects      |
 
 ---
+
+***Java I/O Streams including Byte Streams, Character Streams, Buffered Streams, Data Streams, and Object Streams***.
+
+---
+
+# ⭐ **Java I/O Streams (Input/Output Streams)**
+
+Java I/O (Input/Output) is used to **read data from a source** or **write data to a destination**, such as:
+
+* File
+* Keyboard
+* Network
+* Memory
+
+Java I/O is mainly provided by the package:
+📦 **`java.io`**
+
+---
+
+# 🔵 **1. What is a Stream?**
+
+A **stream** is a continuous flow of data.
+
+### Two types:
+
+1. **Input Stream** → reads data
+2. **Output Stream** → writes data
+
+---
+
+# 🔵 **2. Byte Streams (8-bit streams)**
+
+Used to read/write **binary data** such as:
+
+* images
+* audio
+* video
+* PDF
+* executable files
+
+### Parent classes:
+
+* **InputStream**
+* **OutputStream**
+
+### Common Classes:
+
+* FileInputStream
+* FileOutputStream
+* BufferedInputStream
+* BufferedOutputStream
+
+### Example:
+
+```java
+FileInputStream fis = new FileInputStream("data.bin");
+int b = fis.read();
+fis.close();
+```
+
+---
+
+# 🔵 **3. Character Streams (16-bit Unicode)**
+
+Used to read/write **text files** (characters).
+
+### Parent classes:
+
+* **Reader**
+* **Writer**
+
+### Common Classes:
+
+* FileReader
+* FileWriter
+* BufferedReader
+* BufferedWriter
+
+### Example:
+
+```java
+FileReader fr = new FileReader("text.txt");
+int ch = fr.read();
+fr.close();
+```
+
+---
+
+# 🔵 **Byte Streams vs Character Streams**
+
+| Feature       | Byte Stream              | Character Stream |
+| ------------- | ------------------------ | ---------------- |
+| Base class    | InputStream/OutputStream | Reader/Writer    |
+| Data handled  | Binary data              | Characters/Text  |
+| Size          | 1 byte                   | 2 bytes          |
+| Example class | FileInputStream          | FileReader       |
+
+---
+
+# 🔵 **4. Buffered Streams (Fast I/O)**
+
+Used to increase performance by using an internal buffer.
+
+### Byte version:
+
+* BufferedInputStream
+* BufferedOutputStream
+
+### Character version:
+
+* BufferedReader
+* BufferedWriter
+
+### Example:
+
+```java
+BufferedReader br = new BufferedReader(new FileReader("file.txt"));
+String line = br.readLine();
+br.close();
+```
+
+✔ Reads line by line → faster
+✔ Useful for large files
+
+---
+
+# 🔵 **5. Data Streams**
+
+Used to read/write **primitive data types** in a portable way.
+
+### Classes:
+
+* **DataInputStream**
+* **DataOutputStream**
+
+### Supports:
+
+`int, float, boolean, long, double, char, UTF strings`
+
+### Example:
+
+```java
+DataOutputStream dos = new DataOutputStream(new FileOutputStream("data.dat"));
+dos.writeInt(10);
+dos.writeDouble(9.5);
+dos.close();
+```
+
+```java
+DataInputStream dis = new DataInputStream(new FileInputStream("data.dat"));
+int x = dis.readInt();
+double y = dis.readDouble();
+dis.close();
+```
+
+---
+
+# 🔵 **6. Object Streams (Serialization/Deserialization)**
+
+Used to write and read **objects**.
+
+### Classes:
+
+* **ObjectOutputStream** → writeObject()
+* **ObjectInputStream** → readObject()
+
+### Requirements:
+
+* Class must implement **Serializable** interface
+
+### Example:
+
+```java
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("student.ser"));
+oos.writeObject(new Student("Ram", 20));
+oos.close();
+```
+
+```java
+ObjectInputStream ois = new ObjectInputStream(new FileInputStream("student.ser"));
+Student s = (Student) ois.readObject();
+ois.close();
+```
+
+✔ Used in:
+
+* File storage
+* Caching
+* Sending objects over network (RMI, sockets)
+
+---
+
+# ⭐ **Summary Table**
+
+| Stream Type      | Parent Class                           | Use Case                    |
+| ---------------- | -------------------------------------- | --------------------------- |
+| Byte Stream      | InputStream / OutputStream             | Images, videos, binary data |
+| Character Stream | Reader / Writer                        | Text files, characters      |
+| Buffered Stream  | BufferedInputStream / BufferedReader   | Faster I/O with buffer      |
+| Data Stream      | DataInputStream / DataOutputStream     | Read/write primitives       |
+| Object Stream    | ObjectInputStream / ObjectOutputStream | Serialization               |
+
+---
