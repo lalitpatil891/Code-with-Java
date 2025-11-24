@@ -3234,3 +3234,54 @@ Runnable r = new Runnable() {
 
 ---
 
+# ⭐ **Enum **
+
+---
+
+## 🔵 **What is an Enum?**
+
+* Enum is a special type in Java used to define a **fixed set of constant values**.
+* More powerful and type-safe than `final static` constants.
+
+---
+
+## 🔵 **Enum Inside a Class**
+
+* Enum can be declared **inside a class** to keep constants related to that class.
+* Helps in grouping values logically.
+
+```java
+class Test {
+    enum Level { LOW, MEDIUM, HIGH }
+}
+```
+
+---
+
+## 🔵 **Enum in a Switch**
+
+* Enums work very well with **switch statements**.
+* Switch directly matches enum constants.
+
+```java
+Level l = Level.HIGH;
+switch (l) {
+    case LOW: break;
+    case HIGH: break;
+}
+```
+
+---
+
+## 🔵 **Iterating Through an Enum**
+
+* Use **values()** method to get all enum constants.
+* Useful for looping or printing all values.
+
+```java
+for (Level l : Level.values()) {
+    System.out.println(l);
+}
+```
+
+---
