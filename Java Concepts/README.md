@@ -906,6 +906,100 @@ public class Test {
 
 ---
 
+# ✅ **1. What is Type Casting?**
+
+Type casting means **converting one data type into another**.
+Java allows conversion between primitive types and object types.
+It helps in storing values in different type variables.
+
+---
+
+# ✅ **2. Types of Type Casting**
+
+Java has **two main types**:
+
+### **A. Primitive Type Casting**
+
+* Implicit (automatic)
+* Explicit (manual)
+
+### **B. Reference Type Casting**
+
+* Upcasting
+* Downcasting
+
+---
+
+# ✅ **3. Implicit Type Casting (Widening)**
+
+Performed **automatically** by Java.
+Happens when converting **small type → big type**.
+
+Example:
+
+```java
+int a = 10;
+double d = a;   // implicit
+```
+
+No data loss.
+
+---
+
+# ✅ **4. Explicit Type Casting (Narrowing)**
+
+Done **manually** by programmer.
+Big type → small type.
+
+Example:
+
+```java
+double d = 10.5;
+int a = (int) d;  // explicit
+```
+
+Possible data loss.
+
+---
+
+# ✅ **5. Upcasting (Object Casting)**
+
+Converting **child object to parent reference**.
+Done **automatically**.
+Used in polymorphism.
+
+Example:
+
+```java
+Parent p = new Child();  // upcasting
+```
+
+---
+
+# ✅ **6. Downcasting**
+
+Converting **parent reference back to child type**.
+Done **manually**.
+Risky → may cause `ClassCastException`.
+
+Example:
+
+```java
+Parent p = new Child();
+Child c = (Child) p;  // downcasting
+```
+
+---
+
+# 🔹 **Short Summary (easy to speak)**
+
+* Type casting = converting one type to another
+* Implicit = small to big (automatic)
+* Explicit = big to small (manual)
+* Upcasting = child to parent (safe)
+* Downcasting = parent to child (manual, risky)
+
+---
 
 
  
