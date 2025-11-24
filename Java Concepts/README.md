@@ -3076,3 +3076,105 @@ System.out.printf("Age: %d", age);
 * Methods: `sort()`, `reverse()`, `shuffle()`, `min()`, `max()`, `synchronizedList()`.
 
 ---
+
+# ⭐ **Java 8 Features — Interview Notes**
+
+---
+
+## 🔵 **Lambda Expressions**
+
+* Lambda is a **short way to write anonymous methods**.
+* Helps in writing clean code for functional programming.
+* Syntax: `(a, b) -> a + b`.
+
+---
+
+## 🔵 **Functional Interfaces**
+
+* Interface with **only one abstract method**.
+* Examples: `Runnable`, `Callable`, `Comparator`, `Supplier`, `Function`.
+* Annotated with **@FunctionalInterface**.
+
+---
+
+## 🔵 **Default Methods (in Interface)**
+
+* Methods inside interface with **default implementation**.
+* Used to add new features without breaking old code.
+
+```java
+default void show() { }
+```
+
+---
+
+## 🔵 **Static Methods (in Interface)**
+
+* Static helper methods inside interface.
+* Called using `InterfaceName.method()`.
+
+---
+
+## 🔵 **Private Methods (in Interface – Java 9+)**
+
+* Used inside interface to **re-use code** between default methods.
+* Cannot be accessed outside the interface.
+
+---
+
+## 🔵 **Method References**
+
+* Shortcut to refer existing methods.
+* Types: **Static**, **Instance**, **Constructor**.
+* Example: `System.out::println`.
+
+---
+
+# ⭐ **Stream API**
+
+* Used to process collections **in a functional way**.
+* Supports operations like **filter, map, sort, reduce**.
+* Makes code short and readable.
+
+---
+
+## 🔵 **Collectors Class**
+
+* Used to collect Stream output into **List, Set, Map**.
+* Example: `Collectors.toList()`, `Collectors.groupingBy()`.
+
+---
+
+## 🔵 **forEach() Method**
+
+* Used to loop elements in Lambda style.
+* Example: `list.forEach(x -> System.out.println(x));`
+
+---
+
+## 🔵 **Optional Class**
+
+* Used to avoid **NullPointerException**.
+* Represents a value that may or may not be present.
+* Methods: `of()`, `empty()`, `isPresent()`, `orElse()`.
+
+---
+
+## 🔵 **Parallel Array Sorting**
+
+* Arrays class supports **parallelSort()** which uses multithreading.
+* Faster for large arrays.
+
+---
+
+## 🔵 **New Date & Time API (java.time)**
+
+* Java 8 introduced new immutable classes:
+
+  * `LocalDate`
+  * `LocalTime`
+  * `LocalDateTime`
+  * `ZonedDateTime`
+* Thread-safe and easier than old Date/Calendar.
+
+---
