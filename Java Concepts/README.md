@@ -1309,4 +1309,50 @@ if (age < 18)
 
 ---
 
- 
+ **Scanner Class**:
+
+---
+
+## ✅ **Scanner Class – Simple Interview Notes**
+
+### **What is Scanner Class?**
+
+* Scanner is a class in `java.util` package used to take input from the user.
+* It reads data like int, String, double, etc., from the keyboard.
+
+---
+
+## ✅ **Common Methods of Scanner**
+
+* `nextInt()` → reads an integer
+* `nextDouble()` → reads a decimal value
+* `next()` → reads a single word
+* `nextLine()` → reads a full line
+* `nextBoolean()` → reads true/false
+* `nextFloat()` → reads float value
+
+---
+
+## ✅ **How to use Scanner**
+
+```java
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+
+int a = sc.nextInt();
+String name = sc.nextLine();
+```
+
+* Always write `import java.util.Scanner;`
+* Create an object → `Scanner sc = new Scanner(System.in);`
+
+---
+
+## ✅ **Key Points**
+
+* Scanner reads input from keyboard (System.in).
+* `next()` reads one word, `nextLine()` reads entire sentence.
+* Close scanner using `sc.close()` to avoid resource leak (optional for small programs).
+
+---
