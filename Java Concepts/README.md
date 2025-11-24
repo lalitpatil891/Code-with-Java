@@ -665,6 +665,82 @@ static {
 
 ---
 
+## **1. Understanding Instance Members**
+
+Instance members belong to the **object**.
+Each object gets its **own copy** of instance variables and can use instance methods.
+They work only when an object is created.
+
+---
+
+## **2. Instance Variable vs Static Variable**
+
+| Instance Variable                    | Static Variable                    |
+| ------------------------------------ | ---------------------------------- |
+| Belongs to **object**                | Belongs to **class**               |
+| Each object gets a **separate copy** | **One copy** shared by all objects |
+| Accessed using object                | Accessed using class name          |
+| Stored in **Heap**                   | Stored in **Method Area**          |
+
+---
+
+## **3. Instance Method**
+
+* Declared **without static**.
+* You must create an object to call it.
+* Can access both **instance + static** variables.
+
+Example:
+
+```java
+void show() { }
+```
+
+---
+
+## **4. Instance Block vs Static Block**
+
+### **Instance Block**
+
+* Written using `{ }` (no keyword).
+* Runs **every time** an object is created.
+* Used for object-level initialization.
+
+Example:
+
+```java
+{
+    System.out.println("Instance Block");
+}
+```
+
+---
+
+### **Static Block**
+
+* Written using `static { }`.
+* Runs **one time** when class loads.
+* Used for static initialization.
+
+Example:
+
+```java
+static {
+    System.out.println("Static Block");
+}
+```
+
+---
+
+## **Short Difference (Instance Block vs Static Block)**
+
+| Instance Block              | Static Block               |
+| --------------------------- | -------------------------- |
+| Runs for **every object**   | Runs **only once**         |
+| Object-level initialization | Class-level initialization |
+| Needs object creation       | Runs before main()         |
+
+---
 
 
 
