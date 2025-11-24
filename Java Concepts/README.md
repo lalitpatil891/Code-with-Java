@@ -1356,3 +1356,88 @@ String name = sc.nextLine();
 * Close scanner using `sc.close()` to avoid resource leak (optional for small programs).
 
 ---
+**Packages in Java**:
+
+---
+
+## ✅ **What is a Package?**
+
+* Package is a folder in Java used to group related classes.
+* It helps in organizing code and avoiding name conflicts.
+
+---
+
+## ✅ **Need of Packages**
+
+* To organize classes properly.
+* To avoid class name collision.
+* To provide access control and reusability.
+
+---
+
+## ✅ **Structure of a Package**
+
+```
+src/
+   com/
+      company/
+          project/
+              MyClass.java
+```
+
+* Package uses folder structure.
+* We declare it at top: `package com.company.project;`
+
+---
+
+## ✅ **Types of Packages**
+
+### **1. Built-in Packages**
+
+* `java.lang` (default)
+* `java.util`
+* `java.io`
+* `java.sql`
+* `java.time`
+
+### **2. User-defined Packages**
+
+* Created using the `package` keyword.
+
+---
+
+## ✅ **Package Naming Rules**
+
+* Always in lowercase.
+* Use domain style: `com.company.project`.
+* Should not start with numbers or special symbols.
+
+---
+
+## ✅ **How to Access a Package from Another Package**
+
+### **Using import keyword**
+
+```java
+import com.company.project.MyClass;
+```
+
+### **Using fully-qualified name**
+
+```java
+com.company.project.MyClass obj = new com.company.project.MyClass();
+```
+
+### **Using wildcard**
+
+```java
+import com.company.project.*;
+```
+
+---
+
+## ⚡ Interview-ready 2–3 lines:
+
+* “Package is a way to group related classes in Java. It helps organize code and avoid name conflicts. We access packages using `import`, fully-qualified names, or wildcard import.”
+
+---
