@@ -2392,3 +2392,195 @@ Checked exceptions must be handled; unchecked happen at runtime.
 We can also create our own exceptions by extending Exception class.”
 
 ---
+***final keyword + Garbage Collection in Java***
+
+---
+
+# ⭐ Understanding `final` Keyword & Garbage Collection in Java
+
+---
+
+# 🔵 **1. Uses of `final` Keyword**
+
+The `final` keyword in Java is a **modifier** used with **variables, methods, and classes**.
+
+### ✔ **1) final Variable – Value Cannot Change**
+
+* Once assigned, you **cannot modify** the value.
+
+```java
+final int x = 10;
+// x = 20;  // ❌ Compilation error
+```
+
+* For object references:
+
+```java
+final StringBuilder sb = new StringBuilder("Hi");
+sb.append(" Hello");   // ✔ allowed (object can change)
+sb = new StringBuilder("New");  // ❌ not allowed
+```
+
+---
+
+### ✔ **2) final Method – Cannot be Overridden**
+
+```java
+class A {
+    final void show() {}
+}
+
+class B extends A {
+    void show() {}   // ❌ cannot override
+}
+```
+
+---
+
+### ✔ **3) final Class – Cannot be Inherited**
+
+```java
+final class Test {}
+class A extends Test {} // ❌ error
+```
+
+Examples: `String`, `Math`, `Wrapper Classes`.
+
+---
+
+# 🔵 **2. How Automatic Garbage Collection Works**
+
+Java has **automatic memory management** using the **Garbage Collector (GC)**.
+
+### ✔ GC removes objects that are:
+
+* No longer reachable
+* No valid reference exists
+
+The process:
+
+1. JVM identifies unreachable objects
+2. GC frees heap memory
+3. Memory becomes available for new objects
+
+GC works on **Heap memory**, NOT on:
+
+* Stack
+* Method Area
+* Metaspace
+
+---
+
+# 🔵 **3. When an Object is Eligible for Garbage Collection**
+
+### ✔ 1) Reference is Reassigned
+
+```java
+String s = new String("Java");
+s = new String("Python");   // "Java" becomes eligible
+```
+
+### ✔ 2) Reference Goes Out of Scope
+
+```java
+void test() {
+    Person p = new Person(); // ✔ eligible after method ends
+}
+```
+
+### ✔ 3) Nullifying the Reference
+
+```java
+Employee e = new Employee();
+e = null;   // object becomes eligible
+```
+
+### ✔ 4) Objects Without Any Reference (Anonymous)
+
+```java
+new Student();   // ✔ directly eligible
+```
+
+---
+
+# 🔵 **4. finalize() Method**
+
+* Present in `java.lang.Object`.
+* Called **before GC destroys the object**.
+* Rarely used → deprecated since Java 9.
+
+```java
+@Override
+protected void finalize() throws Throwable {
+    System.out.println("Object destroyed");
+}
+```
+
+⚠ **Note:** finalize() is **not guaranteed** to execute.
+
+---
+
+# 🔵 **5. System.gc() & Runtime.getRuntime().gc()**
+
+### ✔ System.gc()
+
+* Suggests JVM to run garbage collector.
+
+```java
+System.gc();
+```
+
+### ✔ Runtime.getRuntime().gc()
+
+```java
+Runtime.getRuntime().gc();
+```
+
+⚠ These methods only **request** GC; JVM may ignore it.
+
+---
+
+# 🔵 **6. Usage of equals() and hashCode()**
+
+Both present in `java.lang.Object`.
+
+### ✔ equals()
+
+* Used to compare **content** of two objects.
+* Default implementation → compares memory addresses.
+
+### ✔ hashCode()
+
+* Returns an integer hash value of object.
+* Used in hashing-based collections:
+
+  * HashMap
+  * HashSet
+  * Hashtable
+
+### ⚠ RULE:
+
+If you override `equals()`, always override `hashCode()`.
+
+---
+
+# ⭐ QUICK INTERVIEW REVISION
+
+### **final keyword:**
+
+| final applies to | Meaning                  |
+| ---------------- | ------------------------ |
+| variable         | constant (cannot change) |
+| method           | cannot override          |
+| class            | cannot extend            |
+
+### **GC Concepts:**
+
+| Topic       | Summary                  |
+| ----------- | ------------------------ |
+| GC          | automatic memory cleanup |
+| finalize()  | deprecated, not reliable |
+| System.gc() | request GC               |
+| Eligibility | unreachable objects      |
+
+---
