@@ -1783,3 +1783,84 @@ for(char c : str.toCharArray()){
 ```
 
 ---
+
+ ***OOP (Object-Oriented Programming)*** 
+
+---
+
+# ✅ **Introduction to OOP**
+
+* OOP stands for Object-Oriented Programming.
+* It organizes code around **objects** instead of functions.
+* Main aim is to make code reusable, secure, and easy to maintain.
+
+---
+
+# ✅ **Procedure-Oriented vs Object-Oriented**
+
+### **Procedure-Oriented**
+
+* Focus on functions.
+* Data is not secure.
+* Difficult to maintain large programs.
+
+### **Object-Oriented**
+
+* Focus on objects + data.
+* Data is secure through classes.
+* Easy to reuse and extend.
+
+---
+
+# ✅ **4 Main Principles of OOP**
+
+### **1. Encapsulation**
+
+* Binding data + methods into a single unit (class).
+* Achieved using private variables + public getters/setters.
+* Provides data hiding.
+
+### **2. Inheritance**
+
+* One class acquiring properties of another class.
+* Promotes reusability.
+* Example: `class Dog extends Animal`.
+
+### **3. Polymorphism**
+
+* One thing behaving in many forms.
+* Two types:
+
+  * **Compile-time** → Method overloading
+  * **Runtime** → Method overriding
+
+### **4. Abstraction**
+
+* Showing only essential details, hiding internal logic.
+* Achieved using abstract class or interface.
+
+---
+
+# ✅ **Association Types**
+
+### **1. Composition (Strong Relationship)**
+
+* Part cannot exist without whole.
+* Example: House → Rooms
+* If house is destroyed, rooms are destroyed.
+
+### **2. Aggregation (Weak Relationship)**
+
+* Part can exist without whole.
+* Example: Student → College
+* If college closes, student still exists.
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“OOP is a way of writing programs using objects.
+Its main features are encapsulation, inheritance, polymorphism, and abstraction.
+OOP makes code reusable, secure, and easier to manage.”
+
+---
