@@ -1549,3 +1549,237 @@ return this;
 “`this` keyword refers to the current object. We use it to access instance variables, call methods or constructors of the same class, and to avoid naming conflicts between local and instance variables.”
 
 ---
+***Arrays***:
+
+---
+
+# ✅ **Arrays in Java – Interview Notes**
+
+## **1. How to Declare an Array**
+
+* It tells Java the type of array.
+
+```java
+int[] arr;
+String[] names;
+```
+
+---
+
+## **2. How to Instantiate (create memory)**
+
+```java
+arr = new int[5];
+```
+
+* This creates space for 5 integers.
+
+---
+
+## **3. Rules for Array Instantiation**
+
+* Size must be **non-negative**.
+* Size cannot be **float or double** (only int).
+* Once created, size cannot be changed (fixed size).
+
+---
+
+## **4. How to Access Array Elements**
+
+```java
+arr[0];  // first element
+arr[3];  // fourth element
+```
+
+* Index starts from **0** to **length-1**.
+
+---
+
+## **5. length Vs length()**
+
+* `arr.length` → property for arrays
+* `str.length()` → method for strings
+
+---
+
+## **6. Multidimensional Array**
+
+```java
+int[][] matrix = new int[3][3];
+```
+
+* It is an array of arrays.
+* Example: matrix[1][2]
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“Array is a collection of same-type elements stored in continuous memory.
+We declare it, then instantiate using `new`.
+We access elements using index, and array size is fixed.”
+
+---
+
+# 🧠 **Logical Programs (Short)**
+
+### ✔ Program 1: Sum of array elements
+
+```java
+int sum = 0;
+for(int i : arr){
+    sum += i;
+}
+```
+
+### ✔ Program 2: Find max element
+
+```java
+int max = arr[0];
+for(int i : arr){
+    if(i > max) max = i;
+}
+```
+
+### ✔ Program 3: Search element
+
+```java
+boolean found = false;
+for(int i : arr){
+    if(i == key){
+        found = true;
+        break;
+    }
+}
+```
+
+---
+
+***Strings*** 
+
+---
+
+# ✅ **1. Why Strings are Immutable?**
+
+* String objects cannot be changed once created.
+* Because String is stored in **SCP (String Constant Pool)** and shared by many references.
+* Immutable design improves **security, memory efficiency, and caching**.
+
+---
+
+# ✅ **2. What is SCP (String Constant Pool)?**
+
+* SCP is a special memory inside Heap where all string literals are stored.
+* If a literal already exists, Java reuses it instead of creating a new object.
+
+---
+
+# ✅ **3. Important String Class Methods**
+
+* `length()` → returns string length
+* `charAt()` → gets a character
+* `substring()` → extracts part of string
+* `toUpperCase()` / `toLowerCase()`
+* `equals()` / `equalsIgnoreCase()`
+* `contains()`
+* `trim()`
+* `replace()`
+* `split()`
+
+---
+
+# ✅ **4. String vs StringBuffer**
+
+| Feature       | String               | StringBuffer               |
+| ------------- | -------------------- | -------------------------- |
+| Mutability    | Immutable            | Mutable                    |
+| Performance   | Slow in modification | Faster                     |
+| Thread Safety | Not thread-safe      | Thread-safe (synchronized) |
+
+---
+
+# ✅ **5. StringBuffer vs StringBuilder**
+
+| Feature       | StringBuffer | StringBuilder |
+| ------------- | ------------ | ------------- |
+| Mutability    | Mutable      | Mutable       |
+| Thread Safety | YES          | NO            |
+| Speed         | Slower       | Faster        |
+
+---
+
+# ✅ **6. String vs StringBuffer vs StringBuilder**
+
+* String → Immutable → best for fixed data.
+* StringBuffer → Mutable + Thread-safe.
+* StringBuilder → Mutable + Fast (non-thread-safe).
+
+---
+
+# ⚡ **7. StringBuffer Important Methods**
+
+* `append()`
+* `insert()`
+* `delete()`
+* `deleteCharAt()`
+* `reverse()`
+* `setCharAt()`
+
+---
+
+# ⚡ **8. StringBuilder Important Methods**
+
+(Same as StringBuffer but faster)
+
+* `append()`
+* `insert()`
+* `delete()`
+* `reverse()`
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“String is immutable and stored in SCP for memory efficiency and security.
+For modification, we use StringBuffer or StringBuilder.
+StringBuffer is thread-safe but slow; StringBuilder is fast but not thread-safe.”
+
+---
+
+# 🧠 **Logical Programs on Strings (Simple)**
+
+### ✔ Reverse a String
+
+```java
+String rev = "";
+for(int i = str.length()-1; i >= 0; i--){
+    rev += str.charAt(i);
+}
+```
+
+### ✔ Count vowels
+
+```java
+int count = 0;
+for(char c : str.toLowerCase().toCharArray()){
+    if("aeiou".contains(c+"")) count++;
+}
+```
+
+### ✔ Check palindrome
+
+```java
+String rev = new StringBuilder(str).reverse().toString();
+boolean isPal = str.equals(rev);
+```
+
+### ✔ Frequency of characters
+
+```java
+int[] freq = new int[256];
+for(char c : str.toCharArray()){
+    freq[c]++;
+}
+```
+
+---
