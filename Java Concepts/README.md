@@ -3178,3 +3178,59 @@ default void show() { }
 * Thread-safe and easier than old Date/Calendar.
 
 ---
+
+# ⭐ **Inner Classes**
+
+---
+
+## 🔵 **What are Inner Classes?**
+
+* A class declared **inside another class** is called an inner class.
+* Used to group classes that are **logically related** and to access outer class members easily.
+
+---
+
+# ⭐ **Types of Inner Classes**
+
+---
+
+## 🔵 **1. Nested (Non-Static) Inner Class**
+
+* Normal inner class declared inside another class **without static keyword**.
+* Can access all **instance members** of outer class.
+
+```java
+class Outer { class Inner { } }
+```
+
+---
+
+## 🔵 **2. Static Inner Class**
+
+* Defined using **static keyword**.
+* Can access **only static members** of outer class.
+* Object is created using: `Outer.Inner obj = new Outer.Inner();`
+
+---
+
+## 🔵 **3. Method Local Inner Class**
+
+* Class declared **inside a method**.
+* Can access **final or effectively final** local variables.
+* Mostly used in **event handling and encapsulation**.
+
+---
+
+## 🔵 **4. Anonymous Inner Class**
+
+* Class **without a name**, used to override methods quickly.
+* Mostly used with **interfaces, abstract classes, or listeners**.
+
+```java
+Runnable r = new Runnable() {
+    public void run() { }
+};
+```
+
+---
+
