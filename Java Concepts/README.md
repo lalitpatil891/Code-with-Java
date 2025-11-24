@@ -2787,3 +2787,217 @@ ois.close();
 | Object Stream    | ObjectInputStream / ObjectOutputStream | Serialization               |
 
 ---
+Here is the **short, simple, interview-ready** explanation of the **Collection Framework** — exactly in the format you asked:
+**2–3 lines, simple English, only the important points.**
+
+---
+
+# ⭐ ***Collection Framework***
+
+---
+
+## 🔵 **Limitations of Array**
+
+* Arrays have **fixed size**, you cannot increase or decrease it.
+* Stores **only same data type**.
+* No built-in methods like sort, search, add, delete.
+
+---
+
+## 🔵 **Introduction to Collections**
+
+* Collections is a **framework** to store and process a group of objects.
+* It provides **dynamic size**, **ready-made methods**, and **standard data structures**.
+
+---
+
+## 🔵 **Collection Interface**
+
+* Root interface of the Collection framework (except Map).
+* Common methods: **add(), remove(), size(), contains(), iterator()**.
+
+---
+
+## 🔵 **Set – List – Queue – Map (Overview)**
+
+* **List** → ordered, allows duplicates.
+* **Set** → unordered, no duplicates.
+* **Queue** → follows FIFO for processing.
+* **Map** → stores key–value pairs.
+
+---
+
+## 🔵 **Retrieving Elements**
+
+* Using loops, **Iterator**, **ListIterator**, **for-each**, **Spliterator**, **Enumeration**.
+
+---
+
+# ⭐ **LIST Interface**
+
+---
+
+## 🔵 **ArrayList**
+
+* Dynamic array; allows duplicates; ordered.
+* Good for **searching**, slow for **inserting middle**.
+* Generics example: `ArrayList<String> list = new ArrayList<>();`
+
+---
+
+## 🔵 **Vector**
+
+* Same as ArrayList but **thread-safe** (synchronized).
+* Slower because of synchronization.
+* Generics example: `Vector<Integer> v = new Vector<>();`
+
+---
+
+## 🔵 **Stack**
+
+* LIFO (Last In First Out).
+* Methods: **push(), pop(), peek()**.
+* Implementation: `Stack<String> s = new Stack<>();`
+
+---
+
+## 🔵 **LinkedList**
+
+* Doubly linked list; good for **insertion/deletion**.
+* Slower for searching.
+* Can be used as **List + Queue**.
+
+---
+
+# ⭐ **SET Interface**
+
+---
+
+## 🔵 **HashSet**
+
+* No duplicates, no order.
+* Uses **hashing** internally; very fast.
+
+## 🔵 **LinkedHashSet**
+
+* No duplicates, **insertion order** is preserved.
+* Slower than HashSet.
+
+## 🔵 **TreeSet**
+
+* No duplicates, **sorted order**.
+* Uses **TreeMap (Red-Black Tree)** internally.
+
+## 🔵 **EnumSet**
+
+* Used for storing **enum values only**.
+* Very fast and memory-efficient.
+
+---
+
+# ⭐ **QUEUE Interface**
+
+---
+
+## 🔵 **ArrayDeque**
+
+* Better than Stack & LinkedList as Queue.
+* No capacity limit; supports both **FIFO & LIFO**.
+
+## 🔵 **PriorityQueue**
+
+* Elements arranged in **natural order** (min-heap).
+* Used when we want **priority-based retrieval**.
+
+---
+
+# ⭐ **MAP Interface**
+
+---
+
+## 🔵 **HashMap**
+
+* Stores key-value pairs; **fastest**; no order.
+* Allows one null key and multiple null values.
+
+## 🔵 **LinkedHashMap**
+
+* Maintains **insertion order**.
+* Slightly slower than HashMap.
+
+## 🔵 **Hashtable**
+
+* Thread-safe (synchronized).
+* No null key or value.
+
+## 🔵 **TreeMap**
+
+* Stores data in **sorted order** of keys.
+* Based on Red-Black tree.
+
+## 🔵 **WeakHashMap**
+
+* Key is removed automatically when not referenced.
+* Good for caching.
+
+## 🔵 **IdentityHashMap**
+
+* Uses **==** instead of **equals()** for key comparison.
+* Used when reference equality is required.
+
+## 🔵 **Properties Class**
+
+* Stores configuration data as **key=value (String only)**.
+* Used for reading `.properties` files.
+
+---
+
+# ⭐ **Comparable & Comparator**
+
+---
+
+## 🔵 **Comparable**
+
+* Used for **natural sorting**.
+* Implement `compareTo()` method.
+
+```java
+public int compareTo(Student s)
+```
+
+## 🔵 **Comparator**
+
+* Used for **custom sorting**.
+* Implement `compare()` method.
+
+```java
+public int compare(Student s1, Student s2)
+```
+
+---
+
+# ⭐ **Iterators**
+
+---
+
+## 🔵 **Iterator**
+
+* Used to traverse forward only.
+* Methods: **hasNext(), next(), remove()**.
+
+## 🔵 **ListIterator**
+
+* Works only with List.
+* Supports **forward + backward** traversal.
+
+## 🔵 **Spliterator**
+
+* Used for **parallel processing**.
+* Methods: trySplit(), tryAdvance().
+
+## 🔵 **Enumeration**
+
+* Legacy iterator used in Vector.
+* Methods: **hasMoreElements(), nextElement()**.
+
+---
