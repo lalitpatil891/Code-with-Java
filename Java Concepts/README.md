@@ -2248,3 +2248,147 @@ Marker interface has no methods and just marks a class for special behavior.”
 
 ---
 
+# ✅ **What is an Exception?**
+
+* Exception is an **unexpected event** that breaks normal program flow.
+* Example: divide by zero, file not found, null pointer.
+
+---
+
+# ✅ **Exception vs Error**
+
+| Exception                     | Error                        |
+| ----------------------------- | ---------------------------- |
+| Recoverable                   | Not recoverable              |
+| Happens due to program issues | Happens due to system issues |
+| Can be handled                | Cannot be handled            |
+
+Examples:
+Exception → `NullPointerException`
+Error → `OutOfMemoryError`
+
+---
+
+# ✅ **Types of Errors**
+
+1. **Compile-time errors** → syntax mistakes
+2. **Runtime errors** → occur while running
+3. **Logical errors** → wrong output
+
+---
+
+# ✅ **Types of Exceptions**
+
+1. **Checked Exception**
+
+   * Compiler checks
+   * Must handle
+   * Example: IOException, SQLException
+
+2. **Unchecked Exception**
+
+   * Runtime exceptions
+   * Not checked by compiler
+   * Example: ArithmeticException, NullPointerException
+
+---
+
+# ✅ **Hierarchy of Exception Classes**
+
+```
+Object
+ └── Throwable
+      ├── Error
+      └── Exception
+           ├── RuntimeException
+           └── Other Exceptions
+```
+
+---
+
+# ✅ **Keywords used in Exception Handling**
+
+* **try** → risky code
+* **catch** → handles exception
+* **finally** → always executes
+* **throw** → manually throw exception
+* **throws** → declare exception in method signature
+
+---
+
+# ✅ **Exception Handling Rules**
+
+* Only one exception is thrown at a time.
+* More specific catch block must come **before** general catch.
+* Finally block always runs (even if exception occurs).
+
+---
+
+# ✅ **Methods to Display Exception Information**
+
+Given an exception `e`:
+
+* `e.getMessage()` → shows message
+* `e.toString()` → class + message
+* `e.printStackTrace()` → full details (best for debugging)
+
+---
+
+# ✅ **Finally Block**
+
+* Used to close resources (file, DB connection).
+* Always executes except in JVM crash.
+
+---
+
+# ✅ **Java 7 – Try With Resources**
+
+* Automatically closes resources.
+
+```java
+try (BufferedReader br = new BufferedReader(new FileReader("a.txt"))) {
+    // code
+}
+```
+
+---
+
+# ✅ **throw vs throws**
+
+### **throw**
+
+* Used to **manually throw** exception.
+
+```java
+throw new ArithmeticException("Invalid");
+```
+
+### **throws**
+
+* Used in method signature to **declare** exception.
+
+```java
+void read() throws IOException {}
+```
+
+---
+
+# ✅ **Creating a User-Defined Exception**
+
+```java
+class MyException extends Exception {
+    public MyException(String msg){
+        super(msg);
+    }
+}
+```
+
+---
+
+# 🎤 **2–3 Line Interview Answer**
+
+“Exception is an event that breaks normal flow. We handle it using try-catch-finally.
+Checked exceptions must be handled; unchecked happen at runtime.
+We can also create our own exceptions by extending Exception class.”
+
+---
