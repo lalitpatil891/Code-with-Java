@@ -1441,3 +1441,56 @@ import com.company.project.*;
 * “Package is a way to group related classes in Java. It helps organize code and avoid name conflicts. We access packages using `import`, fully-qualified names, or wildcard import.”
 
 ---
+
+***Access Modifiers***:
+
+---
+
+# ✅ **Access Modifiers in Java**
+
+## **1. Class Level Access Modifiers**
+
+These apply on **classes**:
+
+### **✔ public**
+
+* Class is accessible from anywhere in the project.
+
+### **✔ default (no keyword)**
+
+* Class is accessible only inside the **same package**.
+* Also called *package-private*.
+
+👉 *Note: Classes cannot be private or protected.*
+
+---
+
+## **2. Member Level Access Modifiers**
+
+These apply on **variables, methods, constructors**:
+
+### **✔ public**
+
+* Accessible from anywhere.
+
+### **✔ protected**
+
+* Accessible in same package + subclasses in other packages.
+
+### **✔ default (no keyword)**
+
+* Accessible only in same package.
+
+### **✔ private**
+
+* Accessible only inside the same class.
+
+---
+
+# 🎤 **Interview 2–3 Line Answer**
+
+“Access modifiers define visibility. At class level, we have **public** and **default**.
+At member level, we have **public, protected, default, and private**.
+Private is most restricted, public is fully open.”
+
+---
